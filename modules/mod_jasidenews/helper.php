@@ -166,13 +166,13 @@ class modJASildeNewsHelper
         $query .= " LEFT JOIN #__users AS ua ON ua.id = a.created_by";
         $query .= " WHERE a.state = 1";
 
-        //Filter by date range
-        $relativeDate = (int) $params->get('relative_date', '');
-        if(!empty($relativeDate))
-        {
-            $dateField = 'a.created';
-            $query .= " AND {$dateField} >= DATE_SUB('{$nowDate}', INTERVAL {$relativeDate} DAY)";
-        }
+		//Filter by date range
+		$relativeDate = (int) $params->get('relative_date', '');
+		if(!empty($relativeDate))
+		{
+			$dateField = 'a.created';
+			$query .= " AND {$dateField} >= DATE_SUB('{$nowDate}', INTERVAL {$relativeDate} DAY)";
+		}
 
         // Filter by start and end dates.
         $query .= " AND (a.publish_up = '" . $nullDate . "' OR a.publish_up <= '" . $nowDate . "')";
@@ -254,29 +254,27 @@ class modJASildeNewsHelper
         if (!$this->checkComponent('com_k2')) {
             return array();
         }
-        // $catsid = $params->get('k2catsid');
-        // $catids = array();
-        // if (!is_array($catsid)) {
-        //     $catids[] = $catsid;
-        // } else {
-        //     $catids = $catsid;
-        // }
+        $catsid = $params->get('k2catsid');
+        $catids = array();
+        if (!is_array($catsid)) {
+            $catids[] = $catsid;
+        } else {
+            $catids = $catsid;
+        }
 
-        // JArrayHelper::toInteger($catids);
-        // if ($catids) {
-        //     if ($catids && count($catids) > 0) {
-        //         foreach ($catids as $k => $catid) {
-        //             if (!$catid)
-        //                 unset($catids[$k]);
-        //         }
-        //     }
-        // }
+        JArrayHelper::toInteger($catids);
+        if ($catids) {
+            if ($catids && count($catids) > 0) {
+                foreach ($catids as $k => $catid) {
+                    if (!$catid)
+                        unset($catids[$k]);
+                }
+            }
+        }
 
-
+// 
         $tagsid = $params->get('k2tagsid');
-        
         $tagids = array();
-
         if (!is_array($tagsid)) {
             $tagids[] = $tagsid;
         } else {
@@ -293,8 +291,7 @@ class modJASildeNewsHelper
             }
         }
 
-
- 
+// 
 
         jimport('joomla.filesystem.file');
 
@@ -314,30 +311,26 @@ class modJASildeNewsHelper
 
         $nullDate = $db->getNullDate();
 
-
-        // if($catids!=null){
         // $query = "SELECT i.*, c.name AS categoryname,c.id AS categoryid, c.alias AS categoryalias, c.name as cattitle, c.params AS categoryparams";
         // $query .= "\n FROM #__k2_items as i LEFT JOIN #__k2_categories c ON c.id = i.catid";
         // $query .= "\n WHERE i.published = 1 AND i.access <= {$aid} AND i.trash = 0 AND c.published = 1 AND c.access <= {$aid} AND c.trash = 0";
         // $query .= "\n AND ( i.publish_up = " . $db->Quote($nullDate) . " OR i.publish_up <= " . $db->Quote($now) . " )";
         // $query .= "\n AND ( i.publish_down = " . $db->Quote($nullDate) . " OR i.publish_down >= " . $db->Quote($now) . " )";
-        // }
 
-        
         $query = "SELECT i.*,x.*,t.*";
         $query .= "\n FROM #__k2_items as i JOIN #__k2_tags_xref x ON x.itemID = i.id 
-                   \n   JOIN #__k2_tags t ON t.id = x.tagID";
+                        JOIN #__k2_tags t ON t.id = x.tagID";
         $query .= "\n WHERE i.published = 1 AND i.access <= {$aid} AND i.trash = 0";
         $query .= "\n AND ( i.publish_up = " . $db->Quote($nullDate) . " OR i.publish_up <= " . $db->Quote($now) . " )";
         $query .= "\n AND ( i.publish_down = " . $db->Quote($nullDate) . " OR i.publish_down >= " . $db->Quote($now) . " )";
         
-        //Filter by date range
-        $relativeDate = (int) $params->get('relative_date', '');
-        if(!empty($relativeDate))
-        {
-            $dateField = 'i.created';
-            $query .= " AND {$dateField} >= DATE_SUB({$db->Quote($now)}, INTERVAL {$relativeDate} DAY)";
-        }
+		//Filter by date range
+		$relativeDate = (int) $params->get('relative_date', '');
+		if(!empty($relativeDate))
+		{
+			$dateField = 'i.created';
+			$query .= " AND {$dateField} >= DATE_SUB({$db->Quote($now)}, INTERVAL {$relativeDate} DAY)";
+		}
 
 
         // if ($catids) {
@@ -353,12 +346,13 @@ class modJASildeNewsHelper
         // }
 
 
-        $tagids_new = $tagids;  
+            $tagids_new = $tagids;          
+            $tagids = implode(',', $tagids_new);
+            if(!empty($tagids)){
+                $query .= "\n AND t.id IN ($tagids)";
+            }
+            
 
-        $tagids = implode(',', $tagids_new);
-        if($tagids != null){
-            $query .= "\n AND t.id IN ($tagids) ";
-        }
 
 
 
@@ -371,17 +365,17 @@ class modJASildeNewsHelper
         }
         
         // language filter
-        $lang = JFactory::getLanguage();
-        $languageTag = $lang->getTag();
-        if ($app->getLanguageFilter()) {
-            $query .= " AND i.language IN ('{$languageTag}','*') ";
-        }
+		$lang = JFactory::getLanguage();
+		$languageTag = $lang->getTag();
+		if ($app->getLanguageFilter()) {
+			$query .= " AND i.language IN ('{$languageTag}','*') ";
+		}
 
         // order by
         $ordering = $params->get('sort_order_field', 'created');
 
         $dir = $params->get('sort_order', 'DESC');
-        // Set ordering     
+        // Set ordering		
         switch ($ordering) {
 
             case 'created':
@@ -484,6 +478,28 @@ class modJASildeNewsHelper
     }
 
 
+
+    function getTag($tagid)
+    {
+
+        static $array = array();
+        if ($clear)
+            $array = array();
+        $user = JFactory::getUser();
+        $aid = $user->get('aid') ? $user->get('aid') : 1;
+        $catid = (int)$tagid;
+        $db = JFactory::getDBO();
+        $query = "SELECT * FROM #__k2_tags_xref WHERE tagID={$tagid} AND published=1 AND access={$aid} ";
+        $db->setQuery($query);
+        $rows = $db->loadObjectList();
+
+        foreach ($rows as $row) {
+            array_push($array, $row->id);
+            $this->getTag($row->id);
+        }
+        return $array;
+    }
+
     /**
      *
      * Check category has children
@@ -533,7 +549,7 @@ class modJASildeNewsHelper
         $aid = $user->get('aid') ? $user->get('aid') : 1;
         $catid = (int)$catid;
         $db = JFactory::getDBO();
-        $query = "SELECT * FROM FROM #__k2_items as i JOIN #__k2_tags_xref x ON x.itemID = i.id JOIN #__k2_tags t ON t.id = x.tagID WHERE i.published = 1 AND i.access <= {$aid} AND i.trash = 0 ORDER BY ordering ";
+        $query = "SELECT * FROM #__k2_categories WHERE parent={$catid} AND published=1 AND trash=0 AND access<={$aid} ORDER BY ordering ";
         $db->setQuery($query);
         $rows = $db->loadObjectList();
 
@@ -560,7 +576,7 @@ class modJASildeNewsHelper
         $aid = $user->get('aid') ? $user->get('aid') : 1;
         $id = (int)$id;
         $db = JFactory::getDBO();
-        $query = "SELECT * FROM #__k2_items as i JOIN #__k2_tags_xref x ON x.itemID = i.id JOIN #__k2_tags t ON t.id = x.tagID WHERE i.published = 1 AND i.access <= {$aid} AND i.trash = 0 ";
+        $query = "SELECT * FROM #__k2_categories WHERE parent={$id} AND published=1 AND trash=0 AND access<={$aid} ";
         $db->setQuery($query);
         $rows = $db->loadObjectList();
 

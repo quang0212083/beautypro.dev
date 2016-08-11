@@ -120,36 +120,7 @@
 						description="K2_CATEGORIES_SELECTION_DESC"/>
 
 
-
-<!-- 				<field
-						name="k2tagsid"
-						type="k2tag"
-						class="mselect"
-						multiple="true"
-						size="5"
-						default=""
-						published="1"
-						level="3"
-						label="K2_TAG_SELECTION"
-						description="K2_TAG_SELECTION_DESC"/> -->
-
-				<field
-						name="k2tagsid"
-						type="sql"
-						class="mselect"
-						multiple="true"
-						size="5"
-						default=""
-						published="1"
-						level="3"
-						label="select tag"
-						description="select tag desc"
-						query="SELECT id, name FROM #__k2_tags" 
-						key_field="id" 
-						value_field="name" />						
-
-
-<!-- 				<field 
+				<field 
 					name="k2tagsid" 
 					type="sql" 
 					default="10" 
@@ -158,7 +129,7 @@
 					key_field="id" 
 					value_field="name" 
 					multiple="true"
-					/> -->
+					/>
 
 				<field
 						name="show_featured"
