@@ -1,0 +1,1 @@
+ALTER TABLE `#__categoryblock` ADD COLUMN   `allowcontentplugins` tinyint(1) NOT NULL;

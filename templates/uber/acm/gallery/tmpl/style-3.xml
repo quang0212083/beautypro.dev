@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Gallery Style 3</title>
+	<sampledata><![CDATA[  		
+		{":type":"uber:gallery","gallery":{"jatools-layout-gallery":"style-2","isotope[block-intro]":["Meet just a few of the many dedicated, enthusiastic, collaborative and mildy workaholic people who add real edge and variety to our offering. We could not reach this far without such a hero team. "],"isotope[block-extra-class]":[" section-lightest"],"isotope[block-bg]":[""],"isotope[colmb]":["2"],"isotope[coltb]":["2"],"isotope[coldt]":["4"],"isotope[gutter]":["40"],"isotope[fullwidth]":[" container"],"isotope[animation]":[""],"isotope[hover-animation]":["none"],"isotope[btn-text]":[""],"isotope[btn-class]":[""],"isotope[btn-link]":[""],"isotope[text-1]":[""],"isotope[gallery]":{"isotope[gallery][selectitem]":["1","1","1","1","1","1","1","1"],"undefined":["","","","","","","",""],"isotope[gallery][img]":["images/joomlart/uber/items/item-1.jpg","images/joomlart/uber/items/item-16.jpg","images/joomlart/uber/items/item-25.jpg","images/joomlart/uber/items/item-25.jpg","images/joomlart/uber/items/item-12.jpg","images/joomlart/uber/items/item-7.jpg","images/joomlart/uber/items/item-9.jpg","images/joomlart/uber/items/item-24.jpg"],"isotope[gallery][title]":["Bert Bonetti","Sean Hamrick","Bailey Drees","Kerri Gastelum","Violet Gates","Iva Dietrich","Clarissa Buteau","Leontine Martin"],"isotope[gallery][link]":["#","#","#","#","#","#","#","#"],"isotope[gallery][details]":["Software Engineer","Product Manager","Editorial Assistant","Marketing Director","Social Media Assistant","Support Technician","Social Media Assistant","Editorial Assistant"],"rows":8,"cols":6,"type":"list"}}}
+		
+    ]]></sampledata>
+
+    <fields name="isotope">
+		<fieldset name="basic-1" label="ISOTOPE_BASIC1_LABEL" description="ISOTOPE_BASIC1_DESC">
+			<field name="block-intro" type="textarea" default="" rows="5" cols="40"  label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+      <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+      <field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+			<field name="colmb" type="list" label="ISOTOPE_COL_MOBILE_LABEL" default="" description="ISOTOPE_COL_MOBILE_DESC">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</field>
+			
+			<field name="coltb" type="list" label="ISOTOPE_COL_TABLET_LABEL" default="" description="ISOTOPE_COL_TABLET_DESC">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</field>
+			
+			<field name="coldt" type="list" label="ISOTOPE_COL_DESKTOP_LABEL" default="" description="ISOTOPE_COL_DESKTOP_DESC">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</field>
+			
+			<field name="number-item-page" type="text" default="0" label="NUMBER_ITEM_IN_PAGE_LABEL" description="NUMBER_ITEM_IN_PAGE_DESC" filter="integer"></field>
+			<field name="gutter" type="text" default="0" label="ISOTOPE_GUTTER_LABEL" description="ISOTOPE_GUTTER_DESC" filter="integer"></field>
+			<field name="fullwidth" type="radio" default="" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC">
+				<option value=" container">JNO</option>
+				<option value="">JYES</option>
+			</field>
+
+			<field name="acm-style" type="list" default="style-light"
+			  global="1"
+			  label="ACM_STYLE_LABEL"
+			  description="ACM_STYLE_DESC">
+				<option value="style-light">LAYOUT_STYLE_LIGHT</option>
+				<option value="style-dark">LAYOUT_STYLE_DARK</option>
+			</field>
+			
+			<field name="hover-animation" type="list" default="none" label="ISOTOPE_HOVER_ANIMATION_LABEL" description="ISOTOPE_HOVER_ANIMATION_DESC">
+				<option value="none">None</option>
+				<option value="scale">Scale</option>
+				<option value="lily">Lily</option>
+				<option value="sadie">Sadie</option>
+				<option value="flip">Flip</option>
+				<option value="zoe">Zoe</option>
+				<option value="swiper">Swiper</option>
+			</field>
+			
+		</fieldset>
+		
+    <fieldset name="basic-2" label="ISOTOPE_BASIC2_LABEL" description="ISOTOPE_BASIC2_DESC" multiple="0">
+			<field name="gallery" type="jalist">
+				<item name="selectitem" type="list" default="1" label="ISOTOPE_SIZE_ITEMS_LABEL"
+										 description="ISOTOPE_SIZE_ITEMS_DESC">
+										<option value="1">Item 1x1</option>
+										<option value="2">Item 2x2</option>
+				</item>
+				<item name="img" type="media" label="ISOTOPE_IMG_LABEL" description="ISOTOPE_IMG_DESC" required="1"/>
+				<item name="title" type="text" size="50" label="ISOTOPE_TITLE_LABEL" description="ISOTOPE_TITLE_DESC" />
+				<item name="link" type="text" size="50" label="ISOTOPE_LINK_LABEL" description="ISOTOPE_LINK_DESC" />
+				<item name="details" type="textarea" cols="40" rows="5" label="ISOTOPE_DETAILS_LABEL" description="ISOTOPE_DETAILS_DESC" />
+			</field>
+    </fieldset>
+    </fields>
+</form>

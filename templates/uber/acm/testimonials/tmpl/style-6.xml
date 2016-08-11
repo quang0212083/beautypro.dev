@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>Testimonials Style 6</title>
+	<sampledata><![CDATA[ 
+		{":type":"uber:testimonials","testimonials":{"jatools-layout-testimonials":"style-6","testimonials[block-intro]":[""],"testimonials[block-extra-class]":["  mod-gray"],"testimonials[block-bg]":[""],"testimonials[text-color]":[""],"testimonials[author-info-color]":[""],"testimonials[full-width]":["1"],"testimonials[enable-controls]":["0"],"testimonials[data]":{"testimonials[data][testimonial-text]":[""],"testimonials[data][author-name]":[""],"rows":1,"cols":3,"type":"list"},"testimonials[data-special]":{"testimonials[data-special][testimonial-text]":[""],"testimonials[data-special][author-name]":[""],"testimonials[data-special][author-title]":[""],"testimonials[data-special][author-img]":[""],"rows":1,"cols":5,"type":"list"},"testimonials[text-1]":["You make my life so easy, ((br /))thanks for your great"],"testimonials[data-carousel]":{"testimonials[data-carousel][color]":["#2980b9","#2ecc71","#2980b9","#2ecc71"],"testimonials[data-carousel][carousel]":["service","product","team","framework"],"rows":4,"cols":3,"type":"list"}}}
+    ]]></sampledata>
+	<fields name="testimonials">
+		<fieldset name="basic" label="TESTIMONIAL_BASIC_LABEL" description="TESTIMONIAL_BASIC_DESC">
+			<field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+			<field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+			<field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+		</fieldset>
+			
+		<fieldset name="basic-1" label="TESTIMONIAL_INTRO_TEXT_LABEL" description="TESTIMONIAL_INTRO_TEXT_DESC">
+			<field name="text-1" type="textarea" default="" label="TESTIMONIAL_TEXT1_LABEL" description="TESTIMONIAL_TEXT1_DESC" cols="40" rows="5"></field>
+		</fieldset>
+			
+		<fieldset name="carousel-text" label="TESTIMONIAL_CARSOUSEL_SETTING_LABEL" description="TESTIMONIAL_CARSOUSEL_SETTING_DESC">
+			<field name="data-carousel" type="jalist">
+				<item name="color" type="text" default="" label="TESTIMONIAL_COLOR_TEXT" description="TESTIMONIAL_COLOR_TEXT_DESC" />
+				<item name="carousel" type="text" default="" label="TESTIMONIAL_TEXT_HIGHLIGHT" required="1" description="TESTIMONIAL_TEXT_HIGHLIGHT_DESC" />
+			</field>
+		</fieldset>
+
+	</fields>
+</form>

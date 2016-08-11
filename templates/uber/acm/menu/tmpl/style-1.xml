@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Menu Style 1</title>
+	<sampledata><![CDATA[
+		{":type":"uber:menu","menu":{"jatools-layout-menu":"style-1","menu[block-intro]":["Don't have to skip meals, easy recipes to get you through even when time is tight. "],"menu[block-extra-class]":[" style-dark"],"menu[block-bg]":["images/joomlart/restaurant/misc/mod-bg-2.jpg"],"menu[number_col]":["3"],"menu[full-width]":["0"],"menu[menu-style]":["style-dark"],"menu[data]":{"menu[data][dish-name]":["Chili Chicken","Calamari Fritti ","Japanese Gyoza","Trio of Dips","Szechuan Edamame","Cheeseburger Sliders","Lettuce Wraps","Pesto Shrimp Flatbread","Tandoori Chicken Flatbread","Hot Wings","Yam Fries & Truffle Lemon Aioli"],"menu[data][dish-description]":["tempura style, cool cucumbers, chili sauce","tempura vegetables, spicy aioli","pork dumplings with hot mustard","smoked trout dip, cheese dip, hummus, fresh sliced baguette","wok tossed with chilies, garlic, soy sauce","secret sauce & American cheese + additional sliders $4/each","toasted peanuts, crispy noodles, fresh cilantro + chicken or shrimp $3","whole milk mozzarella, sundried tomatoes, chipotle aioli","chutney, red onion, cilantro, yogurt","Frank's hot sauce, creamy blue cheese dip","grated Grana Padano, truffle lemon aioli"],"menu[data][dish-price]":["$30","$47","$56","#33","$47","$58","$89","$29","$30","$30","$30"],"menu[data][dish-image]":["","","","","","","","","","",""],"rows":11,"cols":5,"type":"list"}}}
+    ]]></sampledata>
+	<fields name="menu">
+		<fieldset name="col" label="MENU_COL_LABEL" description="MENU_COL_DESC" >
+      <field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+      <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+      <field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+  
+			<field name="number_col" type="list" label="MENU_NUMBER_COL_LABEL" description="MENU_NUMBER_COL_DESC">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</field>
+      <field name="full-width" type="radio" default="1" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC" >
+      	<option value="0" class="off">JNO</option>
+				<option value="1" class="on">JYES</option>
+      </field>
+      
+      <field name="menu-style" type="list" default="style-dark"
+          global="1"
+          label="MENU_STYLE_LABEL"
+          description="MENU_STYLE_DESC">
+        <option value="style-dark">LAYOUT_MENU_DARK</option>
+        <option value="style-light">LAYOUT_MENU_LIGHT</option>
+      </field>
+		</fieldset>
+		
+		<fieldset name="menu_info" label="MENU_INFO_LABEL" description="MENU_INFO_DESC">
+			<field name="data" type="jalist">
+				<item name="dish-name" type="text" size="40" default="" label="DISH_NAME_LABEL" description="DISH_NAME_DESC" required="1" />
+				<item name="dish-description" type="text" size="40" default="" label="DISH_DESCRIPTION_LABEL" description="DISH_DESCRIPTION_DESC" />
+				<item name="dish-price" type="text" size="40" default="" label="DISH_MEMBER_PRICE_LABEL" description="DISH_MEMBER_PRICE_DESC" />
+        <field name="dish-image" type="media" default="" label="DISH_IMAGE_LABEL" description="DISH_IMAGE_DESC"></field>
+			</field>
+    </fieldset>
+	</fields>
+</form>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <title>Footer Style 1</title>
+	<sampledata><![CDATA[
+        {":type":"uber:footer","footer":{"jatools-layout-footer":"style-1","footer[footer-background]":["light-color"],"footer[img]":[""],"footer[enable-breadcrumbs]":["0"],"footer[enable-backtotop]":["0"],"footer[footer-left-position]":["footer-1"],"footer[footer-right-position]":["footer-2"],"footer[full-width]":["0"],"footer[facebook]":["joomlart"],"footer[google-plus]":["joomlart"],"footer[twitter]":["joomlart"],"footer[pinterest]":["joomlart"],"footer[linkedin]":["joom-solutions"]}}
+    ]]></sampledata>
+	
+    <fields name="footer">
+    	<fieldset name="basic" label="FOOTER_BASIC_LABEL" description="FOOTER_BASIC_DESC" multiple="0">
+				<field name="footer-background" type="list" default="light-color"
+						 global="1"
+						 label="FOOTER_BACKGROUND_LABEL"
+						 description="FOOTER_BACKGROUND_DESC">
+					<option value="dark-color">DARK_COLOR</option>
+					<option value="light-color">LIGHT_COLOR</option>
+					<option value="highlight-color">HIGHLIGHT_COLOR</option>
+				</field>
+				<field name="img" type="media" default="" label="FOOTER_BACKGROUND_IMG_LABEL" description="FOOTER_BACKGROUND_IMG_DESC" />
+				<field name="enable-breadcrumbs" type="radio" default="0" label="FOOTER_ENABLE_BREADCRUMBS_LABEL" description="FOOTER_ENABLE_BREADCRUMBS_DESC" >
+          <option value="0" class="off">JNO</option>
+					<option value="1" class="on">JYES</option>
+      	</field>
+      	<field name="enable-backtotop" type="radio" default="0" label="FOOTER_ENABLE_BACKTOTOP_LABEL" description="FOOTER_ENABLE_BACKTOTOP_DESC" >
+          <option value="0" class="off">JNO</option>
+					<option value="1" class="on">JYES</option>
+      	</field>
+      	<field name="footer-left-position" type="moduleposition"    
+					        description="FOOTER_LEFT_POSITION_DESC"
+					        label="FOOTER_LEFT_POSITION_LABEL"
+					        default=""/>
+				<field name="footer-right-position" type="moduleposition"    
+					        description="FOOTER_RIGHT_POSITION_DESC"
+					        label="FOOTER_RIGHT_POSITION_LABEL"
+					        default=""/>
+				<field name="full-width" type="radio" default="0" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC" >
+	      	<option value="0" class="off">JNO</option>
+					<option value="1" class="on">JYES</option>
+	      </field>
+
+			</fieldset>
+			
+			<fieldset name="social" label="SOCIAL_LABEL" description="SOCIAL_DESC" multiple="0">
+				<field name="facebook" type="text" size="40" default="" label="FACEBOOK_LABEL" description="FACEBOOK_DESC"></field>
+				<field name="google-plus" type="text" size="40" default="" label="GOOGLE_PLUS_LABEL" description="GOOGLE_PLUS_DESC"></field>
+				<field name="twitter" type="text" size="40" default="" label="TWITTER_LABEL" description="TWITTER_DESC"></field>
+				<field name="pinterest" type="text" size="40" default="" label="PINTEREST_LABEL" description="PINTEREST_DESC"></field>
+				<field name="linkedin" type="text" size="40" default="" label="LINKEDIN_LABEL" description="LINKEDIN_DESC"></field>
+			</fieldset> 
+			
+    </fields>
+</form>

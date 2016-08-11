@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>Testimonials Style Simple</title>
+	<sampledata><![CDATA[ 
+		{":type":"uber:testimonials"}
+    ]]></sampledata>
+	<fields name="testimonials">
+		<fieldset name="basic" label="TESTIMONIAL_BASIC_LABEL" description="TESTIMONIAL_BASIC_DESC">
+			<field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+			
+		</fieldset>
+
+		<fieldset name="testimonial-box" label="TESTIMONIALS_BOX_LABEL" description="TESTIMONIALS_BOX_DESC">
+			<field name="data" type="jalist">
+				<item name="testimonial-text" type="textarea" cols="40" rows="5" default="" label="TESTIMONIAL_TEXT_LABEL" description="TESTIMONIAL_TEXT_DESC" />
+				<item name="author-name" type="text" size="50" default="" label="TESTIMONIAL_NAME_LABEL" description="TESTIMONIAL_NAME_DESC" />
+				<item name="author-img" type="media" default="" label="TESTIMONIAL_AUTHORIMG_LABEL" description="TESTIMONIAL_AUTHORIMG_DESC"/>
+			</field>
+		</fieldset>
+	</fields>
+</form>

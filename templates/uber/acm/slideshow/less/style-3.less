@@ -1,0 +1,78 @@
+// ------------------------------------------------
+// SLIDESHOW STYLE 3
+// ------------------------------------------------
+.acm-slideshow {
+  position: relative;
+  .style-3 {
+    .slide-desc {
+      background: @link-color;
+      padding: @grid-gutter-width;
+      margin-left: -@t3-global-margin;
+      margin-right: -@t3-global-margin;
+      text-align: left;
+    }
+    .item {
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-top: @grid-gutter-width*3;
+      padding-bottom: @grid-gutter-width*3;
+      color: @white;
+
+      @media screen and (max-width: @screen-xs-max) {
+        height: auto !important;
+        background: none !important;
+        padding: 0;
+      }
+
+      h3 {
+      	font-size: @font-size-h2;
+        margin-top: 0;
+
+        // Mobile view 
+        @media screen and (max-width: @screen-xs-max) {
+          font-size: @font-size-h3;
+        }
+      }
+
+      p {
+      	font-size:  @font-size-h5;
+        line-height: 1.5;
+        font-weight: bold;
+      }
+    }
+
+    .carousel-control {
+      background: none;
+      width: auto;
+      margin: 0;
+      padding: 0;
+
+      .fa {
+        left: @grid-gutter-width;
+        right: auto;
+      }
+
+      &.right {
+        .fa {
+          left: auto;
+          right: @grid-gutter-width;
+        }
+      }
+    }
+  }
+
+  .transition-timer-carousel-progress-bar {
+    height: 5px;
+    background-color: @link-color;
+    width: 0%;
+    margin: 0px 0px 0px 0px;
+    border: none;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+}
+

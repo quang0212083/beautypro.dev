@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+
+	<name>System - JA Popup</name>
+	<author>JoomlArt.com</author>
+	<creationDate>12 June 2015</creationDate>
+	<copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights
+		Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+	</license>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>www.joomlart.com</authorUrl>
+	<version>2.6.3</version>
+	<updateservers>
+		<server type="collection">http://update.joomlart.com/service/tracking/list.xml</server>
+	</updateservers>
+	<description>
+		<![CDATA[
+		<div style="text-align:left;">
+			<h1>JA Popup Plugin for Joomla! 2.5 & 3.x</h1>
+			<span style="color: #008000;"><strong>JA Popup plugin supports many types of content to display using Framework like AJAX, iFrame, Youtube video, image, slideshow, Inline.</strong></span>
+			<p><span style="color: #ff6600;"><strong>Features:</strong></span></p>
+				<img border="0" alt="JA Popup plugin" src="http://asset.joomlart.com/images/stories/extensions/joomla/jaec-popup_plg.png">Depending on each type of Popup that you select, you declare JA Popup tab in your content (i.e. module, article) to <code>{japopup type="<span style="color:#FF0000">iframe</span>" content="http://www.bing.com/" width="500" height="400" }Load a sample iFrame{/japopup}</code>
+			
+			<p><strong><span style="color: #ff0000;">Usage Instructions:</span><br /></strong></p>
+			<ol>   
+				<li>
+					<strong>ajax</strong>: <em>loading external page or HTML content via AJAX method </em><br>
+					Example: <br/><code>{japopup type="ajax" content="http://www.bing.com/" width="500" height="400"}Load an Url using AJAX{/japopup}</code>
+				</li> 
+				
+				<li> 
+					<strong>iFrame</strong>: <em>loading external page or HTML content via iFrame method  </em><br>
+					Example: <br/><code>{japopup type="iframe" content="http://www.bing.com/" width="500" height="400"}Load a sample iFrame{/japopup}</code>
+				</li>   
+				<li> 
+					<strong>youtube</strong>: <em>loading Youtube video. Note: use embeded link </em><br>
+					Example: <br/><code>{japopup type="youtube" content="http://www.youtube.com/v/cdphzxz64BY?hl=en&fs=1" width="640" height="380" title="Political Roast: Obama Emanuel 2005"}Political Roast: Obama Emanuel 2005{/japopup}</code>
+				</li>   
+				<li> 
+					<strong>image</strong>:<em> loading a specified image </em><br>
+					Example: <br/><code>{japopup type="image" content="images/sampledata/fruitshop/apple.jpg" width="400" height="300" title="Sample image"}Sample image{/japopup}</code>
+				</li>   
+				<li>
+					<strong>slideshow</strong>:<em> loading a group of images via a slideshow</em><br>
+					Example: <br/><code>{japopup type="slideshow" content="images/sampledata/fruitshop/apple.jpg,images/sampledata/fruitshop/bananas_2.jpg" width="400" height="300" title="Sample image"} Sample image {/japopup}</code>
+				</li>  
+				<li>
+					<strong>Inline</strong>:<em> To display full HTML content in the expander</em><br>
+					Example: <br/>
+						<code>
+							{japopup type="inline" content="inline1" width="500" height="400" }Inline{/japopup}							
+						</code>
+					<br />
+					<strong>inline1</strong>:<em> The ID of block content</em><br>	
+				</li> 
+			</ol> 
+			<p>The best showcase of JA Popup is used in JA Teline III.</p> 
+			<p><strong><span style="color: #ff0000;">Upgrade Method:</span><br /></strong></p>
+				<ol>
+					<li>You can install new version directly over this version. Uninstallation is not required. Backup any customized files before upgrading.</li>		
+				</ol>
+			<p><span style="color: #008000;"><strong>Links:</strong></span></p>
+				<ul>		
+					<li><a target="_blank" href="http://www.joomlart.com/forums/showthread.php?51150">General Userguide</a></li>
+					<li><a target='_blank' href='http://update.joomlart.com/'>Updates &amp; Versions</a></li>
+				</ul>
+			<p>Copyright 2004 - 2015 <a href="http://www.joomlart.com/" title="Visit Joomlart.com!">JoomlArt.com</a>.</p> 
+		</div>
+		]]>
+	</description>
+
+	<files>
+		<filename plugin="japopup">japopup.php</filename>
+		<filename>popupHelper.php</filename>
+		<filename>index.html</filename>
+		<folder>asset</folder>
+		<folder>fancybox</folder>
+		<folder>greybox</folder>
+		<folder>highslide</folder>
+		<folder>multibox</folder>
+		<folder>thickbox</folder>
+	</files>
+
+	<languages>
+		<language tag="en-GB">en-GB.plg_system_japopup.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/plugins/system/japopup/asset/elements">
+				<!-- General config -->
+				<field type="spacer" hr="false" label="POPUP_TYPE_SETTINGS" />
+				
+				<field name="group1" type="radio" default="fancybox" label="TYPE"
+					description="TYPE_DESC">
+					<option value="fancybox" url="http://fancybox.net/home">FANCYBOX</option>
+					<option value="greybox" url="http://orangoo.com/labs/GreyBox/">GREYBOX</option>
+					<option value="highslide" url="http://highslide.com/">HIGHSLIDE</option>
+					<option value="thickbox" url="http://jquery.com/demo/thickbox/">THICKBOX</option>
+					<option value="multibox" url="http://www.phatfusion.net/multibox/">MULTIBOX</option>
+				</field>
+
+				<!-- FancyBox config -->
+
+				<field name="group1-fancybox-centerOnScroll" 
+					type="radio"
+					default="1" 
+					class="btn-group" 
+					label="CENTER_ON_SCROLL" 
+					description="CENTER_ON_SCROLL_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+
+				<field name="group1-fancybox-image_scale" 
+					type="radio"
+					default="1" 
+					class="btn-group" 
+					label="SCALE_IMAGE" 
+					description="SCALE_IMAGE_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+
+				<field name="group1-fancybox-speed_in" type="list" default="500"
+					label="Animation speed in" description="ANIMATION_SPEED_IN_DESC">
+					<option value="0">No Animation</option>
+					<option value="250">Fast</option>
+					<option value="500">Normal</option>
+					<option value="1000">Slow</option>
+				</field>
+
+				<field name="group1-fancybox-speed_out" type="list" default="500"
+					label="Animation speed out" description="ANIMATION_SPEED_OUT_DESC">
+					<option value="0">No Animation</option>
+					<option value="250">Fast</option>
+					<option value="500">Normal</option>
+					<option value="1000">Slow</option>
+				</field>
+				<!-- End FancyBox config -->
+
+				<!-- GreyBox config -->
+				<field name="group1-greybox-behavior" type="list" default=""
+					label="POPUP_POSITION" description="METHODS_FOR_SHOWING_WINDOWS">
+					<option value="">Top</option>
+					<option value="_center">Centered</option>
+					<option value="_fs">Fullscreen</option>
+					<option value="set">Group</option>
+				</field>
+				<!-- End GreyBox config -->
+
+				<!-- HighSlide config -->
+				<field name="group1-highslide-outline" type="list" default="drop-shadow"
+					label="OUTLINE_TYPE" description="OUTLINE_TYPE_DESC">
+					<option value="0">None</option>
+					<option value="beveled">Beveled</option>
+					<option value="drop-shadow">Drop Shadow</option>
+					<option value="glossy-dark">Glossy Dark</option>
+					<option value="outer-glow">Outer glow</option>
+					<option value="rounded-black">Rounded Black</option>
+					<option value="rounded-white">Rounded White</option>
+				</field>
+
+				<field name="group1-highslide-speed_in" type="list" default="250"
+					label="Animation speed in" description="Animation speed in">
+					<option value="0">No Animation</option>
+					<option value="125">Fast</option>
+					<option value="250">Normal</option>
+					<option value="500">Slow</option>
+				</field>
+
+				<field name="group1-highslide-speed_out" type="list" default="250"
+					label="Animation speed out" description="Animation speed out">
+					<option value="0">No Animation</option>
+					<option value="125">Fast</option>
+					<option value="250">Normal</option>
+					<option value="500">Slow</option>
+				</field>
+				<!-- End HighSlide config -->
+
+				<!-- ShadowBox config -->
+				<field name="group1-shadowbox-animateFade" 
+					type="radio"
+					default="1" 
+					class="btn-group" 
+					label="Fade Overlay" 
+					description="Fade Overlay">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="group1-shadowbox-animate" 
+					type="radio" 
+					default="1"
+					class="btn-group" 
+					label="Animation" 
+					description="Animation">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="group1-shadowbox-animSequence" type="list"
+					default="wh" label="Animation Sequence" description="Animation Sequence">
+					<option value="wh">WIDTH_FIRST_THEN_HEIGHT</option>
+					<option value="hw">HEIGHT_FIRST_THEN_WIDTH</option>
+					<option value="sync">BOTH_SIMULTANEOUSLY</option>
+				</field>
+				<field name="group1-shadowbox-overlayColor" type="jacolorpicker"
+					size="10" label="OVERLAY_COLOR" description="OVERLAY_COLOR_DESC"
+					default="#fff" />
+				<field name="group1-shadowbox-viewportPadding" type="text"
+					size="10" label="VIEWPORT_PADDING" description="VIEWPORT_PADDING_DESC"
+					default="20" class="validate-numeric"/>
+				<!-- End ShadowBox config -->
+
+				<field name="group1-multibox-contentColor" type="jacolorpicker"
+					size="10" label="CONTENT_COLOR" description="CONTENT_COLOR_DESC"
+					default="#FFF" />
+
+				<field name="group1-multibox-showControls" 
+					type="radio"
+					default="1" 
+					class="btn-group" 
+					label="SHOW_CONTROLS" 
+					description="SHOW_CONTROLS_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				
+				<field type="spacer" hr="false" label="POPUP_WINDOW_CONFIG" />
+				<field name="width" type="text" size="4" label="Width"
+					description="The width of the Modal Window" default="600" class="validate-numeric"/>
+
+				<field name="height" type="text" size="4" default="400" label="Height"
+					description="The height of the Modal Window" class="validate-numeric"/>
+
+				<field name="overlay" 
+					type="radio" 
+					default="1" 
+					class="btn-group" 
+					label="SHOW_OVERLAY"
+					description="SHOW_OVERLAY_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+
+				<field name="overlay_opacity" type="list" default="0.7"
+					label="OVERLAY_FILL" description="OVERLAY_FILL_DESC">
+					<option value="0">Transparent</option>
+					<option value="0.1">10%</option>
+					<option value="0.2">20%</option>
+					<option value="0.3">30%</option>
+					<option value="0.4">40%</option>
+					<option value="0.5">50%</option>
+					<option value="0.6">60%</option>
+					<option value="0.7">70%</option>
+					<option value="0.8">80%</option>
+					<option value="0.9">90%</option>
+				</field>
+
+				<field name="add_title" 
+					type="radio" 
+					default="1"
+					class="btn-group" 
+					label="ADD_TITLE_IN_TAG" 
+					description="ADD_TITLE_IN_TAG_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+
+				<field name="add_desc" 
+					type="radio" 
+					default="1" 
+					class="btn-group" 
+					label="ADD_DESC_IN_TAG"
+					description="ADD_DESC_IN_TAG_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+
+				<field name="image_slideshow" type="radio" default="one"
+					label="Image in Slideshow type" description="How to show image on HTML page in Slideshow type">
+					<option value="one">Only one image</option>
+					<option value="all">All images</option>
+				</field>
+				<!-- End general config -->
+				<field type="japanel" path="plugins/system/japopup/asset/elements/" />
+				<field name="group" type="japanel" function="depend" hidden="true">
+					<option for="group1" value="fancybox" hideRow="true">width,height,group1-fancybox-centerOnScroll,group1-fancybox-image_scale,group1-fancybox-speed_in,group1-fancybox-speed_out
+					</option>
+					<option for="group1" value="greybox" hideRow="true">group1-greybox-behavior
+					</option>
+					<option for="group1" value="highslide" hideRow="true">group1-highslide-outline,group1-highslide-speed_in,group1-highslide-speed_out
+					</option>
+					<option for="group1" value="thickbox" hideRow="true">group1-shadowbox-animateFade,group1-shadowbox-animate,group1-shadowbox-animSequence,group1-shadowbox-overlayColor,group1-shadowbox-viewportPadding
+					</option>
+					<option for="group1" value="multibox" hideRow="true">group1-multibox-contentColor,group1-multibox-showControls,add_desc
+					</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,86 @@
+/*
+ * @version		$Id: webplayer.css 3.1 2012-11-28 $
+ * @package		Joomla
+ * @copyright   Copyright (C) 2012-2013 HD Webplayer
+ * @license     GNU/GPL http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+#hdwplayer_title, #hdwplayer_video, #hdwplayer_description {
+	margin:0px 0px 10px 0px;
+	padding:0px;
+}
+div.hdwplayer_thumb {
+	float:left;
+	padding:0px;
+	margin:7px 14px 7px 0px;
+	cursor:pointer;
+}
+div.hdwplayer_thumb a {
+	text-decoration:none;
+}
+div.hdwplayer_thumb .image {
+	display:block;
+}
+div.hdwplayer_thumb .arrow {
+	position:absolute;
+	width:29px;
+	height:26px;
+	margin-left:59px;
+	margin-top:28px;
+	opacity:0.5;
+}
+div.hdwplayer_thumb .name, div.hdwplayer_thumb .title {
+	margin:5px 0px 0px 0px;
+	padding:0px;
+	display:block;
+	font-family:Arial;
+	font-size:12px;
+	color:#444;
+	font-weight:bold;
+}
+div.hdwplayer_thumb .views {
+	margin:0px;
+	padding:0px;
+	display:block;
+	font-family:Arial;
+	font-size:11px;
+	color:#777;
+}
+#whitebox div #hdwplayer_pagination, div #hdwplayer_pagination { 
+	margin-top:15px; 
+	text-align:center; 
+	height:25px; 
+}
+#hdwplayer_pagination .pagination span, #hdwplayer_pagination .pagination a { 
+	margin:0px 2px; 
+	padding:3px 7px; 
+	background-color:#eee; 
+	border:1px solid #ddd; 
+	text-align:center; 
+	font-size:12px; 
+}
+#hdwplayer_pagination ul li span, #hdwplayer_pagination ul li a { 
+	margin:0px; 
+	padding:3px 7px; 
+	background-color:#eee; 
+	border:1px solid #ddd; 
+	text-align:center; 
+	font-size:12px; 
+	display:inline-block;
+	line-height:inherit;
+}
+#hdwplayer_pagination ul { 
+	list-style-type:none !important; 
+}
+#hdwplayer_pagination ul li { 
+	list-style-type:none !important;
+	float:left; 
+	margin:0px 2px !important; 
+	padding:0px;
+	text-align:center; 
+	font-size:12px;  
+}
+
+[id^=hdwplayer_] video {
+	object-fit: cover !important;
+}

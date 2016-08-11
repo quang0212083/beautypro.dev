@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+        <name>COM_VIDEOGALLERYLITE</name>
+	<author>Huge-IT</author>
+	<version>1.0.8</version>
+        <creationDate>January 2015</creationDate>
+        <copyright>Copyright (C) 2013 Huge-IT.com 2013. All rights reserved.</copyright> 
+        <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+        <authorEmail>info@huge-it.com</authorEmail> 
+        <authorUrl>http://www.huge-it.com</authorUrl>
+
+
+	<description>COM_VIDEOGALLERYLITE_XML_DESCRIPTION</description>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>controller.php</filename>
+		<filename>videogallerylite.php</filename>
+                <filename>ajax_url.php</filename>
+		<folder>models</folder>
+		<folder>views</folder>
+		<folder>helpers</folder>
+	</files>
+
+	<media destination="com_videogallerylite" folder="media">
+		<filename>index.html</filename>
+		<folder>elements</folder>
+                <folder>images</folder>
+                <folder>js</folder>
+                <folder>style</folder>
+	</media>
+	<administration>
+	    <menu img="../media/com_videogallerylite/images/huge.png">COM_VIDEOGALLERYLITE</menu>
+        <submenu>
+            <menu img="../media/com_videogallerylite/images/huge.png" link="option=com_videogallerylite&amp;view=general">COM_GENERAL</menu>
+            <menu img="../media/com_videogallerylite/images/huge.png" link="option=com_videogallerylite&amp;view=general">COM_LIGHTBOX</menu>
+            <menu img="../media/com_videogallerylite/images/huge.png" link="option=com_videogallerylite&amp;view=featured">COM_FEATURED</menu>
+        </submenu>
+		
+        <files folder="admin">
+            <filename>index.html</filename>
+            <filename>controller.php</filename>
+            <filename>videogallerylite.php</filename>
+            <folder>controllers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        	<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_videogallerylite.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_videogallerylite.sys.ini</language>
+		</languages>
+		
+	</administration>
+</extension>

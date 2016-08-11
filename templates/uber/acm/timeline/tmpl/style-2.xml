@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>Timeline Style 1</title>
+	<sampledata><![CDATA[ 
+		{":type":"uber:timeline","timeline":""}}
+    ]]></sampledata>
+	<fields name="timeline">
+		<fieldset name="basic" label="TIMELINE_BASIC_LABEL" description="TIMELINE_BASIC_DESC">
+			<field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+			<field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+			<field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+			<field name="block-size" type="text" default="" label="TPL_TIMELINE_SIZE_LABEL" description="TPL_TIMELINE_SIZE_DESC" />
+		</fieldset>
+
+		<fieldset name="timeline-box" label="TIMELINE_BOX_LABEL" description="TIMELINE_BOX_DESC">
+			<field name="data" type="jalist">
+				<item name="date" type="calendar" default="" label="TIMELINE_DATE_LABEL" description="TIMELINE_DATE_DESC" />
+				<item name="icon" type="text" default="fa-clock-o" label="TIMELINE_ICON_LABEL" description="TIMELINE_ICON_DESC" />
+				<item name="image" type="media" default="" label="TIMELINE_IMAGE_LABEL" description="TIMELINE_IMAGE_DESC" />
+				<item name="title" type="text" default="" label="TIMELINE_TITLE_LABEL" description="TIMELINE_TITLE_DESC" />
+				<item name="description" type="textarea" cols="40" rows="5" default="" label="TIMELINE_DESC_LABEL" description="TIMELINE_DESC" />
+				<item name="action-btn" type="text" default="" label="TIMELINE_BTN_LABEL" description="TIMELINE_BTN_DESC" />
+				<item name="action-url" type="text" default="" label="TIMELINE_BTN_URL_LABEL" description="TIMELINE_BTN_URL_DESC" />
+			</field>
+		</fieldset>
+	</fields>
+</form>

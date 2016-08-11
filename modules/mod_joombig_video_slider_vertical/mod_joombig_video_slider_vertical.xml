@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+  <name>joombig video slider vertical</name>
+<!--   <author>joombig.com</author>
+  <creationDate>April 2014</creationDate>
+  <copyright>Copyright (C) 2014 joombig.com. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>support@joombig.com</authorEmail>
+  <authorUrl>www.joombig.com</authorUrl>
+  <version>1.1</version>
+  <description>MODULE_DESC</description> -->
+  <languages>
+    <language tag="en-GB">language/en-GB.mod_joombig_video_slider_vertical.ini</language>
+  </languages>
+  <files>
+    <filename module="mod_joombig_video_slider_vertical">mod_joombig_video_slider_vertical.php</filename>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <folder>tmpl/</folder>
+    <folder>fields/</folder>
+    <folder>helpers/</folder>
+    <folder>language/</folder>
+    <folder>assets/</folder>
+  </files>
+  <config>
+    <fields name="params">
+      <fieldset name="basic" addfieldpath="/modules/mod_joombig_video_slider_vertical/fields">
+        <field type="assets" url="/modules/mod_joombig_video_slider_vertical/assets" />
+        <field type="tmpl" name="sp_style" default="Videoslidervertical"  label="STYLE" description="STYLE_DESC" />
+		<field name="enable_jQuery" type="radio" default="1" label="Enable/Disable jQuery" description="select Enable/Disable">
+			<option value="1">Enable</option>
+			<option value="0">Disable</option>
+		</field>
+		<field name="video_skin" type="list" default="1" label="Skin" description="Skin of module">
+			<option value="1">vertical</option>
+			<option value="0">hozizontal</option>
+		</field>
+		<field name="width" type="text" default="100%" label="Width of module(%)" description="Width of module(%)" />
+		<field name="autoslide" type="list" default="1" label="Auto slide" description="Auto slide">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</field>
+		<field name="autoplayvideo" type="list" default="1" label="Auto play video" description="Auto play video">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</field>
+      </fieldset>
+      <fieldset name="sliders" description="Setting for all item,Click Add New(require fill title)" label="Setting Item">
+        <field type="sliders" name="sliders" />
+      </fieldset>
+	  <fieldset name="animation">
+        <field type="animation" name="animation" />
+      </fieldset>
+	  <fieldset name="vertical_setting" label="Setting vertical skin">
+		<field name="width_vthumb" type="text" default="148" label="Width of thumb" description="Width without px" />
+		<field name="height_vthumb" type="text" default="48" label="Height of thumb" description="Height without px" />
+      </fieldset>
+	  <fieldset name="hozizontal_setting" label="Setting hozizontal skin">
+		<field name="width_hthumb" type="text" default="64" label="Width of thumb" description="Width without px" />
+		<field name="height_hthumb" type="text" default="48" label="Height of thumb" description="Height without px" />
+      </fieldset>
+      <fieldset name="advanced">	  
+		<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+		<field name="module_cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+		<option value="1">JGLOBAL_USE_GLOBAL</option>
+		<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+		</field>
+		<field name="cache" type="hidden" default="1" />
+		<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+		<field name="cachemode" type="hidden" default="itemid">
+			<option value="itemid"></option>
+		</field>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

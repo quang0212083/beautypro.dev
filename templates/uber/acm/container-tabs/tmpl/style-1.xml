@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>[Container] Tabs Style 1</title>
+	<sampledata><![CDATA[  		
+		{":type":"uber:container-tabs","container-tabs":{"jatools-layout-container-tabs":["style-1"],"container-tabs[block-intro]":["An easy way to set things in neat order. Organise any content type in groups. "],"container-tabs[block-extra-class]":[""],"container-tabs[position]":["container-tabs"]}}
+    ]]></sampledata>
+  <fields name="container-tabs">
+  
+    <fieldset name="basic" label="CONTAINER_TABS_BASIC_LABEL" description="CONTAINER_TABS_BASIC_DESC" multiple="0">
+    	<field name="block-intro" type="textarea" default="" rows="5" cols="40"  label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+      <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+      <field name="full-width" type="radio" default="1" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC" >
+        <option value="0" class="off">JNO</option>
+        <option value="1" class="on">JYES</option>
+      </field>
+      <field name="position" type="moduleposition"    
+        description="SLIDESHOW_POSITION_DESC"
+        label="SLIDESHOW_POSITION_LABEL"
+        default=""
+        maxlength="50" />
+    </fieldset>
+		
+  </fields>
+</form>

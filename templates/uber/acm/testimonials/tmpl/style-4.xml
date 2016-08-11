@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>Testimonials Style 4</title>
+	<sampledata><![CDATA[ 
+		{":type":"uber:testimonials","testimonials":{"jatools-layout-testimonials":"style-4","testimonials[block-intro]":[""],"testimonials[block-extra-class]":[" mod-gray"],"testimonials[block-bg]":[""],"testimonials[text-color]":[""],"testimonials[author-info-color]":[""],"testimonials[full-width]":["0"],"testimonials[enable-controls]":["0"],"testimonials[data]":{"testimonials[data][testimonial-text]":[""],"testimonials[data][author-name]":[""],"rows":1,"cols":3,"type":"list"},"testimonials[data-special]":{"testimonials[data-special][testimonial-text]":["We are very pleased with your design and programming talents and continue to rely on your good work. Sure we will get back to you as our site evolves going forward. ","Your staff has been nothing less than professional and respectful. They are super patient and really listened to what I wanted. I would give you the top stars!","You're the best! You did an amazing and perfect job … We have received many positive feedbacks on our new site since the launch. Great thanks again. ","I can say without doubt that your team are a true pleasure to work with.  They are easy to communicate with which make process smooth. Highly recommended. "],"testimonials[data-special][author-name]":["James S. ","Jaquelin A. ","Kelly B. ","David J. "],"testimonials[data-special][author-title]":["Creative Director","IT Systems Analyst","IT Engineer","CEO"],"testimonials[data-special][author-img]":["images/joomlart/uber/avatars/avt-1.jpg","images/joomlart/uber/avatars/avt-2.jpg","images/joomlart/uber/avatars/avt-3.jpg","images/joomlart/uber/avatars/avt-4.jpg"],"rows":4,"cols":5,"type":"list"},"testimonials[text-1]":[""],"testimonials[data-carousel]":{"testimonials[data-carousel][color]":[""],"testimonials[data-carousel][carousel]":[""],"rows":1,"cols":3,"type":"list"}}}
+    ]]></sampledata>
+	<fields name="testimonials">
+		<fieldset name="basic" label="TESTIMONIAL_BASIC_LABEL" description="TESTIMONIAL_BASIC_DESC">
+			<field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+			<field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+			<field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+
+			<field name="text-color" type="text" size="10" default="" label="TESTIMONIAL_TEXTCOLOR_LABEL" description="TESTIMONIAL_TEXTCOLOR_DESC"></field>
+			<field name="author-info-color" type="text" size="10" default="" label="TESTIMONIAL_AUTHORINFOCOLOR_LABEL" description="TESTIMONIAL_AUTHORINFOCOLOR_DESC"></field>
+			<field name="full-width" type="radio" default="1" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC">
+				<option value="0" class="off">JNO</option>
+				<option value="1" class="on">JYES</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="testimonial-box" label="TESTIMONIALS_BOX_LABEL" description="TESTIMONIALS_BOX_DESC">	  
+			<field name="data-special" type="jalist">
+				<item name="testimonial-text" type="textarea" cols="40" rows="5" default="" label="TESTIMONIAL_TEXT_LABEL" description="TESTIMONIAL_TEXT_DESC" />
+				<item name="author-name" type="text" size="50" default="" label="TESTIMONIAL_NAME_LABEL" description="TESTIMONIAL_NAME_DESC" />
+				<item name="author-title" type="text" size="50" default="" label="TESTIMONIAL_TITLE_LABEL" description="TESTIMONIAL_TITLE_DESC"  />
+				<item name="author-img" type="media" default="" label="TESTIMONIAL_IMG_LABEL" description="TESTIMONIAL_IMG_DESC" />
+			</field>
+		</fieldset>
+	</fields>
+</form>

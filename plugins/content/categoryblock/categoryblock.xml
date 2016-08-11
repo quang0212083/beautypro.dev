@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade" client="site">
+    <name>Content - CategoryBlock</name>
+    <author>DesignCompass corp</author>
+	<authorEmail>support@joomlaboat.com</authorEmail>
+    <authorUrl>http://joomlaboat.com</authorUrl>
+	<license>GNU General Public License</license>
+	<creationDate>June 2014</creationDate>
+    <copyright>Copyright (C) 2009-2014 Design Compass corp. All rights reserved.</copyright>
+    <version>1.8.0</version>
+    <description>CATEGORYBLOCKDESCRIPTION</description>
+		
+	<files>
+        <filename plugin="categoryblock">categoryblock.php</filename>
+		<filename>index.html</filename>
+    </files>
+	<languages>
+      	
+	  <language tag="en-GB">language/en-GB/en-GB.plg_content_categoryblock.ini</language>
+	  <language tag="es-ES">language/es-ES/es-ES.plg_content_categoryblock.ini</language>
+	  <language tag="pl-PL">language/pl-PL/pl-PL.plg_content_categoryblock.ini</language>
+	  
+	</languages>
+</extension>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Clients Style 1</title>
+	<sampledata><![CDATA[
+        {":type":"uber:clients","clients":{"jatools-layout-clients":"style-1","clients[block-intro]":["To deliver to you a diverse range of the best services"],"clients[block-extra-class]":[""],"clients[block-bg]":[""],"clients[columns]":["6"],"clients[acm-style]":["style-light"],"clients[full-width]":["0"],"clients[img-gray]":["0"],"clients[img-opacity]":["100"],"clients[client-item]":{"clients[client-item][client-logo]":["images/joomlart/uber/clients/partner-1.png","images/joomlart/uber/clients/partner-2.png","images/joomlart/uber/clients/partner-3.png","images/joomlart/uber/clients/partner-4.png","images/joomlart/uber/clients/partner-5.png","images/joomlart/uber/clients/partner-6.png"],"clients[client-item][client-name]":["Nivea","Biore","Rmi","","",""],"clients[client-item][client-link]":["#","#","#","#","#","#"],"rows":6,"cols":4,"type":"list"}}}
+        ]]>
+	</sampledata>
+    <fields name="book">
+    	<fieldset name="book-basic" label="BOOK_BASIC_LABEL" description="BOOK_BASIC_DESC">
+      	<field name="block-intro" type="textarea" default="" rows="5" cols="40"  label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+        <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+        <field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+    		<field name="acm-style" type="list" default="style-light"
+    		  global="1"
+    		  label="ACM_STYLE_LABEL"
+    		  description="ACM_STYLE_DESC">
+    			<option value="style-light">LAYOUT_STYLE_LIGHT</option>
+    			<option value="style-dark">LAYOUT_STYLE_DARK</option>
+    		</field>
+			
+  		  <field name="full-width" type="radio" default="1" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC" >
+        	<option value="0" class="off">JNO</option>
+  				<option value="1" class="on">JYES</option>
+        </field>
+		  </fieldset>
+
+      <fieldset name="book-item" label="BOOK_ITEM_LABEL" description="BOOK_ITEM_DESC">
+        <field name="book-intro" type="textarea" default="" rows="5" cols="40"  label="BOOK_INTRO_LABEL" description="BOOK_INTRO_DESC" />
+        <field name="book-cover" type="media" default="" label="BOOK_COVER_LABEL" description="BOOK_COVER_DESC" />
+        <field name="book-bg-color" type="text" default="" label="BOOK_BG_COLOR_LABEL" description="BOOK_BG_COLOR_DESC" />
+        <field name="book-text-color" type="text" default="" label="BOOK_TEXT_COLOR_LABEL" description="BOOK_TEXT_COLOR_DESC" />
+        <field name="book-link" type="text" default="" label="BOOK_LINK_LABEL" description="BOOK_LINK_DESC" />
+      </fieldset>
+
+      <fieldset name="book-page" label="BOOK_PAGE_LABEL" description="BOOK_PAGE_DESC">
+      	<field name="book-page" type="jalist">
+  				<item name="page-text" size="50"  type="textarea" default="" rows="5" cols="40" label="BOOK_PAGE_TEXT_LABEL" description="BOOK_PAGE_TEXT_DESC" />
+  			</field>
+      </fieldset>
+    </fields>
+</form>

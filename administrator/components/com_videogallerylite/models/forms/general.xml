@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="first" addfieldpath="/modules/com_videogallerylite/models/fields" >
+                    <field
+                    name="ht_view2_element_width"
+                    type_="number"
+                    type="jscolor"
+                    id="ht_view2_element_width"
+		    label="Element Width"
+                    value="ht_view2_element_width"
+                    for="ht_view2_element_width"
+                    class="generalFields"/>
+           
+                <field name="ht_view2_element_height" 
+                       type_="number"
+                       type="jscolor"
+                       class="generalFields"
+                       id="ht_view2_element_height"
+                       value="ht_view2_element_height"
+                       for="ht_view2_element_height"
+		       label="Element Height"/>	
+      		<field 
+                    name="ht_view2_element_border_width" 
+                    type_="number"
+                    type="jscolor"
+                    class="generalFields"
+                    id="ht_view2_element_border_width"
+                    value="ht_view2_element_border_width"
+                    for="ht_view2_element_border_width"
+		    label="Element Border Width"/>
+                    <field
+                    for="ht_view2_element_border_color"
+                    label="Element Border Color"
+                    name="ht_view2_element_border_color"
+                    type_="textColor"
+                    type="jscolor"
+                    class="color"
+                    value="ht_view2_element_border_color"
+                    default=""/> 
+                    <field
+                    for="ht_view2_element_overlay_color"
+                    label="Element's Image Overlay Color"
+                    name="ht_view2_element_overlay_color"
+                    type_="textColor"
+                    type="jscolor"
+                    class="color"
+                    id="ht_view2_element_overlay_color"
+                    value="ht_view2_element_overlay_color"/> 
+                   <field
+                    for="ht_view2_zoombutton_style"
+                    label="Element's Image Overlay Transparency"
+                    name="ht_view2_element_overlay_transparency"
+                    type_="opacity"
+                    type="jscolor"
+                    data-slider-highlight="true"
+                    data-slider-values="0,10,20,30,40,50,60,70,80,90,100"
+                    id="ht_view2_element_overlay_transparency"
+                    value="ht_view2_element_overlay_transparency"/>  
+                              
+                    <field   type_="zoomImageStyle" type="jscolor" name="ht_view2_zoombutton_style" id="ht_view2_zoombutton_style" for="ht_view2_zoombutton_style" label="Zoom Image Style">
+                    <option  value="light">Light</option>
+                    <option  value="dark">Dark</option>
+                    </field>
+                
+        </fieldset>
+        
+        <fieldset name="GalleryContentElementTitle">
+                <field
+                    for="ht_view2_element_title_font_size"
+                    label="Element Title Font Size"
+                    type="jscolor"
+                    type_="number"
+                    class="generalFields"
+                    id="ht_view2_element_title_font_size"
+                    values="ht_view2_element_title_font_size"
+                    name="ht_view2_element_title_font_size"/>
+                <field
+                for="ht_view2_element_title_font_color"
+                label = "Element Title Font Color"
+                name="ht_view2_element_title_font_color"
+                type_="textColor"
+                type="jscolor"
+                class="color"
+                id="ht_view2_element_title_font_color" 
+                value="ht_view2_element_title_font_color" />
+                <field
+                for="ht_view2_element_background_color"
+                label = "Element Title Background Color"
+                name="ht_view2_element_background_color"
+                type_="textColor"
+                type="jscolor"
+                class="color"
+                id="ht_view2_element_background_color" 
+                value="ht_view2_element_background_color" />
+                </fieldset>
+         	<fieldset name="GalleryContentElementLinkButton" >
+                    <field  
+                    for="ht_view2_element_show_linkbutton" 
+                    label="Show Link Button On Element"
+                    value="off"
+                    name="ht_view2_element_show_linkbutton"
+                    type_="checkbox"  
+                    type="jscolor"
+                    id="ht_view2_element_show_linkbutton"/>
+                    <field
+                    for="ht_view2_element_linkbutton_text"
+                    label="Link Button Text"
+                    type_="text"
+                    type="jscolor"
+                    name="ht_view2_element_linkbutton_text"
+                    id="ht_view2_element_linkbutton_text"
+                    value="ht_view2_element_linkbutton_text"
+                    class="text" />
+                    <field
+                    for="ht_view2_element_linkbutton_font_size"
+                    label="Link Button Font Size"
+                    type_="number" 
+                    type="jscolor"
+                    name="ht_view2_element_linkbutton_font_size" 
+                    id="ht_view2_element_linkbutton_font_size"
+                    value="ht_view2_element_linkbutton_font_size" 
+                    class="text" />
+                    <field 
+                    for="ht_view2_element_linkbutton_color"
+                    label="Link Button Font Color" 
+                    name="ht_view2_element_linkbutton_color" 
+                    type_="textColor" 
+                    type="jscolor"
+                    class="colorText" 
+                    id="ht_view2_element_linkbutton_color" 
+                    value="ht_view2_element_linkbutton_color" 
+                    size="10" />
+                    <field
+                    for="ht_view2_element_linkbutton_background_color"
+                    label="Link Button Background Color" 
+                    name="ht_view2_element_linkbutton_background_color" 
+                    type_="textColor" 
+                    type="jscolor"
+                    class="color" 
+                    id="ht_view2_element_linkbutton_background_color" 
+                    value="ht_view2_element_linkbutton_background_color" 
+                    size="10"/>
+                </fieldset>
+                
+                <fieldset name="GalleryContentPopupStyles">
+                    <field 
+                    for="ht_view2_popup_background_color"
+                    label="Popup Background Color"
+                    name="ht_view2_popup_background_color"
+                    type_="textColor"
+                    type="jscolor"
+                    class="color" 
+                    id="ht_view2_popup_background_color"
+                    value="ht_view2_popup_background_color"/>
+                    <field 
+                    for="ht_view2_popup_overlay_color"
+                    label="Popup Overlay Color"
+                    name="ht_view2_popup_overlay_color"
+                    type_="textColor"
+                    type="jscolor" 
+                    class="color" id="ht_view2_popup_overlay_color"
+                    value="ht_view2_popup_overlay_color"/>
+                    <field
+                    for="ht_view2_popup_overlay_transparency_color"
+                    label="Popup Overlay Transparency"
+                    name="ht_view2_popup_overlay_transparency_color"
+                    id="ht_view2_popup_overlay_transparency_color"
+                    data-slider-highlight="true"
+                    data-slider-values="0,10,20,30,40,50,60,70,80,90,100" 
+                    type="jscolor" 
+                    type_="opacity"
+                    data-slider="true" 
+                    value="ht_view2_popup_overlay_transparency_color"/>
+                    <field   type_="zoomImageStyle" type="jscolor" name="ht_view2_popup_closebutton_style" id="ht_view2_popup_closebutton_style" for="ht_view2_popup_closebutton_style" label="Popup Close Button Style">
+                    <option  value="light">Light</option>
+                    <option  value="dark">Dark</option>
+                    </field>
+                    <field 
+                    for="ht_view2_show_separator_lines"
+                    label="Show Separator Lines"
+                    name="ht_view2_show_separator_lines"
+                    type_="checkbox" 
+                    type="jscolor"
+                    id="ht_view2_show_separator_lines"/>
+                </fieldset>
+                <fieldset name="GalleryContentPopupTitle">
+                    <field
+                        for="ht_view2_popup_title_font_size"
+                        name="ht_view2_popup_title_font_size"
+                        label="Popup Title Font Size"
+                        type="jscolor"
+                        type_="number"
+                        id="ht_view2_element_title_font_size"
+                        class="text"/>
+                        <field 
+                        label="Popup Title Font Color"
+                        for="ht_view2_popup_title_font_color"
+                        name="ht_view2_popup_title_font_color"
+                        type="jscolor"
+                        type_="textColor"
+                        class="color" 
+                        id="ht_view2_element_title_font_color"/>
+                </fieldset>
+                <fieldset name="GalleryContentPopupDescription">
+                    <field 
+                    for="ht_view2_show_description"
+                    label="Show Description"
+                    type_="checkbox"
+                    type="jscolor"
+                    id="ht_view2_show_description"
+                    name="ht_view2_show_description"/>
+                    <field 
+                    for="ht_view2_description_font_size"
+                    label="Description Font Size"
+                    type_="number"
+                    type="jscolor"
+                    name="ht_view2_description_font_size"
+                    id="ht_view2_description_font_size"
+                    value="ht_view2_description_font_size" 
+                    class="text" />
+                    <field
+                    for="ht_view2_description_color"
+                    label="Description Font Color"
+                    name="ht_view2_description_color" 
+                    type_="textColor"
+                    type="jscolor"
+                    class="color" 
+                    id="ht_view2_description_color"
+                    value="ht_view2_description_color"/>
+                </fieldset>
+                <fieldset name="GalleryContentPopupLinkButton">
+                    <field 
+                    for="ht_view2_show_popup_linkbutton"
+                    label="Show Link Button"
+                    name="ht_view2_show_popup_linkbutton"
+                    type_="checkbox" 
+                    type="jscolor"
+                    id="ht_view2_show_popup_linkbutton"/>
+                    <field
+                    for="ht_view2_popup_linkbutton_text"
+                    label="Link Button Text" 
+                    type_="text"
+                    type="jscolor"
+                    name="ht_view2_popup_linkbutton_text"
+                    id="ht_view2_popup_linkbutton_text"
+                    value="ht_view2_popup_linkbutton_text"
+                    class="text"/>
+                   <field 
+                    for="ht_view2_popup_linkbutton_font_size"
+                   label="Link Button Font Size"
+                   type_="number"
+                   type="jscolor"
+                   name="ht_view2_popup_linkbutton_font_size"
+                   id="ht_view2_popup_linkbutton_font_size"
+                   value="ht_view2_popup_linkbutton_font_size"
+                   class="text"/>
+                   <field 
+                    for="ht_view2_popup_linkbutton_color"
+                    label="Link Button Font Color"
+                    name="ht_view2_popup_linkbutton_color" 
+                    type_="textColor" 
+                    type="jscolor"
+                    class="color" 
+                    id="ht_view2_popup_linkbutton_color" 
+                    value="ht_view2_popup_linkbutton_color"/>
+                    <field 
+                    for="ht_view2_popup_linkbutton_font_hover_color"
+                    label="Link Button Font Hover Color"
+                    name="ht_view2_popup_linkbutton_font_hover_color"
+                    type_="textColor"
+                    type="jscolor"
+                    class="color"
+                    id="ht_view2_popup_linkbutton_font_hover_color"
+                    value="ht_view2_popup_linkbutton_font_hover_color"/>
+                    <field 
+                    for="ht_view2_popup_linkbutton_background_color"
+                    label="Link Button Background Color"
+                    name="ht_view2_popup_linkbutton_background_color"
+                    type_="textColor"
+                    type="jscolor" 
+                    class="color" 
+                    id="ht_view2_popup_linkbutton_background_color"
+                    value="ht_view2_popup_linkbutton_background_color"/>
+                    <field
+                    for="ht_view2_popup_linkbutton_background_hover_color"
+                    label="Link Button Background Hover Color"
+                    name="ht_view2_popup_linkbutton_background_hover_color"
+                    type_="textColor"
+                    type = "jscolor" 
+                    class="color" 
+                    id="ht_view2_popup_linkbutton_background_hover_color"
+                    value="ht_view2_popup_linkbutton_background_hover_color"/>
+                </fieldset>
+                <fieldset name="SliderContainer">
+                    <field 
+                    for="ht_view5_main_image_width"
+                    label="Main Video Width"
+                    type_="number"
+                    type="jscolor"
+                    name="ht_view5_main_image_width"
+                    id="ht_view5_main_image_width"
+                    value="ht_view5_main_image_width"
+                    class="text"/>
+                    <field 
+                    for="ht_view5_slider_background_color"
+                    label="Slider Background Color"
+                    name="ht_view5_slider_background_color" 
+                    type_="textColor"
+                    type="jscolor"
+                    id="ht_view5_slider_background_color"
+                    value="ht_view5_slider_background_color" /> 
+                    <field   type_="zoomImageStyle" type="jscolor" name="ht_view5_icons_style" id="ht_view5_icons_style" for="ht_view5_icons_style" label="Arrow Icons Style">
+                    <option  value="light">Light</option>
+                    <option  value="dark">Dark</option>
+                    </field>
+                    <field 
+                    for="ht_view5_show_separator_lines"
+                    label="Show Separator Lines"
+                    name="ht_view5_show_separator_lines"
+                    type_="checkbox" 
+                    type="jscolor"
+                    id="ht_view5_show_separator_lines" 
+                    value="ht_view5_show_separator_lines"/>
+                </fieldset>
+                <fieldset name="SliderContainerTitle">
+                    <field 
+                    for="ht_view5_title_font_size"
+                    label="Title Font Size"
+                    type_="number"
+                    type="jscolor" 
+                    name="ht_view5_title_font_size"
+                    id="ht_view5_title_font_size"
+                    value="ht_view5_title_font_size"
+                    class="text" />
+                    <field 
+                    for="ht_view5_title_font_color"
+                    label="Title Font Color"
+                    name="ht_view5_title_font_color"
+                    type_="textColor"
+                    type="jscolor"
+                    class="color" 
+                    id="ht_view5_title_font_color"
+                    value="ht_view5_title_font_color" />
+                </fieldset>
+                <fieldset name="SliderContainerDescription">
+                    <field 
+                    for="ht_view5_show_description"
+                    label="Show Description"
+                    name="ht_view5_show_description"
+                    type_="checkbox" 
+                    type="jscolor"
+                    id="ht_view5_show_description" 
+                    value="ht_view5_show_description"/>
+                    <field 
+                    for="ht_view5_description_font_size"
+                    label="Description Font Size"
+                    name="ht_view5_description_font_size"
+                    id="ht_view5_description_font_size"
+                    type_="number"
+                    type="jscolor"/>
+                    <field 
+                    for="ht_view5_description_color"
+                    label="Description Font Color"
+                    name="ht_view5_description_color"
+                    type_="textColor"
+                    type="jscolor"
+                    class="color" 
+                    id="ht_view5_description_color"/>
+                </fieldset>
+                <fieldset name="SliderContainerLinkButton">
+                    <field 
+                    for="ht_view5_show_linkbutton"
+                    label="Show Link Button"
+                    name="ht_view5_show_linkbutton"
+                    type_="checkbox"
+                    type="jscolor"
+                    id="ht_view5_show_linkbutton" />
+                    <field
+                    type_= "text"
+                    type="jscolor"
+                    for="ht_view5_linkbutton_text"
+                    label = "Link Button Text"
+                    name="ht_view5_linkbutton_text"
+                    id="ht_view5_linkbutton_text"
+                    class="text"/>
+                    <field 
+                    for="ht_view5_linkbutton_font_size"
+                    label="Link Button Font Size"
+                    type="jscolor"
+                    type_="number"
+                    name="ht_view5_linkbutton_font_size"
+                    id="ht_view5_linkbutton_font_size"/>
+                    <field 
+                    for="ht_view5_linkbutton_color"
+                    label="Link Button Font Color"
+                    name="ht_view5_linkbutton_color"
+                    type_="textColor"
+                    type = "jscolor"
+                    class="color"
+                    id="ht_view5_linkbutton_color"/>
+                    <field 
+                        for="ht_view5_linkbutton_font_hover_color"
+                        label="Link Button Font Hover Color"
+                        name="ht_view5_linkbutton_font_hover_color"
+                        type_="textColor"
+                        type="jscolor"
+                        class="color"
+                        id="ht_view5_linkbutton_font_hover_color"/>
+                    <field 
+                    for="ht_view5_linkbutton_background_color"
+                    label="Link Button Background Color"
+                    name="ht_view5_linkbutton_background_color"
+                    type_="textColor"
+                    type="jscolor"
+                    class="color"
+                    id="ht_view5_linkbutton_background_color"/>
+                    <field 
+                    for="ht_view5_linkbutton_background_hover_color"
+                    label="Link Button Background Hover Color"
+                    name="ht_view5_linkbutton_background_hover_color"
+                    type_="textColor"
+                    type="jscolor"
+                    class="color" 
+                    id="ht_view5_linkbutton_background_hover_color"/>
+                </fieldset>
+                <fieldset name="LightboxGalleryImage">
+                    <field 
+                    for="ht_view6_width"
+                    label="Video-image Width"
+                    type_= "number"
+                    type="jscolor"
+                    name="ht_view6_width"
+                    id="ht_view6_width"/>
+                    <field 
+                    for="ht_view6_border_width"
+                    label="Video-image Border Width"
+                    type_="number"
+                    type="jscolor"
+                    name="ht_view6_border_width"
+                    id="ht_view6_border_width"/>
+                    <field 
+                    for="ht_view6_border_color"
+                    label="Video-image Border Color"
+                    name="ht_view6_border_color"
+                    type_="textColor"
+                    type="jscolor"
+                    class="color" 
+                    id="ht_view6_border_color"/>
+                    <field 
+                    for="ht_view6_border_radius"
+                    label="Border Radius"
+                    type_= "number"
+                    type="jscolor"
+                    name="ht_view6_border_radius"
+                    id="ht_view6_border_radius"/>
+                </fieldset>
+                <fieldset name="LightboxGalleryTitle">
+                    <field 
+                    for="ht_view6_title_font_size"
+                    label="Title Font Size"
+                    type_="number"
+                    type="jscolor"
+                    name="ht_view6_title_font_size"
+                    id="ht_view6_title_font_size"/>
+                    <field 
+                    for="ht_view6_title_font_color"
+                    label="Title Font Color"
+                    name="ht_view6_title_font_color"
+                    type_="textColor"
+                    type="jscolor"
+                    class="color"
+                    id="ht_view6_title_font_color"/>
+                    <field 
+                    for="ht_view6_title_font_hover_color"
+                    label="Title Font Hover Color"
+                    name="ht_view6_title_font_hover_color"
+                    type_="textColor"
+                    type="jscolor"
+                    class="color"
+                    id="ht_view6_title_font_hover_color"/>
+                      
+                     <field 
+                    for="ht_view6_title_background_color"
+                    label="Title Background Color"
+                    name="ht_view6_title_background_color"
+                    type_="textColor"
+                    type="jscolor"
+                    class="color"
+                    id="ht_view6_title_background_color"/>
+                      
+                    <field 
+                    for="ht_view6_title_font_hover_color"
+                    label="Title Font Hover Color"
+                    name="ht_view6_title_font_hover_color"
+                    type_="textColor"
+                    type="jscolor"
+                    class="color"
+                    id="ht_view6_title_font_hover_color"/>
+                    
+            
+                <field 
+                for="ht_view6_title_background_transparency"
+                label="Title Background Transparency"
+                name="ht_view6_title_background_transparency"
+                id="ht_view6_title_background_transparency"
+                type_="opacity"
+                type="jscolor"/>
+                </fieldset>
+                <fieldset name="Slider">
+                <field   type_="zoomImageStyle" type="jscolor" name="slider_crop_image" id="slider_crop_image" label="Video Behaviour">
+                <option  value="light">Light</option>
+                <option  value="dark">Dark</option>
+                </field>
+                <field 
+                for="slider_slider_background_color"
+                label = "Slider Background Color"
+                name = "slider_slider_background_color"
+                type_="textColor"
+                type="jscolor"
+                class="color" 
+                id="slider_slider_background_color"
+                value="slider_slider_background_color"  />
+                <field 
+                for="slider_slideshow_border_size"
+                type="jscolor"
+                type_= "number"
+                label = "Slider Border Size"
+                name = "slider_slideshow_border_size"
+                id="slider_slideshow_border_size" 
+                value="slider_slideshow_border_size"/>
+                <field 
+                for="slider_slideshow_border_color"
+                label = "Slider Border Color"
+                name="slider_slideshow_border_color"
+                type_= "textColor"
+                type="jscolor"
+                class="color" 
+                id="slider_slideshow_border_color"
+                value="slider_slideshow_border_color"/>
+                <field 
+                for="slider_slideshow_border_radius"
+                label = "Slider Border radius"
+                type_= "number"
+                type="jscolor"
+                name="slider_slideshow_border_radius"
+                id="slider_slideshow_border_radius"
+                value = "slider_slideshow_border_radius"
+                class="text"/>
+                </fieldset>
+                <fieldset name = "SliderNavigation">
+                    <field 
+                    for="slider_show_arrows"
+                    label = "Show Navigation Arrows"
+                    type = "jscolor"
+                    type_ = "checkbox"
+                    name = "slider_show_arrows"
+                    id="slider_show_arrows" />
+                    <field for="slider_dots_position" type_ = "NavigationDots" type="jscolor" label = "Navigation Dots Position / Hide Dots" name = "slider_dots_position" id = "slider_dots_position">  
+                        <option value="none">Dont Show</option>
+			<option  value="top">Top</option>
+			<option value="bottom">Bottom</option>
+		    </field>
+                <field 
+                for="slider_dots_color"
+                label = "Navigation Dots Color"
+                type_ = "textColor"
+                type = "jscolor"
+                name = "slider_dots_color"
+                id="slider_dots_color"/>
+                <field 
+                for="slider_active_dot_color"
+                label = "Navigation Active Dot Color"
+                type_ = "textColor"
+                type = "jscolor"
+                class="color"
+                name="slider_active_dot_color"
+                id="slider_active_dot_color"
+                value = "slider_active_dot_color" />
+                
+                <field 
+                name = "slider_navigation_type"
+                label = "Navigation Type "
+                type_ ="navigationTypeArrow"
+                type = "jscolor"
+                value = "slider_navigation_type"/>
+                </fieldset>
+        <fieldset name = "ThumbnailsContainerStyle">
+            <field 
+            for="thumb_box_padding"
+            label = "Box padding"
+            name = "thumb_box_padding"
+            type_ = "number"
+            type = "jscolor"
+            id="thumb_box_padding"/>
+            <field 
+            for="thumb_box_background"
+            label = "Box background"
+            type = "jscolor"
+            type_ = "textColor"
+            name = "thumb_box_background"
+            class="color"
+            id="thumb_box_background"/>
+            <field 
+            for="thumb_box_use_shadow"
+            label = "Box Use shadow"
+            name = "thumb_box_use_shadow"
+            type_ = "checkbox"
+            type = "jscolor"
+            id="thumb_box_use_shadow"/>
+            <field 
+            for="thumb_box_has_background"
+            label = "Box Has background"
+            name = "thumb_box_has_background"
+            type_ = "checkbox"
+            type = "jscolor"
+            id="thumb_box_has_background" />
+
+
+        </fieldset>
+        <fieldset name = "ThumbnailsImage">
+            <field 
+            for="thumb_image_behavior"
+            label = "Video Behavior"
+            type_="checkbox"
+            type = "jscolor" 
+            id="thumb_image_behavior"
+            name = "thumb_image_behavior"/>
+            <field 
+            for="thumb_image_width"
+            label = "Thumbnail Width"
+            type_ = "number"
+            type = "jscolor"
+            name = "thumb_image_width"
+            id="thumb_image_width"/>
+            <field 
+            for="thumb_image_height"
+            label = "Video-image Height"
+            type_ = "number"
+            type = "jscolor"
+            name = "thumb_image_height"
+            id="thumb_image_height"
+            class="text"/>
+            <field 
+            for="thumb_image_border_width"
+            label = "Video-image Border Width"
+            name = "thumb_image_border_width"
+            id="thumb_image_border_width"
+            type_ = "number"
+            type = "jscolor"/>
+            <field 
+            for="thumb_image_border_color"
+            label = "Video-image Border Color" 
+            name = "thumb_image_border_color"
+            class="color" 
+            id="thumb_image_border_color"
+            type_ = "textColor"
+            type = "jscolor"/>
+            <field 
+            for="thumb_image_border_radius"
+            label = "Border Radius"
+            type_ = "number"
+            type = "jscolor"
+            name = "thumb_image_border_radius"
+            id="thumb_image_border_radius"/>
+            <field 
+            for="thumb_margin_image"
+            label = "Margin Video-image"
+            name  = "thumb_margin_image"
+            id="thumb_margin_image"
+            type = "jscolor"
+            type_ = "number"/>
+        </fieldset>
+        <fieldset name = "ThumbnailsTitle">
+            <field 
+            for="thumb_title_font_size"
+            label = "Title Font Size"
+            name =  "thumb_title_font_size"
+            id="thumb_title_font_size"
+            type = "jscolor"
+            type_ = "number"/>
+            <field 
+            for="thumb_title_font_color"
+            label = "Title Font Color"
+            name = "thumb_title_font_color" 
+            id="thumb_title_font_color"
+            type_ = "textColor"
+            type = "jscolor"/>
+            <field 
+            for="thumb_title_background_color"
+            label = "Overlay Background Color"
+            name = "thumb_title_background_color"
+            id="thumb_title_background_color"
+            type_ = "textColor"
+            type = "jscolor"/>
+            <field 
+            name = "thumb_title_background_transparency"
+            for="thumb_title_background_transparency"
+            label = "Title Background Transparency"
+            type_ = "opacity"
+            type = "jscolor"/>
+            <field 
+            for="thumb_view_text"
+            label = "Link Text"
+            name = "thumb_view_text"
+            id="thumb_view_text"
+            type = "jscolor"
+            type_ = "text"/>
+        </fieldset>
+           				
+</form>
+
+				
+					
+				

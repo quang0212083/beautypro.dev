@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0.0" method="upgrade">
+  <name>HDW Player</name>
+  <author>HDW Player</author>
+  <creationDate>November 2012</creationDate>
+  <copyright>Copyright (c) 2011 - 2013 HDW Player. All rights reserved.</copyright>
+  <authorEmail>admin@hdplayer.com</authorEmail>
+  <authorUrl>www.hdwplayer.com</authorUrl>
+  <version>3.1</version>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <description>&lt;h3 style=&quot;margin:0px 5px; padding:0px;&quot;&gt;HDW Player - A Joomla! Video Player Extension&lt;/h3&gt;</description>
+  <installfile>install.hdwplayer.php</installfile>
+  <uninstallfile>uninstall.hdwplayer.php</uninstallfile>
+  <scriptfile>script.hdwplayer.php</scriptfile>
+  <install>
+    <sql>
+      <file charset="utf8" driver="mysql">install.sql</file>
+      <file driver="mysql">install.mysql4.sql</file>
+      <file charset="utf8" driver="mysqli">install.sql</file>
+      <file driver="mysqli">install.mysql4.sql</file>
+    </sql>
+  </install>
+  <uninstall>
+    <sql>
+      <file charset="utf8" driver="mysql">uninstall.sql</file>
+      <file driver="mysql">uninstall.sql</file>
+      <file charset="utf8" driver="mysqli">uninstall.sql</file>
+      <file driver="mysqli">uninstall.sql</file>
+    </sql>
+  </uninstall>
+  <!-- user part -->
+  <files folder="components/com_hdwplayer">
+    <folder>assets</folder>
+    <folder>css</folder>
+    <folder>js</folder>
+    <folder>models</folder>
+    <folder>views</folder>
+    <filename>controller.php</filename>
+    <filename>index.html</filename>
+    <filename>player.swf</filename>
+    <filename>router.php</filename>
+    <filename>hdwplayer.php</filename>
+  </files>
+  <!-- administration part -->
+  <administration>
+    <menu img="components/com_hdwplayer/assets/hdwplayer.png">COM_HDWPLAYER</menu>
+    <files folder="administrator/components/com_hdwplayer">
+      <folder>assets</folder>
+      <folder>css</folder>
+      <folder>controllers</folder>
+      <folder>elements</folder>
+      <folder>libs</folder>
+      <folder>models</folder>
+      <folder>tables</folder>
+      <folder>views</folder>
+      <filename>hdwplayer.php</filename>
+      <filename>index.html</filename>
+      <filename>install.mysql4.sql</filename>
+      <filename>install.sql</filename>
+      <filename>uninstall.sql</filename>
+    </files>
+    <languages folder="administrator/language">
+      <language tag="en-GB">en-GB/en-GB.com_hdwplayer.ini</language>
+      <language tag="en-GB">en-GB/en-GB.com_hdwplayer.menu.ini</language>
+      <language tag="en-GB">en-GB/en-GB.com_hdwplayer.sys.ini</language>
+    </languages>
+  </administration>
+  <modules>
+    <module module="mod_hdwplayer" client="site" />
+    <module module="mod_hdwplayergallery" client="site" />
+    <module module="mod_hdwplayersearch" client="site" />
+    <module module="mod_hdwplayerupload" client="site" />
+  </modules>
+  <plugins>
+    <plugin plugin="hdwplayer" group="content" />
+  </plugins>
+</extension>

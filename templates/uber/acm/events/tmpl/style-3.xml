@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Events Style 3</title>
+
+  <sampledata><![CDATA[
+      {":type":"uber:events","events":{"jatools-layout-events":"style-3","events[block-intro]":[""],"events[block-extra-class]":[""],"events[block-bg]":[""],"events[full-width]":["0"],"events[data]":{"events[data][event-date]":["25","08","13","14","15","16"],"events[data][event-month]":["November","October","September","August","July","April"],"events[data][event-year]":["2015","2015","2015","2015","2015","2015"],"events[data][event-time]":["((i class=\"fa fa-calendar-o\"))((/i))Sat: 8:00 - 17:00","((i class=\"fa fa-calendar-o\"))((/i))Mon: 8:00 - 17:00","((i class=\"fa fa-calendar-o\"))((/i))Sat: 8:00 - 17:00","((i class=\"fa fa-calendar-o\"))((/i))Sat: 8:00 - 17:00","((i class=\"fa fa-calendar-o\"))((/i))Sat: 8:00 - 17:00","((i class=\"fa fa-calendar-o\"))((/i))Sat: 8:00 - 17:00"],"events[data][event-title]":["Joomla World Conference","JoomlaDay™ Italy 2014","Joomla User Group Suffolk","JoomlaDay™ Faso 2014","JUG Pune Meetup November 2014","Joomla!Day™ Bangkok 2014"],"events[data][event-description]":["Interdum urna cursus pretium curabitur turpis nunc ligula eu dictumst.","Consequat curabitur vitae nibh et ut orci senectus quis accumsan sem.","Laoreet tempus Vestibulum In tortor tortor Aenean fames id wisi enim.","Laoreet tempus Vestibulum In tortor tortor Aenean fames id wisi enim.","Laoreet tempus vestibulum In tortor tortor aenean fames id wisi enim.","Phasellus sed dui nunc laoreet nunc curabitur sed."],"events[data][event-link]":["http://www.joomlart.com","http://www.joomlart.com","http://www.joomlart.com","http://www.joomlart.com","http://www.joomlart.com","http://www.joomlart.com"],"rows":6,"cols":8,"type":"list"}}}
+  ]]></sampledata>
+    
+	<fields name="events">
+		<fieldset name="col" label="EVENT_COL_LABEL" description="EVENT_COL_DESC" >
+      <field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+      <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+      <field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+
+		</fieldset>
+		
+		<fieldset name="event_info" label="EVENT_INFO_LABEL" description="EVENT_INFO_DESC">
+			<field name="data" type="jalist">
+        <item name="event-date" type="text" size="10" default="" label="EVENT_DATE_LABEL" description="EVENT_DATE_DESC" required="1" />
+        <item name="event-month" type="text" size="10" default="" label="EVENT_MONTH_LABEL" description="EVENT_MONTH_DESC" required="1" />
+        <item name="event-year" type="text" size="10" default="" label="EVENT_YEAR_LABEL" description="EVENT_YEAR_DESC" required="1" />
+        <item name="event-time" type="text" size="10" default="" label="EVENT_TIME_LABEL" description="EVENT_TIME_DESC" />
+        <item name="event-title" type="text" size="40" default="" label="EVENT_TITLE_LABEL" description="EVENT_TITLE_DESC" required="1" />
+        <item name="event-description" type="text" size="40" default="" label="EVENT_DESCRIPTION_LABEL" description="EVENT_DESCRIPTION_DESC" />
+        <item name="event-link" type="text" size="20" default="" label="EVENT_LINK_LABEL" description="EVENT_LINK_DESC" />
+			</field>
+    </fieldset>
+	</fields>
+</form>

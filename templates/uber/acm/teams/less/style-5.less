@@ -1,0 +1,135 @@
+// -------------------------------
+// TEAMS STYLE 5
+// -------------------------------
+.acm-teams {
+  &.style-5 {
+    .team-title {
+      margin-top: 0;
+    }
+    .section-intro {
+      margin-bottom: @grid-gutter-width;
+
+      @media screen and (max-width: @screen-sm-max) {
+        margin-right: @grid-gutter-width*2;
+        width: auto;
+      }
+    }
+    .carousel-control {
+      z-index: 999;
+      background: none;
+      width: 38px;
+      height: 38px;
+      text-align: center;
+      line-height: 1;
+      color: @gray;
+      top: -@grid-gutter-width*2;
+      right: 0;
+      left: auto;
+      border: 2px solid @t3-border-color;
+      padding: 8px;
+
+      &.left {
+        right: 36px;
+      }
+      &.right {}
+    }
+
+    .carousel-inner {
+      .item {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+    .team-list-items {
+      .member-item {
+        .member-image {
+          img {
+            width: 100%;
+          }
+        }
+        h4 {
+          font-size: @font-size-h5;
+          small {
+            font-weight: 400;
+          }
+        }
+        .member-desc {
+          padding-bottom: @t3-global-padding;
+          border-bottom: 1px solid @t3-border-color;
+        }
+        .social-links{
+          .clearfix();
+          margin: @t3-global-margin 0;
+          padding: 0;
+          width: 0%;
+          .transition(all .35s ease-in 0.1s);
+          height: 40px;
+          overflow:hidden;
+          float: left;
+
+          // Mobile view
+          @media screen and (max-width: @screen-xs-max) {
+            float: none;
+            width: 100%;
+          }
+
+          li {
+            display: inline-block;
+            a {
+              width: 40px;
+              height: 40px;
+              background: @gray-lighter;
+              color: @gray;
+              line-height: 40px;
+              text-align: center;
+              border-radius: 50%;
+              display:  block;
+              background: @white;
+              .transition(all .2s linear);
+
+              &:hover {
+                background: @gray-darker;
+                color: @white;
+              }
+            }
+          }
+        }
+        
+
+        .view-social-btn {
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          display: block;
+          position: absolute;
+          border: 1px solid @t3-border-color;
+          line-height: 1;
+          padding: 10px;
+          background: @white;
+          text-align: center;
+          color: @gray;
+          .transition(all .25s ease-in .1s);
+          left: @t3-global-margin;
+          bottom: @t3-global-margin;
+
+          // Mobile view
+          @media screen and (max-width: @screen-xs-max) {
+            display: none;
+          }
+        }
+
+        &:hover {
+          .social-links {
+            width: 100%;
+          }
+
+          .view-social-btn {
+            left: 100%;
+            margin-left: -@t3-global-margin*2.15;
+          }
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,274 @@
+/*
+ * @version		$Id: allvideoshare.css 2.3.0 2014-06-21 $
+ * @package		Joomla
+ * @copyright   Copyright (C) 2012-2014 MrVinoth
+ * @license     GNU/GPL http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/***General[start]********************************************************/
+.icon-48-allvideoshare {
+	background:url(../assets/logo.png) no-repeat 0 50%;
+}
+.icon-32-preview {
+	background-image:url(../assets/icon-32-preview.png) !important;
+}
+.pagetitle {
+	margin-left:15px !important;
+	padding-left:55px !important;
+	padding-top:5px !important;
+}
+.pagetitle h2 {
+	font-size:1.8em !important;
+	text-shadow:1px 1px 1px #fff;
+}
+#avs {
+	margin:0px;
+	padding:10px;
+	background-color:#FFF;
+	color:#454545 !important;
+	font-size:12px;
+	line-height:18px;
+}
+#avs h2 {
+	font-size:12px;
+	font-weight:bold;
+	font-style:italic;
+	margin:5px 0px;
+}
+#avs table {
+	width:100%;
+}
+#avs input, #avs select, #avs textarea {
+	border:1px solid #CCC;
+	margin:2px;
+	padding:5px;
+	font-family:inherit;
+	font-size:12px;
+	vertical-align:middle;
+}
+#avs input[type="file"] {
+	padding:2px;
+	border:0px;
+	background-color:#FFFFDD;
+}
+#avs input[type="button"] {
+	cursor:pointer;
+}
+#avs input[type="button"]:hover {
+	border:1px solid #999;
+}
+#avs input[type="checkbox"], #avs input[type="radio"] {
+	width:auto !important;
+	padding:0px;
+	vertical-align:middle;
+}
+#avs input[type="checkbox"] {
+	margin:3px 3px 3px 4px;
+}
+#avs input.disabled {
+	display:block;
+	background-color:#FCFCFC;
+	margin-bottom:5px;
+}
+#avs select {
+	max-width:225px;
+}
+#avs select.multiple {
+	min-height:150px;
+	font-style:italic;
+}
+#avs button {
+	margin:0px;
+	padding:5px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	border:1px solid #CCC;
+	font-size:11px;
+}
+#avs .ctr {
+	text-align:center;
+}
+#avs .left {
+	float:left;
+}
+#avs .padlft {
+	text-align:left;
+	padding-left:10px;
+}
+#avs .right {
+	float:right;
+}
+#avs .clear {
+	clear:both;
+}
+#avs .spacer {
+	height:10px;
+}
+#avs .icon {
+	float:left;
+	margin:0px 9px 5px 0px;
+	background-color:#fff;
+	text-align:center;
+}
+#avs .icon a {
+	display:block;
+	height:81px;
+	width:86px;
+	float:left;
+	border:1px solid #e7e7e7;
+	text-decoration:none;
+	vertical-align:middle;
+}
+#avs .icon a:hover {
+	background:#f9f9f9;
+	border-top:1px solid #eee;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	border-left:1px solid #eee;
+	color:#0B55C4;
+	text-decoration:none;
+}
+#avs .icon img {
+	padding:10px 0;
+	margin:0 auto;
+}
+#avs .icon span {
+	display:block;
+	text-align:center;
+}
+#avs .noitem {
+	display:block;
+	padding:5px;
+	color:#999;
+	text-align:center;
+}
+#avs .mandatory {
+	color:#FF9900 !important;
+	font-weight:bold;
+	padding-left:5px;
+}
+#avs .invalid {
+	border-color:#FF0000 !important;
+	color:inherit !important;
+	font-weight:normal !important;
+}
+#avs label.invalid, #avs label.invalid a {
+	border:none !important;
+	color:#FF0000 !important;
+}
+#avs .toggle-editor {
+	display:none;
+}
+#avs span.preloader {
+	display:inline-block;
+	width:24px;
+	height:24px;
+	margin:2px;
+	vertical-align:middle;
+	background:url(../assets/loading.gif) no-repeat left center;
+}
+/***General[end]**********************************************************/
+
+
+/***Adminfilter[start]****************************************************/
+/***Adminfilter[end]******************************************************/
+
+/***Adminlist[start]******************************************************/
+#avs table.adminlist {
+	border-collapse:collapse;
+}
+#avs form table.adminlist {
+	border-collapse:separate;
+}
+#avs table.adminlist th a.saveorder {
+	display:inline-block;
+	float:none;
+	margin-right:auto;
+	vertical-align:top;
+}
+#avs table.adminlist tbody tr td {
+	height:25px;
+	border:1px solid #DFDFDF;
+}
+#avs table.adminlist .left {
+	float:none;
+	padding-left:10px;
+	text-align:left;
+}
+#avs table.adminlist .pagination {
+	padding:3px;
+}
+#avs table.adminlist .pagination div.limit select#limit {
+	margin-top:-1px;
+	font-size:inherit;
+}
+/***Adminlist[end]********************************************************/
+
+/***Adminform[start]******************************************************/
+/***Adminform[end]********************************************************/
+
+/***Admintable[start]*****************************************************/
+#avs table.admintable td.avskey {
+	width:120px;
+	padding:5px 10px 5px 0px;
+	background-color:#F4F4F4;
+	border:1px solid #E7E7E7;
+	text-align:right;
+	font-size:12px;
+	font-style:italic;
+	font-weight:normal;
+	line-height:18px;
+}
+#avs div.current table.admintable input, #avs div.current table.admintable textarea, #avs div.current table.admintable select {
+	float:none;
+}
+#avs div.current table.admintable select {
+	margin-bottom:auto;
+}
+#avs table.admintable tr td label {
+	margin:2px;
+	font-size:12px;
+	font-style:italic;
+	vertical-align:middle;
+}
+/***Admintable[end]*******************************************************/
+
+/***Tabs[start]***********************************************************/
+#avs dl.tabs {
+	float:left;
+	margin:0px 0px -1px 0px;
+	z-index:50;
+}
+#avs dl.tabs dt {
+	float:left;
+	margin-left:3px;
+	padding:6px 15px;
+	background:#f0f0f0;
+	border:1px solid #CCC;
+	border-bottom:1px solid #f0f0f0;
+	color:#666;
+}
+#avs dl.tabs dt.open {
+	background:#FFFFFF;
+	border:1px solid #CCC;
+	border-bottom:1px solid #FFF;
+	z-index:100;
+	color:#000;
+}
+#avs div.current {
+	clear:both;
+	padding:10px 10px;
+	background-color:#fff;
+	border:1px solid #CCC;
+}
+#avs div.current dd {
+	margin:0;
+	padding:0;
+}
+#avs form#adminForm div.current {
+	border-right:none !important;
+	border-left:none !important;
+	border-bottom:none !important;
+	padding:10px 0px !important;
+}
+/***Tabs[end]*************************************************************/

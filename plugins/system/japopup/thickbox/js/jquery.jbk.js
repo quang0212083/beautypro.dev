@@ -1,0 +1,1 @@
+window.jbkQuery = window.jQuery;

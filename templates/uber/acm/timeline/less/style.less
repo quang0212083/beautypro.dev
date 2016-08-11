@@ -1,0 +1,142 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+.section-inner {
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.acm-timeline {
+	position: relative;
+	margin-top: @grid-gutter-width;
+
+	.timeline-list {
+		margin: 0 auto;
+	  position: relative;
+
+	  @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
+	  	padding: 0 @t3-global-padding;
+	  }
+  }
+	.item-row {
+		.clearfix();
+  	padding-left: 50%;
+	  margin-bottom: @grid-gutter-width*1.5;
+
+	  .timeline-item {
+	  	margin-left: 60px;
+	  	.item-content {
+	  		position: relative;
+		  	background: @gray-lightest;
+		  	padding: @t3-global-padding;
+
+		  	&:before {
+		  		border-top: 10px solid transparent;
+		  		border-bottom: 10px solid transparent;
+		  		border-right: 10px solid @gray-lightest;
+		  		content: "";
+		  		right: 100%;
+		  		top: 15px;
+		  		position: absolute;
+
+		  		@media screen and (max-width: @screen-xs-max) {
+		  			border-right: 10px solid @gray-lightest !important;
+		  			border-left: 0 !important;
+		  			right: 100% !important;
+		  			left: auto !important;
+		  		}
+		  	}
+	  	}
+
+	  	.item-title {
+	  		margin-top: 0;
+	  	}
+
+	  	.item-icon {
+	  		position: absolute;
+	  		left: 50%;
+	  		width: 50px;
+	  		height: 50px;
+	  		background: @gray-lightest;
+	  		margin-left: -25px;
+	  		border-radius: 50%;
+	  		text-align: center;
+	  		padding: 10px;
+
+	  		@media screen and (max-width: @screen-xs-max) {
+	  			left: 0;
+	  			margin-left: 20px;
+	  			margin-top: 40px;
+	  		}
+	  	}
+
+	  	.item-date {
+  		  position: absolute;
+			  left: 0;
+			  right: 50%;
+			  text-align: right;
+			  padding: 10px 50px 10px 0;
+			  font-size: @font-size-h4;
+			  line-height: 1;
+			  
+			  @media screen and (max-width: @screen-xs-max) {
+			  	position: relative !important;
+			  	text-align: left !important;
+			  	right: 0 !important;
+			  	left: 0 !important; 
+			  	padding: 10px !important;
+			  }
+
+	  	}
+	  }
+	}
+ &:before {
+  	width: 3px;
+  	height: 100%;
+  	position: absolute;
+  	left: 50%;
+  	top: 0;
+  	bottom: 0;
+  	content: "";
+  	background: @gray-lightest;
+  	@media screen and (max-width: @screen-xs-max) { 
+  		left: 44px;
+  	}
+  }
+
+  .item-icon {
+		position: absolute;
+		left: 50%;
+		width: 50px;
+		height: 50px;
+		background: @gray-lightest;
+		margin-left: -25px;
+		border-radius: 50%;
+		text-align: center;
+		padding: 10px;
+
+	}
+
+	.item-date {
+	  position: absolute;
+	  left: 0;
+	  right: 50%;
+	  text-align: right;
+	  padding: 10px 50px 10px 0;
+	  font-size: @font-size-h4;
+	  line-height: 1;
+	}
+}
+
+
+// Import Style Less
+// --------------------------
+@import "style-1.less"; // Import file style-1.less
+@import "style-2.less"; 

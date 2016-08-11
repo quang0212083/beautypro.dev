@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Cta Style 3</title>
+	<sampledata><![CDATA[
+        {":type":"uber:cta","cta":{"jatools-layout-cta":"style-3","cta[block-intro]":["Diverse and talented workforce has helped to grow our capabilities and uphold our brand values. They solve the most complex problems with a forward-thinking power. "],"cta[block-extra-class]":[" bg-image no-padding"],"cta[text-align]":["col-md-6 text-left"],"cta[style]":["light"],"cta[img]":["images/joomlart/corporate/demo-5.jpg"],"cta[data]":{"cta[data][button]":["More About Our Value"],"cta[data][link]":["#"],"cta[data][button_class]":["btn btn-border"],"rows":1,"cols":4,"type":"list"}}}
+    ]]></sampledata>
+	<fields name="cta">
+         <fieldset name="basic" label="CTA_BASIC_LABEL" description="CTA_BASIC_DESC" multiple="0">
+         		<field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+         		<field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+         		
+						<field name="text-align" type="list" default="col-md-6 text-left"
+									 global="1"
+									 label="CTA_TEXT_ALIGN_LABEL"
+									 description="CTA_TEXT_ALIGN_DESC">
+							<option value="col-md-6 text-left">Left</option>
+							<option value="col-md-6 text-right">Right</option>
+							<option value="col-md-12 text-center">Center</option>
+						</field>
+						
+						<field name="style" type="list" default="light"
+									 global="1"
+									 label="CTA_STYLE_LABEL"
+									 description="CTA_STYLE_DESC">
+							<option value="light">Light</option>
+							<option value="dark">Dark</option>
+						</field>
+						
+            <field name="img" type="media" default="" label="CTA_IMG_LABEL" description="CTA_IMG_DESC" />
+
+        </fieldset>
+    
+        <fieldset name="button" label="CTA_BUTTON_SETTING_LABEL" description="CTA_BUTTON_SETTING_DESC" >
+        	<field name="data" type="jalist">
+            <item name="button" type="text" default="" label="CTA_BUTTON_LABEL" description="CTA_BUTTON_DESC" required="1" />
+            <item name="link" type="text" default="" label="CTA_LINK_LABEL" description="CTA_LINK_DESC" required="1" />
+            <item name="button_class" type="text" default="" label="CTA_BUTTON_CLASS_LABEL" description="CTA_BUTTON_CLASS_DESC" />
+          </field>
+        </fieldset>   
+         
+  </fields>
+</form>

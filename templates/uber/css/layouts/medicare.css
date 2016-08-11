@@ -1,0 +1,160 @@
+.medicare .item .article-title,
+.medicare .item .article-aside {
+  margin-bottom: 0;
+}
+.medicare .t3-sidebar .t3-module {
+  padding-left: 0;
+  padding-right: 0;
+}
+.medicare .t3-sidebar .t3-module:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+@media screen and (max-width: 767px) {
+  .medicare .t3-sidebar .acm-accordion {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .medicare .acm-slideshow .style-3 {
+    margin-bottom: 80px;
+  }
+}
+.medicare article {
+  margin-top: 0;
+}
+.medicare article .item-image img {
+  margin-top: 0;
+  width: 100%;
+  height: auto;
+}
+.medicare article .article-title {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.medicare .item article .article-header .article-title {
+  font-size: 16px;
+}
+.medicare .item-page article {
+  border: 0;
+}
+.medicare .item-page article .article-title {
+  font-size: 24px;
+  color: #27292e;
+}
+.medicare .item-page article h2 {
+  font-size: 24px;
+}
+.medicare .item-page article h3 {
+  font-size: 16px;
+}
+.medicare .item-page article h1 {
+  font-size: 32px;
+}
+.medicare .blog .blog-item {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.medicare .blog .items-row {
+  margin-bottom: 40px;
+}
+.medicare .blog .items-row .item article aside .btn-group {
+  top: 0;
+  z-index: 2;
+}
+.medicare .blog .items-row .item article .article-aside {
+  margin: 13px 0;
+}
+.medicare .blog .pagination-wrap .counter {
+  margin-top: 0;
+}
+.medicare .blog .article-footer {
+  margin: 0;
+}
+.medicare article .content_rating img {
+  display: inline-block;
+}
+.medicare article .intro-image .item-image img {
+  margin-top: 0;
+}
+.medicare article .article-aside .aside-icon {
+  display: inline-block;
+  float: right;
+  margin-left: 5px;
+}
+.medicare article .article-aside .article-info {
+  position: relative;
+}
+.medicare article .article-aside .article-info dd {
+  padding: 5px 0;
+}
+.medicare article .article-aside .article-info .hits {
+  margin: 0;
+  min-width: 30px;
+  text-align: center;
+}
+.medicare .medicare-home-slideshow {
+  position: relative;
+  z-index: 100;
+}
+.medicare .t3-sidebar .t3-module {
+  background: none;
+  border: 0;
+}
+.medicare .section .section-inner.bg-primary .section-title {
+  color: #ffffff;
+}
+.medicare .section .section-inner.bg-primary .section-intro {
+  color: rgba(255, 255, 255, 0.8);
+}
+.medicare .section .section-inner.bg-primary .features-item {
+  color: #ffffff;
+  margin: 0 !important;
+  padding: 78px 26px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .medicare .section .section-inner.bg-primary .features-item {
+    height: 450px;
+  }
+}
+.medicare .section .section-inner.bg-primary .features-item h3 {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.medicare .section .section-inner.bg-primary .features-item .font-icon {
+  color: #ffffff;
+  font-size: 56px;
+}
+.medicare .section .section-inner.bg-primary .features-item:hover {
+  background: #0394db;
+}
+.medicare .acm-features.style-10 .features-item h3 {
+  font-size: 45px;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+}
+.medicare .acm-features.style-10 .features-item p {
+  font-size: 16px;
+}
+.medicare .acm-features.style-10 .features-item ul {
+  margin-left: 40px;
+}
+.medicare .acm-features.style-10 .features-item ul li {
+  margin: 8.66666667px 0;
+}
+.medicare .masthead .acm-hero {
+  padding: 80px 0;
+}
+.medicare .masthead .acm-hero .hero-heading {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.medicare .masthead .acm-hero .hero-intro {
+  margin: 0;
+}

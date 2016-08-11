@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="Videos Layout">
+    <message>Add Videos Layout</message>
+  </layout>
+  <state>
+    <name>Videos Layout</name>
+    <description>Add Videos Layout</description>
+    <url addpath="/administrator/components/com_hdwplayer/elements">
+      <param name="wid" type="video" default="0" label="Select a Video" description="Select a Video" />
+      <param name="orderby" type="list" default="default" label="Order BY" description="Order BY">
+        <option value="default">Default</option>
+        <option value="latest">Latest Videos</option>
+        <option value="popular">Popular Videos</option>
+        <option value="featured">Featured Videos</option>
+        <option value="random">Random Videos</option>
+      </param>
+    </url>
+    <params>
+      <param type="spacer" default="&lt;div style='font-family:Arial; font-size:11px; font-weight:bold; color:#555; padding:5px; background:#F0F0F0; border:1px solid #CCC;'&gt;HDW Player - Gallery Settings [optional]&lt;/div&gt;" />
+      <param name="no_of_rows" type="text" default="" label="No. of Rows" description="No. of Rows" />
+      <param name="no_of_cols" type="text" default="" label="No. of Cols" description="No. of Cols" />
+      <param name="thumb_width" type="text" default="" label="Thumbnail Width" description="Thumbnail Width" />
+      <param name="thumb_height" type="text" default="" label="Thumbnail Height" description="Thumbnail Height" />
+      <param name="show_relatedvideos" type="list" default="" label="Show Related Videos" description="Show or Hide Related Videos">
+	    <option value="">Global</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </param>
+      <param type="spacer" default="&lt;div style='font-family:Arial; font-size:11px; font-weight:bold; color:#555; padding:5px; background:#F0F0F0; border:1px solid #CCC;'&gt;HDW Player - Player Settings [optional]&lt;/div&gt;" />
+      <param name="player_width" type="text" default="" label="Player Width" description="Player Width" />
+      <param name="player_height" type="text" default="" label="Player Height" description="Player Height" />
+      <param name="show_title" type="list" default="" label="Show Video Title" description="Show Video Title above the Player">
+	    <option value="">Global</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </param>
+      <param name="show_description" type="list" default="" label="Show Video Description" description="Show Video Description below the Player">
+	    <option value="">Global</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </param>
+      <param name="player_autostart" type="list" default="" label="Autoplay" description="Start Playing the Video automatically on Page Load.">
+        <option value="">Global</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </param>
+      <param name="player_playlist_autostart" type="list" default="" label="PlayList Autostart" description="Option to start the Next Video automatically at the end of the Current Playing Video from the Playlist.">
+        <option value="">Global</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </param>
+      <param name="player_playlist_random" type="list" default="0" label="PlayList Random" description="Play the videos in random from the playlist.">
+        <option value="0">No</option>
+      </param>
+    </params>
+    <fields name="request">
+      <fieldset name="request">
+        <field name="wid" type="sql" default="0" label="Select a Video" description="Select a Video"  
+			query="select id, title from #__hdwplayer_videos where published=1 order by title ASC" key_field="id" value_field="title" >
+          <option value="0">Display All Videos</option>
+        </field>
+        <field name="orderby" type="list" default="default" label="Order BY" description="Order BY">
+          <option value="default">Default</option>
+          <option value="latest">Latest Videos</option>
+          <option value="popular">Popular Videos</option>
+          <option value="featured">Featured Videos</option>
+          <option value="random">Random Videos</option>
+        </field>
+      </fieldset>
+    </fields>
+    <fields name="params">
+      <fieldset name="basic" label="HDW Player - Gallery and Player Settings [optional]">
+        <field name="no_of_rows" type="text" default="" label="No. of Rows" description="No. of Rows" />
+        <field name="no_of_cols" type="text" default="" label="No. of Cols" description="No. of Cols" />
+        <field name="thumb_width" type="text" default="" label="Thumbnail Width" description="Thumbnail Width" />
+        <field name="thumb_height" type="text" default="" label="Thumbnail Height" description="Thumbnail Height" />
+        <field name="show_relatedvideos" type="list" default="" label="Show Related Videos" description="Show or Hide Related Videos">
+		  <option value="">Global</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </field>
+        <field name="player_width" type="text" default="" label="Player Width" description="Player Width" />
+        <field name="player_height" type="text" default="" label="Player Height" description="Player Height" />
+        <field name="show_title" type="list" default="" label="Show Video Title" description="Show Video Title above the Player">
+		  <option value="">Global</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </field>
+        <field name="show_description" type="list" default="" label="Show Video Description" description="Show Video Description below the Player">
+		  <option value="">Global</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </field>
+        <field name="player_autostart" type="list" default="" label="Autoplay" description="Start Playing the Video automatically on Page Load.">
+          <option value="">Global</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </field>
+        <field name="player_playlist_autostart" type="list" default="" label="PlayList Autostart" description="Option to start the Next Video automatically at the end of the Current Playing Video from the Playlist.">
+          <option value="">Global</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </field>
+        <field name="player_playlist_random" type="list" default="0" label="PlayList Random" description="Play the videos in random from the playlist.">
+          <option value="0">No</option>
+        </field>
+      </fieldset>
+    </fields>
+  </state>
+</metadata>

@@ -1,0 +1,61 @@
+.section-inner {
+  background-size: cover;
+  background-position: center center;
+}
+.section-inner .section-title {
+  text-align: center;
+}
+.acm-accordion .panel {
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.acm-accordion .panel .panel-body {
+  border: 1px solid #dadedf;
+}
+@media screen and (max-width: 1199px) {
+  .acm-accordion .panel .panel-body {
+    padding: 26px;
+  }
+}
+.acm-accordion .panel .panel-heading {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+.acm-accordion .panel .panel-heading a {
+  display: block;
+  padding: 8.66666667px 13px;
+  font-weight: bold;
+  background: none;
+  color: #27292e;
+  border: 1px solid #dadedf;
+  font-size: 14px;
+}
+.acm-accordion .panel .panel-heading a .fa {
+  font-size: 8px;
+  border: 1px solid;
+  border-radius: 2px;
+  padding: 2px;
+}
+.acm-accordion .panel .panel-heading a:hover,
+.acm-accordion .panel .panel-heading a:focus {
+  color: #039be5;
+}
+.acm-accordion .panel .panel-heading a .heading-icon .fa-plus {
+  display: none;
+}
+.acm-accordion .panel .panel-heading a.active {
+  color: #ffffff;
+  background: #039be5;
+  border-color: #039be5;
+}
+.acm-accordion .panel .panel-heading a.active .fa-plus {
+  display: inline;
+}
+.acm-accordion .panel .panel-heading a.active .fa-minus {
+  display: none;
+}
+.acm-accordion .panel .media-object {
+  margin-right: 13px;
+}

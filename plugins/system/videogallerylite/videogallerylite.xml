@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" version="2.5" method="upgrade">
+<name>PLG_VIDEOGALLERYLITE</name>
+ <author>Huge-IT</author>
+ <creationDate>January 2015</creationDate>
+ <packagename>videogallerylite</packagename>
+ <version>1.0.8</version>
+ <packager>Huge-IT</packager>
+ <copyright>Copyright (C) 2013 Huge-IT.com 2013. All rights reserved.</copyright> 
+<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+<authorEmail>info@huge-it.com</authorEmail> 
+<authorUrl>http://www.huge-it.com</authorUrl>
+   <files>
+        <filename plugin="videogallerylite">videogallerylite.php</filename>
+        <filename plugin="videogallerylite">index.html</filename>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_system_videogallerylite.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_videogallerylite.sys.ini</language>
+    </languages>
+</extension>

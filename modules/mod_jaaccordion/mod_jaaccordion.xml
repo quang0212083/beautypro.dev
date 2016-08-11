@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>JA Accordion</name>
+	<author>joomlart.com</author>
+	<creationDate>03 April 2015</creationDate>
+	<copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights
+		Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>www.joomlart.com</authorUrl>
+	<version>2.5.9</version>
+	<description>
+<![CDATA[
+	 	<span style="color: #008000;"><strong>JA Accordion Module for Joomla! 2.5 & 3</strong></span><br />
+		<div style='font-weight:normal'>
+	 	This module displays selected contents with accordion effect. It supports Joomla! com_content articles / categories and Modules.
+	 	<p style="clear:both"><span style="color: #ff6600;"><strong>Features:</strong></span></p>
+		 <ul>
+		   	<li>Choose specific articles by ID or specific categories.</li>
+		   	<li>Display multiple modules published to an specific module position.</li>	
+			<li>Easy to set number of items, transition effect, duration and width of module.</li>
+		 </ul>	
+		<p><strong><span style="color: #ff0000;">Upgrade Methods:</span><br /></strong></p>
+		<ol><li>You can install new version directly over this version. Uninstallation is not required. Backup any customized files before upgrading. OR</li><li>Use <strong><a href="http://extensions.joomla.org/extensions/core-enhancements/installers/12077" target="_blank">JA Extensions Manager</a></strong> Component for easy upgrades and rollbacks. <strong><a href="http://www.youtube.com/user/JoomlArt#p/c/BC9B0C0BFE98657E/2/mNAuJRmifG8" target="_blank">Watch Video..</a></strong></li></ol>
+		<p><span style="color: #008000;"><strong>Links:</strong></span></p>
+	     <ul>
+			<li><a target="_blank" href="http://www.joomlart.com/forums/showthread.php?65464">JA Accordion Userguide</a></li>
+			<li><a target="_blank" href="http://pm.joomlart.com/browse/JAECMODEACCORDIONJ17">Report Bug</a></li>
+			<li><a target="_blank" href="http://update.joomlart.com/">Updates &amp; Versions</a></li>
+		 </ul>
+		<p>Copyright 2004 - 2014 <a href="http://www.joomlart.com/" title="Visit Joomlart.com!">JoomlArt.com</a>.</p>
+		</div>
+	 ]]>
+	</description>
+	<languages>
+		<language tag="en-GB">en-GB.mod_jaaccordion.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_jaaccordion">mod_jaaccordion.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>helpers</folder>
+		<folder>assets</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_jaaccordion/assets/elements">
+				
+				<field type="spacer" hr="false" default="" label="CONTENT_SETTINGS"
+					description="CONTENT_SETTINGS_DESC" />
+
+				<field name="type" 
+					type="list" 
+					default="articlesIDs" 
+					label="TYPE_ACCORDION"
+					description="TYPE_ACCORDION_DESC">
+					<option value="modules">MODULES</option>
+					<option value="module">MODULE</option>
+					<option value="articlesIDs">ARTICLES-ID</option>
+					<option value="categoryIDs">ARTICLES-CATEGORYID</option>
+				</field>
+				<field name="modules-position" 
+					type="position" 
+					default=""
+					label="SELECT_A_POSITION" 
+					description="SELECT_A_POSITION_DESC" />
+				<field name="module-ids" 
+					type="modules" 
+					default=""
+					label="LIST_MODULE" 
+					description="LIST_MODULE_DESC" />
+				<field name="artIDs" type="text" default="1, 2, 3, 4" label="ARTICLEID_LIST"
+					description="ARTICLEID_LIST_DESC" />
+				<field name="catids" 
+					type="category" 
+					extension="com_content"
+					class="mselect" 
+					multiple="true" 
+					size="10" 
+					default="" 
+					label="JCATEGORY" 
+					description="CATEGORY_DESC">
+					<option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>
+				<field name="show_featured" 
+					type="list" 
+					default=""
+					label="FEATURED_LABEL" 
+					description="FEATURED_DESC">
+					<option value="">JSHOW</option>
+					<option value="0">JHIDE</option>
+					<option value="1">ONLY_SHOW_FEATURED</option>
+				</field>
+				<field name="view" 
+					type="radio" 
+					default="introtext" 
+					label="VIEW"
+					description="VIEW_DESC">
+					<option value="introtext">INTROTEXT</option>
+					<option value="fulltext">FULLTEXT</option>
+				</field>
+				<field name="ordering" 
+					type="list" 
+					default="published"
+					label="FIELD_ORDERING_LABEL" 
+					description="FIELD_ORDERING_DESC">
+					<option value="c_dsc">VALUE_RECENT_ADDED</option>
+					<option value="m_dsc">VALUE_RECENT_MODIFIED</option>
+					<option value="p_dsc">VALUE_RECENT_PUBLISHED</option>
+					<option value="mc_dsc">VALUE_RECENT_TOUCHED</option>
+					<option value="title">VALUE_ARTICLE_TITLE</option>
+				</field>
+				<field name="direction" 
+					type="list" 
+					default="desc"
+					label="FIELD_ORDERING_DIRECTION_LABEL" 
+					description="FIELD_ORDERING_DIRECTION_DESC">
+					<option value="desc">ORDERING_DIRECTION_DESCENDING</option>
+					<option value="asc">ORDERING_DIRECTION_ASCENDING</option>
+				</field>
+				<field name="user_id" 
+					type="list" 
+					default="0" 
+					label="FIELD_USER_LABEL"
+					description="FIELD_USER_DESC">
+					<option value="0">VALUE_ANYONE</option>
+					<option value="by_me">VALUE_ADDED_BY_ME</option>
+					<option value="not_me">VALUE_NOTADDED_BY_ME</option>
+				</field>
+				
+				<field type="spacer" hr="false" default="" label="ADVANCED_SETTINGS"
+					description="ADVANCED_SETTINGS_DESC" />
+
+				<field name="Width" 
+					type="text" 
+					default=""
+					size="5" 
+					class="validate-numeric"
+					label="WIDTH" description="WIDTH_DESC" />
+				<field name="count" 
+					type="text" 
+					default="5" 
+					size="5" 
+					class="validate-numeric"
+					label="COUNT_ITEM" 
+					description="COUNT_ITEM_DESC" />
+				<field name="mouseType" type="radio" default="click" label="EVENT_TYPE"
+					description="EVENT_TYPE_DESC">
+					<option value="click">CLICK</option>
+					<option value="mouseover">MOUSEOVER</option>
+				</field>
+				<field name="duration" 
+					type="text" 
+					default="1000" 
+					size="5" 
+					class="validate-numeric"
+					label="DURATION" description="DURATION_DESC" />
+				<field 
+					name="effect" 
+					type="list" 
+					default="Fx.Transitions.Quad.easeInOut"
+					label="ANIMATION_TRANSITION" 
+					description="ANIMATION_TRANSITION_DESC">
+						<option value="Fx.Transitions.linear">linear</option>
+						<option value="Fx.Transitions.quartOut">QuartOut</option>
+						<option value="Fx.Transitions.Quad.easeIn">Quad.easeIn</option>
+						<option value="Fx.Transitions.Quad.easeOut">Quad.easeOut</option>
+						<option value="Fx.Transitions.Quad.easeInOut">Quad.easeInOut</option>
+						<option value="Fx.Transitions.Cubic.easeIn">Cubic.easeIn</option>
+						<option value="Fx.Transitions.Cubic.easeOut">Cubic.easeOut</option>
+						<option value="Fx.Transitions.Cubic.easeInOut">Cubic.easeInOut</option>
+						<option value="Fx.Transitions.Quart.easeIn">Quart.easeIn</option>
+						<option value="Fx.Transitions.Quart.easeOut">Quart.easeOut</option>
+						<option value="Fx.Transitions.Quart.easeInOut">Quart.easeInOut</option>
+						<option value="Fx.Transitions.Quint.easeIn">Quint.easeIn</option>
+						<option value="Fx.Transitions.Quint.easeOut">Quint.easeOut</option>
+						<option value="Fx.Transitions.Quint.easeInOut">Quint.easeInOut</option>
+						<option value="Fx.Transitions.Pow.easeIn">Pow.easeIn</option>
+						<option value="Fx.Transitions.Pow.easeOut">Pow.easeOut</option>
+						<option value="Fx.Transitions.Pow.easeInOut">Pow.easeInOut</option>
+						<option value="Fx.Transitions.Expo.easeIn">Expo.easeIn</option>
+						<option value="Fx.Transitions.Expo.easeOut">Expo.easeOut</option>
+						<option value="Fx.Transitions.Expo.easeInOut">Expo.easeInOut</option>
+						<option value="Fx.Transitions.Circ.easeIn">Circ.easeIn</option>
+						<option value="Fx.Transitions.Circ.easeOut">Circ.easeOut</option>
+						<option value="Fx.Transitions.Circ.easeInOut">Circ.easeInOut</option>
+						<option value="Fx.Transitions.Sine.easeIn">Sine.easeIn</option>
+						<option value="Fx.Transitions.Sine.easeOut">Sine.easeOut</option>
+						<option value="Fx.Transitions.Sine.easeInOut">Sine.easeInOut</option>
+						<option value="Fx.Transitions.Back.easeIn">Back.easeIn</option>
+						<option value="Fx.Transitions.Back.easeOut">Back.easeOut</option>
+						<option value="Fx.Transitions.Back.easeInOut">Back.easeInOut</option>
+						<option value="Fx.Transitions.Bounce.easeIn">Bounce.easeIn</option>
+						<option value="Fx.Transitions.Bounce.easeOut">Bounce.easeOut</option>
+						<option value="Fx.Transitions.Bounce.easeInOut">Bounce.easeInOut</option>
+						<option value="Fx.Transitions.Elastic.easeIn">Elastic.easeIn</option>
+						<option value="Fx.Transitions.Elastic.easeOut">Elastic.easeOut</option>
+						<option value="Fx.Transitions.Elastic.easeInOut">Elastic.easeInOut</option>
+				</field>	
+			</fieldset>
+				
+			<fieldset name="advanced">
+
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field type="japanel" path="modules/mod_jaaccordion/assets/elements/" />
+				<field name="group" type="japanel" function="depend" hidden="true">
+					<option for="type" value="modules" hideRow="true">modules-position</option>
+					<option for="type" value="module" hideRow="true">module-ids</option>
+					<option for="type" value="articlesIDs" hideRow="true">artIDs,view,ordering</option>
+					<option for="type" value="categoryIDs" hideRow="true">catids,view,show_featured,ordering,user_id</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

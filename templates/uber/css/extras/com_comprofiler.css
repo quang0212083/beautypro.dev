@@ -1,0 +1,99 @@
+.com_comprofiler #login-form .add-on {
+  background: #ffffff;
+  text-align: center;
+  width: 40px;
+  display: table-cell;
+  border-color: #dddddd;
+}
+.com_comprofiler #login-form .add-on:first-child {
+  border-right: 0;
+}
+.com_comprofiler #login-form .input-append,
+.com_comprofiler #login-form .input-prepend {
+  border-collapse: separate;
+  display: table;
+  position: relative;
+}
+.com_comprofiler #login-form input[type="text"],
+.com_comprofiler #login-form input[type="password"] {
+  float: left;
+  margin-bottom: 0;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  display: table-cell;
+}
+.com_comprofiler #login-form #modlgn-remember {
+  float: left;
+  height: 26px;
+  margin-right: 5px;
+  position: static;
+  width: auto;
+  margin-left: 0;
+  margin-top: 0;
+}
+.com_comprofiler #login-form #form-login-remember {
+  margin-bottom: 13px;
+}
+.com_comprofiler #login-form #form-login-remember label {
+  padding-left: 0;
+}
+.com_comprofiler .t3-content #form-login-links {
+  padding-left: 0;
+}
+.com_comprofiler .t3-content #form-login-links li {
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 13px;
+}
+.com_comprofiler .t3-content #login-form .control-group {
+  display: inline-block;
+  vertical-align: middle;
+}
+.com_comprofiler .t3-content #login-form .control-group#form-login-submit {
+  display: block;
+}
+.com_comprofiler .t3-content #login-form .control-group#form-login-remember {
+  vertical-align: top;
+  margin-top: 6.5px;
+}
+.com_comprofiler .cb_template .navbar-toggle {
+  height: auto;
+  width: auto;
+}
+.com_comprofiler .cbMenuNav.navbar-nav > .active > a,
+.com_comprofiler .cbTabsMenuNav.navbar-nav > .active > a,
+.com_comprofiler .cbMenuNav.navbar-nav > .active > a:hover,
+.com_comprofiler .cbTabsMenuNav.navbar-nav > .active > a:hover,
+.com_comprofiler .cbMenuNav.navbar-nav > .active > a:focus,
+.com_comprofiler .cbTabsMenuNav.navbar-nav > .active > a:focus {
+  font-weight: 300;
+}
+@media (max-width: 991px) {
+  .com_comprofiler .cbModerateBans .table-responsive {
+    table-layout: fixed;
+  }
+  .com_comprofiler .cbModerateBans .table-responsive tr td:nth-child(2),
+  .com_comprofiler .cbModerateBans .table-responsive tr td:nth-child(3),
+  .com_comprofiler .cbModerateBans .table-responsive tr td:nth-child(5),
+  .com_comprofiler .cbModerateBans .table-responsive tr td:nth-child(7),
+  .com_comprofiler .cbModerateBans .table-responsive tr th:nth-child(2),
+  .com_comprofiler .cbModerateBans .table-responsive tr th:nth-child(3),
+  .com_comprofiler .cbModerateBans .table-responsive tr th:nth-child(5),
+  .com_comprofiler .cbModerateBans .table-responsive tr th:nth-child(7) {
+    display: none;
+  }
+  .com_comprofiler .cbPendingApprovalUsers .table-responsive {
+    table-layout: fixed;
+  }
+  .com_comprofiler .cbPendingApprovalUsers .table-responsive tr td:nth-child(3),
+  .com_comprofiler .cbPendingApprovalUsers .table-responsive tr td:nth-child(4),
+  .com_comprofiler .cbPendingApprovalUsers .table-responsive tr th:nth-child(3),
+  .com_comprofiler .cbPendingApprovalUsers .table-responsive tr th:nth-child(4) {
+    display: none;
+  }
+  .com_comprofiler .cbPendingApprovalUsers .table-responsive tr td:nth-child(1),
+  .com_comprofiler .cbPendingApprovalUsers .table-responsive tr th:nth-child(1) {
+    width: 4% !important;
+  }
+}

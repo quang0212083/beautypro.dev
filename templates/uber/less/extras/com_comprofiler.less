@@ -1,0 +1,153 @@
+@import "../vars.less";
+
+// ---------------------------------------------------------
+// CB COMPATIBLITY
+// ---------------------------------------------------------
+
+.com_comprofiler {
+
+	// MODULES
+	// ---------------
+
+	// Login 
+	#login-form {
+		.add-on {
+	    background: @white;
+	    text-align: center;
+	    width: 40px;
+	    display: table-cell;
+	    border-color: @input-border;
+
+	    &:first-child {
+	    	border-right: 0;
+	    }
+		}
+
+		.input-append, .input-prepend {
+			border-collapse: separate;
+	    display: table;
+	    position: relative;
+		}
+
+		input[type="text"], 
+		input[type="password"] {
+	    float: left;
+	    margin-bottom: 0;
+	    position: relative;
+	    width: 100%;
+	    z-index: 2;
+	    display: table-cell;
+		}
+
+		#modlgn-remember {
+			float: left;
+			height: @line-height-computed ;
+			margin-right: 5px;
+			position: static;
+			width: auto;
+			margin-left: 0;
+			margin-top: 0;
+		}
+
+		#form-login-remember {
+			margin-bottom: @t3-global-margin/2;
+
+			label {
+				padding-left: 0;
+			}
+		}
+	}
+
+
+	// USER LOGIN PAGE
+	// ---------------
+	.t3-content {
+		#form-login-links {
+			padding-left: 0;
+
+			li {
+				display: inline-block;
+				margin-left: 0;
+				margin-right: @t3-global-margin/2;
+			}
+		}
+
+		#login-form .control-group {
+			display: inline-block;
+			vertical-align: middle;
+
+			&#form-login-submit {
+				display: block;
+			}
+
+			&#form-login-remember {
+				vertical-align: top;
+				margin-top: @t3-global-margin/4;
+			}
+		}
+	}
+
+
+	// USER PROFILE
+	// --------------
+
+	.cb_template .navbar-toggle {
+		height: auto;
+		width: auto;
+	}
+
+	.cbMenuNav,
+	.cbTabsMenuNav {
+		&.navbar-nav > .active > a, 
+		&.navbar-nav > .active > a:hover, 
+		&.navbar-nav > .active > a:focus {
+			font-weight: @font-weight-light;
+		}
+	}
+
+
+	// UNBAN PROFILE REQUESTS
+	// ----------------------
+	@media (max-width: @screen-sm-max) {
+		.cbModerateBans {
+			.table-responsive {
+				table-layout: fixed;
+
+				tr {
+					td:nth-child(2),
+					td:nth-child(3),
+					td:nth-child(5),
+					td:nth-child(7),
+					th:nth-child(2),
+					th:nth-child(3),
+					th:nth-child(5),
+					th:nth-child(7)  {
+						display: none;
+					}
+				}
+			}
+		}
+
+		.cbPendingApprovalUsers {
+			.table-responsive {
+				table-layout: fixed;
+
+				tr {
+					td:nth-child(3),
+					td:nth-child(4),
+					th:nth-child(3),
+					th:nth-child(4) {
+						display: none;
+					}
+				}
+
+				tr {
+					td:nth-child(1),
+					th:nth-child(1) {
+						width: 4%!important;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,221 @@
+.ja-slideshow {
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 767px) {
+  .ja-slideshow {
+    display: none;
+  }
+}
+.ja-ss-slideshow {
+  position: relative;
+  height: 309px;
+}
+.ja-ss-loading:before {
+  content: "";
+  display: block;
+  background: url("../images/slideloading.gif") transparent no-repeat center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+}
+.ja-ss-wrap {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.ja-ss-items {
+  width: 100%;
+}
+.ja-ss-item {
+  display: block;
+  float: left;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 100%;
+  max-height: 815px;
+  z-index: 1;
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.ja-ss-item.prev {
+  display: block;
+}
+.ja-ss-item.next {
+  display: block;
+}
+.ja-ss-item.curr {
+  z-index: 2;
+  
+}
+.ja-ss-item img {
+  background: #fff;
+  width: 100%;
+  max-width: 100%;
+}
+.ja-ss-mask {
+  background: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.ja-ss-desc {
+  color: #000;
+  left: 50%;
+  position: absolute;
+  top: 30%;
+  -webkit-box-sizing: border-box;
+  
+  -moz-box-sizing: border-box;
+  
+  box-sizing: border-box;
+  
+  margin-left: -400px;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  width: 800px;
+  z-index: 400;
+}
+.ja-ss-desc h3 {
+  color: #ffffff;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 64px;
+  font-weight: 300;
+  margin-bottom: 26px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .ja-ss-desc h3 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .ja-ss-desc {
+    top: 0%;
+    width: 500px;
+    left: 50%;
+    margin-left: -250px;
+  }
+}
+.ja-ss-desc h3 a {
+  color: inherit;
+  line-height: normal;
+  text-decoration: none;
+}
+.ja-ss-desc p {
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1.4;
+  margin: 0 0 26px;
+}
+.ja-ss-btns {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+}
+.ja-ss-btns span {
+  border: 2px solid transparent;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 36px;
+  float: left;
+  height: 48px;
+  line-height: 42px;
+  margin: 0 5px 0 0;
+  padding: 0;
+  text-align: center;
+  width: 48px;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.ja-ss-btns span:hover {
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+.ja-ss-btns .ja-ss-prev {
+  margin-left: 52px;
+}
+.ja-ss-btns .ja-ss-next {
+  float: right;
+  margin-right: 52px;
+}
+.ja-ss-btns .ja-ss-next:hover {
+  background-position: -40px bottom;
+}
+.ja-ss-btns .ja-ss-stop {
+  background-position: -80px 0;
+}
+.ja-ss-btns .ja-ss-stop:hover {
+  background-position: -80px bottom;
+}
+.ja-ss-btns .ja-ss-play {
+  background-position: -120px 0;
+}
+.ja-ss-btns .ja-ss-play:hover {
+  background-position: -120px bottom;
+}
+.ja-ss-btns .ja-ss-playback {
+  background-position: right 0;
+}
+.ja-ss-btns .ja-ss-playback:hover {
+  background-position: right bottom;
+}
+.ja-ss-thumbs-wrap {
+  bottom: 52px;
+  clear: both;
+  left: 50%;
+  margin-left: -150px;
+  position: absolute;
+  text-align: center;
+  width: 300px;
+  z-index: 100;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .ja-ss-thumbs-wrap {
+    bottom: 15px;
+  }
+}
+
+.ja-ss-thumbs {
+  margin: 0;
+  padding: 0;
+}
+.ja-ss-thumbs .ja-ss-thumb {
+  background: #ffffff;
+  border: 1px solid #999999;
+  border-radius: 50%;
+  display: inline-block;
+  height: 14px;
+  overflow: hidden;
+  margin: 0 2px;
+  text-align: center;
+  vertical-align: bottom;
+  cursor: pointer;
+  width: 14px;
+}
+.ja-ss-thumbs .ja-ss-thumb .number {
+  display: block;
+  height: 14px;
+  text-indent: -999em;
+  width: 14px;
+}
+.ja-ss-thumbs .ja-ss-thumb.active {
+  background: #039be5;
+  border-color: #039be5;
+}
+.ja-ss-thumbs .ja-ss-thumb.active img {
+  opacity: 1;
+}

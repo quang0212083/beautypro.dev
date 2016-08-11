@@ -1,0 +1,30 @@
+.ja-accordion ul.ja-accordion-containner {
+  margin: 0;
+  padding: 0;
+}
+.ja-accordion ul.ja-accordion-containner li {
+	list-style: none;
+}
+.ja-accordion ul.ja-accordion-containner li h3.ja-accordion-title {
+  cursor: pointer;
+  font-size: 110%;
+  border-bottom: 1px solid #ccc;
+  margin: 0;
+  padding: 10px 0;
+}
+.ja-accordion ul.ja-accordion-containner li h3.ja-accordion-title:hover {
+}
+.ja-accordion ul.ja-accordion-containner li h3.ja-accordion-title.active,
+.ja-accordion ul.ja-accordion-containner li:last-child h3.ja-accordion-title {
+	border-bottom: none;
+}
+.ja-accordion ul.ja-accordion-containner li div.ja-accordion-content {
+}
+.ja-accordion ul.ja-accordion-containner li div.ja-accordion-content h3 {
+}
+.ja-accordion ul.ja-accordion-containner li div.ja-accordion-content p {
+}
+.ja-accordion ul.ja-accordion-containner li div.ja-accordion-content ul {
+}
+.ja-accordion ul.ja-accordion-containner li div.ja-accordion-content ul li {
+}

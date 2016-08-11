@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.5" type="plugin" group="content" method="upgrade">
+    <name>plg_content_osyoutube</name>
+    <author>Alledia</author>
+    <creationDate>May 16 2016</creationDate>
+    <copyright>Copyright (C) 2016 Open Source Training, LLC</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>support@alledia.com</authorEmail>
+    <authorUrl>http://www.alledia.com</authorUrl>
+    <version>3.2.0</version>
+    <variant>FREE</variant>
+    <description>PLG_CONTENT_OSYOUTUBE_DESCRIPTION</description>
+
+    <scriptfile>script.installer.php</scriptfile>
+
+    <files>
+        <folder>language</folder>
+        <folder>library</folder>
+        <folder>views</folder>
+        <folder>form</folder>
+        <filename plugin="osyoutube">osyoutube.php</filename>
+        <filename>include.php</filename>
+        <filename>style.css</filename>
+    </files>
+
+    <media destination="plg_content_osyoutube" folder="media">
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>images</folder>
+        <folder>fonts</folder>
+    </media>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/plugins/content/osyoutube/form/fields">
+                <field
+                    name="width"
+                    type="text"
+                    default="425"
+                    label="PLG_CONTENT_OSYOUTUBE_FIELD_WIDTH_LABEL"
+                    description="PLG_CONTENT_OSYOUTUBE_FIELD_WIDTH_DESC"/>
+
+                <field
+                    name="height"
+                    type="text"
+                    default="344"
+                    label="PLG_CONTENT_OSYOUTUBE_FIELD_HEIGHT_LABEL"
+                    description="PLG_CONTENT_OSYOUTUBE_FIELD_HEIGHT_DESC"/>
+
+                <field
+                    name="responsive"
+                    type="radio"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                    label="PLG_CONTENT_OSYOUTUBE_FIELD_RESPONSIVE_LABEL"
+                    description="PLG_CONTENT_OSYOUTUBE_FIELD_RESPONSIVE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                    name="ignore_html_links"
+                    type="radio"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                    label="PLG_CONTENT_OSYOUTUBE_FIELD_IGNORE_HTML_LINKS_LABEL"
+                    description="PLG_CONTENT_OSYOUTUBE_FIELD_IGNORE_HTML_LINKS_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                    type="customfooter"
+                    name="customfooter"
+                    media="plg_content_osyoutube"
+                    showgoproad="1"
+                    jedurl="http://extensions.joomla.org/extensions/extension/social-web/social-media/osyoutube" />
+            </fieldset>
+        </fields>
+    </config>
+
+    <updateservers>
+        <server type="extension" priority="1" name="OSYouTube"><![CDATA[https://deploy.ostraining.com/client/update/free/stable/plg_content_osyoutube]]></server>
+    </updateservers>
+
+    <alledia>
+        <element publish="true">osyoutube</element>
+        <namespace>OSYouTube</namespace>
+        <license>free</license>
+        <targetplatform>3.*</targetplatform>
+        <relatedExtensions>
+            <extension
+                type="library"
+                element="allediaframework">AllediaFramework</extension>
+
+            <extension
+                type="plugin"
+                group="system"
+                element="ossystem"
+                publish="true"
+                ordering="first">OSSystem</extension>
+        </relatedExtensions>
+        <include>AllediaFreeDefaultFiles</include>
+    </alledia>
+</extension>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>Slideshow Style 3</title>
+  <sampledata><![CDATA[ 
+	{":type":"uber:slideshow","slideshow":{"jatools-layout-slideshow":"style-1","slideshow[block-intro]":[""],"slideshow[block-extra-class]":[" no-padding"],"slideshow[block-bg]":[""],"slideshow[img-bg]":["images/joomlart/uber/demo/demo-9.jpg"],"slideshow[enable-controls]":["0"],"slideshow[data]":{"slideshow[data][title]":["Different","Distinction","Focused","Experienced","Efficient"],"slideshow[data][description]":["We believe in focus. Our single most dedicated priority is to provide functional, aesthetic pleasing solution.","We service our clients in every industry, all over the world, thus give us chance to explore from distinct viewpoints. ","We believe in focus. Our single most dedicated priority is to provide functional, aesthetic pleasing solution.","For more than 10 years, we developed the right process, the right people and the right resources so that we deliver the best.","We invest heavily in developing knowledge across projects together with hard working, effective strategic tools. "],"rows":5,"cols":3,"type":"list"},"slideshow[data-s2]":{"slideshow[data-s2][img]":[""],"rows":1,"cols":2,"type":"list"}}}
+   ]]></sampledata>
+  <fields name="slideshow">
+  
+    <fieldset name="basic" label="SLIDESHOW2_BASIC_LABEL" description="SLIDESHOW2_BASIC_DESC" multiple="0"> 
+      <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+			<field name="item-height" type="text" default="" label="ITEM_HEIGHT_LABEL" description="ITEM_HEIGHT_DESC" />
+			<field name="enable-controls" type="radio" default="0" label="SLIDESHOW2_CONTROLS_LABEL" description="SLIDESHOW2_CONTROLS_DESC" >
+				<option value="0" class="off">JNO</option>
+				<option value="1" class="on">JYES</option>
+      </field>
+      <field name="enable-fade-effect" type="radio" default="0" label="SLIDESHOW_FADE_EFFECT_LABEL" description="SLIDESHOW_FADE_EFFECT_DESC" >
+				<option value="0" class="off">JNO</option>
+				<option value="1" class="on">JYES</option>
+      </field>
+
+      <field name="enable-auto-play" type="radio" default="false" label="SLIDESHOW_AUTOPLAY_LABEL" description="SLIDESHOW_AUTOPLAY_DESC" >
+				<option value="false" class="off">JNO</option>
+				<option value="5000" class="on">JYES</option>
+      </field>
+				
+    </fieldset>
+		
+		<fieldset name="basic2" label="SLIDESHOW2_BASIC_2_LABEL" description="SLIDESHOW2_BASIC_2_DESC">
+			<field name="data" type="jalist">
+				<item name="title" type="text" description="SLIDESHOW2_TITLE_DES" label="SLIDESHOW2_TITLE" default="" size="40"/>
+				<item name="description" type="textarea" description="SLIDESHOW2_DESCRIPTIONS_DES" label="SLIDESHOW2_DESCRIPTIONS_TITLE" default="" cols="40" rows="5"/>
+				<item name="itembg" type="media" description="SLIDESHOW_ITEM_BG_LABEL" label="SLIDESHOW_ITEM_BG_DESC" default=""/>
+				<item name="btn" type="text" description="SLIDE_BTN_DESC" label="SLIDE_BTN_NAME" default=""/>
+				<item name="btn-url" type="text" description="SLIDE_BTNURL_DESC" label="SLIDE_BTNURL_NAME" default=""/>
+				<item name="btn-class" type="text" description="SLIDE_BTNCLASS_DESC" label="SLIDE_BTNCLASS_NAME" default=""/>
+			</field>
+			
+			
+		</fieldset>
+  </fields>
+</form>

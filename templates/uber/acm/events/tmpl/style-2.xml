@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Events Style 2</title>
+
+  <sampledata><![CDATA[
+		{":type":"uber:events","events":{"jatools-layout-events":"style-2","events[block-intro]":[""],"events[block-extra-class]":[" bg-image"],"events[block-bg]":["images/joomlart/gym/bg-event.jpg"],"events[full-width]":["0"],"events[event-style]":["style-light"],"events[data]":{"events[data][event-date]":["19","20","21","22","23","24"],"events[data][event-month]":["Nov","Nov","Nov","Nov","Nov","Nov"],"events[data][event-year]":["2014","2014","2014","2014","2014","2014"],"events[data][event-time]":["","","","","",""],"events[data][event-title]":["Train with a pro","Strong man event","Gym Climbers","Life-time fitness","Obstacle Course race","Fitness Journey"],"events[data][event-description]":["Come and try one of our special offer. Tailored with top tips from the best.","The most recognizable and widely watched competition. Annually since 1980. ","Wish to break the world speed climbing? Chance to win gold in the event. ","The endurance obstacle course races - running event. Join the fun!","An extreme obstacle course event. Grab the shoes and take part in. ","Major obstacle race to fundraise for charity. A great contribution to the community."],"events[data][event-link]":["#","#","#","#","#","#"],"rows":6,"cols":8,"type":"list"}}}
+  ]]></sampledata>
+    
+	<fields name="events">
+		<fieldset name="col" label="EVENT_COL_LABEL" description="EVENT_COL_DESC" >
+      <field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+      <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+      <field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+      
+      <field name="event-style" type="list" default="style-dark"
+          global="1"
+          label="EVENT_STYLE_LABEL"
+          description="EVENT_STYLE_DESC">
+        <option value="style-dark">LAYOUT_EVENT_DARK</option>
+        <option value="style-light">LAYOUT_EVENT_LIGHT</option>
+      </field>
+
+		</fieldset>
+		
+		<fieldset name="event_info" label="EVENT_INFO_LABEL" description="EVENT_INFO_DESC">
+			<field name="data" type="jalist">
+        <item name="event-date" type="text" size="10" default="" label="EVENT_DATE_LABEL" description="EVENT_DATE_DESC" required="1" />
+        <item name="event-month" type="text" size="10" default="" label="EVENT_MONTH_LABEL" description="EVENT_MONTH_DESC" required="1" />
+        <item name="event-year" type="text" size="10" default="" label="EVENT_YEAR_LABEL" description="EVENT_YEAR_DESC" required="1" />
+        <item name="event-time" type="text" size="10" default="" label="EVENT_TIME_LABEL" description="EVENT_TIME_DESC" />
+        <item name="event-title" type="text" size="40" default="" label="EVENT_TITLE_LABEL" description="EVENT_TITLE_DESC" required="1" />
+        <item name="event-description" type="text" size="40" default="" label="EVENT_DESCRIPTION_LABEL" description="EVENT_DESCRIPTION_DESC" />
+        <item name="event-link" type="text" size="20" default="" label="EVENT_LINK_LABEL" description="EVENT_LINK_DESC" />
+			</field>
+    </fieldset>
+	</fields>
+</form>

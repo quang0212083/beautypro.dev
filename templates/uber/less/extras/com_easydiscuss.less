@@ -1,0 +1,156 @@
+@import "../vars.less";
+
+// ---------------------------------------------------------
+// EASYDISCUSS COMPATIBLITY
+// ---------------------------------------------------------
+
+.com_easydiscuss {
+  div#discuss-wrapper .social-button.google-share {
+    width: 220px !important;
+  }
+
+  div#discuss-wrapper .discuss-searchbar .input-searchbar {
+    padding-right: 110px;
+  }
+}
+.com_easydiscuss  #discuss-wrapper {
+
+  .nav-collapse.collapse {
+    display: block;
+
+    .modal-body .row-fluid {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  .dropdown-menu .divider {
+    border-bottom-color: @gray-lighter;
+  }
+
+  // Common Style
+  .btn {
+  	background-image: none;
+  	text-shadow: none;
+
+  	&.btn-primary {
+  		border-color: @brand-primary;
+  		background-color: @brand-primary;
+
+  		&:hover,
+  		&:focus,
+  		&:active {
+  			border-color: darken(@brand-primary, 10%);
+  		}
+  	}
+  }
+
+  .commentFormContainer .discuss-comment-form .mt-5 {
+    margin-left: @t3-global-margin;
+
+    input {
+      margin-top: 0;
+    }
+  }
+
+  .discuss-component-title {
+    line-height: 35px;
+  }
+
+  // MENU
+  // -----------------------------------------------------
+  .discuss-user-menu .modal-body {
+    .row-fluid:last-child {
+      margin-left: 0;
+    }
+  }
+
+  // SEARCH BAR
+  // -----------------------------------------------------
+  .discuss-searchbar {
+  	.btn-ask {
+  		line-height: 22px;
+  	}
+  }
+
+  // LIST BADGES
+  // -----------------------------------------------------
+  .discuss-badges-list {
+    .badges-desp {
+      padding-top: @t3-global-padding / 2;
+    }
+  }
+
+  // DISCUSS CATEGORIES
+  // -----------------------------------------------------
+  .discuss-categories {
+    .media {
+      .media-body {
+        font-size: @t3-font-size-smaller;
+
+        .discuss-subscribe {
+          margin-top: @t3-global-margin / 4;
+        }
+      }
+    }
+  }
+
+  // DISCUSS POST
+  // -----------------------------------------------------
+  .discuss-composer-creating {
+    .modal-footer > .row-fluid {
+      margin: 0;
+    }
+  }
+
+  // Tag
+  &.w320 .discuss-tag-list > li {
+    // Mobile view
+    @media screen and (max-width: @screen-xs-max) {
+      width: 100%;
+    }
+  }
+
+  // USER PAGE
+  // -----------------------------------------------------
+  .discuss-users-list .discuss-story,
+  .discuss-post-share,
+  .discuss-story-bd {
+    overflow: hidden;
+  }
+}
+
+// FIX HEIGHT POPUP
+#discuss-dialog {
+  bottom: auto;
+
+  #subscribeForm {
+    input[type="text"] {
+      height: 30px;
+    }
+
+    input[type="radio"] {
+      margin-left: -20px;
+      margin-top: 2px;
+    }
+  }
+	
+	@media screen and (max-width: @screen-xs){
+		.form-horizontal {
+			.control-label {
+				width: 100%;
+				text-align: left;
+			}
+			
+			.controls {
+				margin-left: 0;
+			}
+		}
+			
+		.form-inline .radio {
+			display: block;
+			padding-left: 20px;
+			min-height: @line-height-computed;
+		}
+	}
+}

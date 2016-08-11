@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="Default Layout">
+    <message>Add Player With All Videos.</message>
+  </layout>
+  <state>
+    <name>Default Layout</name>
+    <description>Add Player With All Videos</description>
+    <params>
+      <param type="spacer" default="&lt;div style='font-family:Arial; font-size:11px; font-weight:bold; color:#555; padding:5px; background:#F0F0F0; border:1px solid #CCC;'&gt;HDW Player - Player Settings [optional]&lt;/div&gt;" />
+      <param name="player_width" type="text" default="" label="Player Width" description="Player Width" />
+      <param name="player_height" type="text" default="" label="Player Height" description="Player Height" />
+	  <param name="show_title" type="list" default="" label="Show Video Title" description="Show Video Title above the Player">
+	    <option value="">Global</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </param>
+      <param name="show_description" type="list" default="" label="Show Video Description" description="Show Video Description below the Player">
+	    <option value="">Global</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </param>
+    </params>
+    <fields name="params">
+      <fieldset name="basic" label="HDW Player - Player Settings [optional]">
+        <field name="player_width" type="text" default="" label="Player Width" description="Player Width" />
+        <field name="player_height" type="text" default="" label="Player Height" description="Player Height" />
+		<field name="show_title" type="list" default="" label="Show Video Title" description="Show Video Title above the Player">
+		  <option value="">Global</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </field>
+        <field name="show_description" type="list" default="" label="Show Video Description" description="Show Video Description below the Player">
+		  <option value="">Global</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </field>
+      </fieldset>
+    </fields>
+  </state>
+</metadata>

@@ -1,0 +1,354 @@
+@-webkit-keyframes dropdown-top {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes dropdown-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes dropdown-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@keyframes dropdown-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.jmb-tree.jmb-tree-dark {
+  display: inline-block;
+  border-radius: 3px;
+  box-shadow: inset 0 0px 2px 0px rgba(255, 255, 255, 0.19), inset 0 -1px 1px 0px rgba(0, 0, 0, 0.36);
+  border: 1px solid #252628;
+  background: rgb(85,88,93);
+  background: -moz-linear-gradient(top,  rgba(85,88,93,1) 0%, rgba(65,68,72,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(85,88,93,1)), color-stop(100%,rgba(65,68,72,1)));
+  background: -webkit-linear-gradient(top,  rgba(85,88,93,1) 0%,rgba(65,68,72,1) 100%);
+  background: -o-linear-gradient(top,  rgba(85,88,93,1) 0%,rgba(65,68,72,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(85,88,93,1) 0%,rgba(65,68,72,1) 100%);
+  background: linear-gradient(to bottom,  rgba(85,88,93,1) 0%,rgba(65,68,72,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55585d', endColorstr='#414448',GradientType=0 );
+}
+
+.jmb-tree.jmb-tree-dark ul,
+.jmb-tree.jmb-tree-dark ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.jmb-tree.jmb-tree-dark ul li {
+  display: inline-block;
+  float: left;
+  position: relative;
+  border-right: 1px solid #252628;
+  box-shadow: 1px 0px 0px rgba(255, 255, 255, 0.12);
+}
+
+.jmb-tree.jmb-tree-dark ul li.jmb-tree-level1.jmb-tree-last-item,
+.jmb-tree.jmb-tree-dark ul li.jmb-tree-level1:last-child {
+  border-right: none;
+  box-shadow: none;
+}
+
+.jmb-tree.jmb-tree-dark ul li a {
+  display: inline-block;
+  padding: 0 14px;
+  text-decoration: none;
+  font: normal normal 14px/40px Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
+}
+
+.jmb-tree.jmb-tree-dark a img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+/* Active and hover */
+
+.jmb-tree.jmb-tree-dark ul li:hover {
+  cursor: pointer;
+}
+
+.jmb-tree.jmb-tree-dark > ul > li:hover > a,
+.jmb-tree.jmb-tree-dark li.active > a {
+  background: #393B3F;
+  box-shadow: inset 0 1px 2px 1px rgba(0, 0, 0, 0.05);
+}
+
+.jmb-tree.jmb-tree-dark .jmb-tree-dropdown-menu {
+  position: absolute;
+  display: block;
+  padding: 0px;
+  opacity: 0;
+  z-index: 999;
+  width: 200px;
+  padding-top: 5px;
+  left: -9999px;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.jmb-tree.jmb-tree-dark .jmb-tree-dropdown:hover .jmb-tree-dropdown-menu {
+  opacity: 1;
+  left: 0;
+  -webkit-animation: dropdown-top .2s ease-in-out;
+  animation: dropdown-top .2s ease-in-out;
+}
+
+.jmb-tree.jmb-tree-dark ul ul {
+  background: #393B3F;
+  padding: 0px;
+  border: 1px solid #252628;
+  border-radius: 3px;
+}
+
+.jmb-tree.jmb-tree-dark ul ul li {
+  float: none;
+  display: list-item;
+  border: none;
+  box-shadow: none;
+  border-bottom: 1px solid #252628;
+  border-radius: 0px;
+}
+
+.jmb-tree.jmb-tree-dark ul ul li:last-child {
+  border-bottom: none;
+}
+
+.jmb-tree.jmb-tree-dark ul ul li a {
+  display: block;
+  line-height: 35px;
+  text-transform: none;
+  border-radius: 0px;
+}
+
+.jmb-tree.jmb-tree-dark ul ul li:hover,
+.jmb-tree.jmb-tree-dark ul ul li.active > a {
+  background: #474A4F;
+  color: #FFF;
+  box-shadow: none;
+}
+
+/* Sub Menu - Level 3*/
+
+.jmb-tree.jmb-tree-dark .jmb-tree-dropdown.jmb-tree-level2 .jmb-tree-dropdown-menu {
+  display: block;
+  opacity: 0;
+  top: 0px;
+  left: -9999px;
+  padding-top: 0px;
+  padding-left: 4px;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.jmb-tree.jmb-tree-dark .jmb-tree-dropdown.jmb-tree-level2:hover .jmb-tree-dropdown-menu {
+  opacity: 1;
+  left: 199px;
+  -webkit-animation: dropdown-left .2s ease-in-out;
+  animation: dropdown-left .2s ease-in-out;
+}
+/* Right Sidebar */
+
+.jmb-tree-right .jmb-tree.jmb-tree-dark li {
+  width: 100%;
+}
+
+.jmb-tree-right .jmb-tree.jmb-tree-dark ul li.jmb-tree-level1 > a {
+  display: block;
+  border-bottom: 1px solid #252628;
+  background: rgb(85,88,93);
+  background: -moz-linear-gradient(top,  rgba(85,88,93,1) 0%, rgba(65,68,72,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(85,88,93,1)), color-stop(100%,rgba(65,68,72,1)));
+  background: -webkit-linear-gradient(top,  rgba(85,88,93,1) 0%,rgba(65,68,72,1) 100%);
+  background: -o-linear-gradient(top,  rgba(85,88,93,1) 0%,rgba(65,68,72,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(85,88,93,1) 0%,rgba(65,68,72,1) 100%);
+  background: linear-gradient(to bottom,  rgba(85,88,93,1) 0%,rgba(65,68,72,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55585d', endColorstr='#414448',GradientType=0 );
+}
+
+.jmb-tree-right .jmb-tree.jmb-tree-dark ul li.jmb-tree-level1:hover > a,
+.jmb-tree-right .jmb-tree.jmb-tree-dark ul li.jmb-tree-level1.active > a {
+  background: #393B3F;
+}
+
+.jmb-tree-right .jmb-tree.jmb-tree-dark .jmb-tree-dropdown:hover > .jmb-tree-dropdown-menu {
+  left: -200px;
+  top: 0;
+  padding-right: 5px;
+  padding-top: 0;
+  margin-left: -5px;
+  padding-left: 0;
+  -webkit-animation: dropdown-left .2s ease-in-out;
+  animation: dropdown-left .2s ease-in-out;
+}
+
+/* Left Sidebar */
+
+.jmb-tree-left .jmb-tree.jmb-tree-dark li {
+  width: 100%;
+}
+
+.jmb-tree-left .jmb-tree.jmb-tree-dark ul li.jmb-tree-level1 > a {
+  display: block;
+  border-bottom: 1px solid #252628;
+  background: rgb(85,88,93);
+  background: -moz-linear-gradient(top,  rgba(85,88,93,1) 0%, rgba(65,68,72,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(85,88,93,1)), color-stop(100%,rgba(65,68,72,1)));
+  background: -webkit-linear-gradient(top,  rgba(85,88,93,1) 0%,rgba(65,68,72,1) 100%);
+  background: -o-linear-gradient(top,  rgba(85,88,93,1) 0%,rgba(65,68,72,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(85,88,93,1) 0%,rgba(65,68,72,1) 100%);
+  background: linear-gradient(to bottom,  rgba(85,88,93,1) 0%,rgba(65,68,72,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55585d', endColorstr='#414448',GradientType=0 );
+}
+
+.jmb-tree-left .jmb-tree.jmb-tree-dark ul li.jmb-tree-level1:hover > a,
+.jmb-tree-left .jmb-tree.jmb-tree-dark ul li.jmb-tree-level1.active > a {
+  background: #393B3F;
+}
+
+.jmb-tree-left .jmb-tree.jmb-tree-dark .jmb-tree-dropdown:hover > .jmb-tree-dropdown-menu {
+  left: 100%;
+  top: 0;
+  padding-left: 5px;
+  padding-top: 0;
+  margin-left: 0px;
+  padding-right: 0;
+  -webkit-animation: dropdown-left .2s ease-in-out;
+  animation: dropdown-left .2s ease-in-out;
+}
+
+@media only screen and (max-width: 767px) {
+
+  .jmb-tree.jmb-tree-dark {
+    background: none;
+  }
+
+  .jmb-tree.jmb-tree-dark a {
+    background: rgb(85,88,93);
+    background: -moz-linear-gradient(top,  rgba(85,88,93,1) 0%, rgba(65,68,72,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(85,88,93,1)), color-stop(100%,rgba(65,68,72,1)));
+    background: -webkit-linear-gradient(top,  rgba(85,88,93,1) 0%,rgba(65,68,72,1) 100%);
+    background: -o-linear-gradient(top,  rgba(85,88,93,1) 0%,rgba(65,68,72,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(85,88,93,1) 0%,rgba(65,68,72,1) 100%);
+    background: linear-gradient(to bottom,  rgba(85,88,93,1) 0%,rgba(65,68,72,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55585d', endColorstr='#414448',GradientType=0 );
+  }
+
+  .jmb-tree.jmb-tree-dark > ul > li:hover > a {
+    box-shadow: none;
+  }
+
+  .jmb-tree.jmb-tree-dark li a:hover {
+    background: #393B3F;
+    box-shadow: inset 0 1px 2px 1px rgba(0, 0, 0, 0.05);
+  }
+
+  .jmb-tree.jmb-tree-dark ul ul li a:before,
+  .jmb-tree.jmb-tree-dark ul ul ul li a:before {
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    margin-right: 10px;
+    content: '';
+    background: #505358;
+    vertical-align: middle;
+    border-radius: 100%;
+    border: 1px solid #252628;
+  }
+
+  .jmb-tree.jmb-tree-dark ul ul ul li a:before {
+    margin-left: 20px;
+    border-radius: 0;
+  }
+
+  .jmb-tree.jmb-tree-dark ul ul li:hover, 
+  .jmb-tree.jmb-tree-dark ul ul li.active > a {
+    background: #393B3F;
+    box-shadow: inset 0 1px 2px 1px rgba(0, 0, 0, 0.05);
+  }
+
+  .jmb-tree.jmb-tree-dark ul li a,
+  .jmb-tree.jmb-tree-dark ul ul li a {
+    line-height: 35px;
+  }
+
+  .jmb-tree.jmb-tree-dark .jmb-tree-dropdown .jmb-tree-dropdown-menu,
+  .jmb-tree.jmb-tree-dark .jmb-tree-dropdown.jmb-tree-level2 .jmb-tree-dropdown-menu,
+
+  .jmb-tree.jmb-tree-dark .jmb-tree-dropdown:hover .jmb-tree-dropdown-menu,
+  .jmb-tree.jmb-tree-dark .jmb-tree-dropdown.jmb-tree-level2:hover .jmb-tree-dropdown-menu,
+
+  .jmb-tree-right .jmb-tree.jmb-tree-dark .jmb-tree-dropdown:hover > .jmb-tree-dropdown-menu,
+  .jmb-tree-right .jmb-tree.jmb-tree-dark .jmb-tree-dropdown.jmb-tree-level2:hover > .jmb-tree-dropdown-menu,
+
+  .jmb-tree-left .jmb-tree.jmb-tree-dark .jmb-tree-dropdown:hover > .jmb-tree-dropdown-menu,
+  .jmb-tree-left .jmb-tree.jmb-tree-dark .jmb-tree-dropdown.jmb-tree-level2:hover > .jmb-tree-dropdown-menu {
+    position: relative;
+    display: block;
+    width: 100%;
+    left: 0;
+    padding: 0px;
+    margin: 0;
+    border-top: none;
+    opacity: 1;
+    z-index: 999;
+    -webkit-animation: none;
+    animation: none;
+  }
+
+  .jmb-tree.jmb-tree-dark li {
+    width: 100%;
+  }
+
+  .jmb-tree.jmb-tree-dark ul li a {
+    border-bottom: 1px solid #252628;
+    display: block;
+  }
+
+  .jmb-tree.jmb-tree-dark ul ul, .jmb-tree.jmb-tree-dark ul ul li, .jmb-tree.jmb-tree-dark ul ul li a {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+  }
+
+  .jmb-tree.jmb-tree-dark ul ul, .jmb-tree.jmb-tree-dark ul ul li {
+    border-bottom: none;
+    border-top: none;
+  }
+}

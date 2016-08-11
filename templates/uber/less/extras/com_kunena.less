@@ -1,0 +1,968 @@
+@import "../vars.less";
+
+// ---------------------------------------------------------
+// KUNENA COMPATIBILITY
+// ---------------------------------------------------------
+
+.com_kunena #t3-mainbody #Kunena {
+	// GENERAL ELEMENTS
+	// ---------------------------------------------------------
+
+	// Common Style
+	a {
+		color: @brand-primary !important;
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: darken(@brand-primary, 10%) !important;
+		}
+	}
+
+	input[type="text"],
+	input[type="password"] {
+		height: 32px;
+
+		&:focus {
+			border-color: @brand-primary;
+			box-shadow: none;
+		}
+	}
+
+	tr.krow1 td {
+		background-color: @gray-lighter;
+	}
+
+	tr.krow1,
+	tr.krow2 {
+		td {
+			border-color: lighten(@gray-light, 25%);
+			padding: (@t3-global-padding / 2);
+
+			// Control screen mobile
+			@media screen and (max-width: @screen-xs-max) {
+				padding-top: 3px;
+				padding-bottom: 3px;
+			}
+		}
+
+		&:last-child td {
+			border-bottom: 0;
+		}
+	}
+
+	.knewchar {
+		vertical-align: text-top;
+		font-size: 10px;
+	}
+
+	.ktitle-desc,
+	.kthead-desc,
+	.kcat-replies,
+	.kcat-topics,
+	.ktopic-details,
+	.ktopic-details-kcategory {
+		font-size: @t3-font-size-smaller;
+	}
+	
+	#kflattable {
+		.krowmoderation .inputbox {
+			@media screen and (max-width: @screen-xs) {
+				display: block;
+				max-width: 100%;
+				margin-bottom: 5px;
+			}
+		}
+	}
+
+	.kcol-ktopicreplies,
+	.kcol-ktopicviews {
+		line-height: 1;
+		font-size: @t3-font-size-smaller;
+
+		strong {
+			color: @gray-dark;
+			font-size: 1.455em;
+		}
+	}
+
+	.kcat-topics-number,
+	.kcat-replies-number,
+	.ktopic-views-number {
+		color: @gray-dark;
+		line-height: 1;
+	}
+
+	.kblocktable {
+		// Control screen mobile
+		@media screen and (max-width: @screen-xs-max) {
+			padding-right: 0;
+
+			.klatest-post-info {
+				clear: both;
+			}
+
+			.ktopicmoderation {
+				text-align: right;
+			}
+		}
+	}
+
+	// Form elements
+	// -----------------------------
+	fieldset {
+	border: 1px solid lighten(@gray-light, 15%);
+
+		legend {
+			margin: 0;
+			padding: 0 (@t3-global-padding / 4);
+			width: inherit;
+		}
+	}
+
+	.kbutton,
+	.button,
+	.kbutton-container .kbutton {
+		background-color: @brand-primary!important;
+		border: 0;
+		color: @white!important;
+		font-size: @font-size-base;
+		margin: 0;
+		padding: (@t3-global-padding / 5) (@t3-global-padding / 2);
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: darken(@brand-primary, 10%) !important;
+			color: @white !important;
+		}
+	}
+
+	// Button message
+	.kmessage-informmarkup {
+		border: 1px solid @gray-light;
+		background-color: @gray-light;
+
+		a {
+			color: @white!important;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: darken(@gray-light, 10%);
+		}
+	}
+
+	// TOP MENU
+	// ------------------------------------------------
+	#ktop {
+		border-color: @brand-primary !important;
+
+		span.ktoggler {
+			background-color: @brand-primary !important;
+		}
+
+		.menu > li {
+
+			// Control screen desktop
+			@media screen and (min-width: @screen-sm-min) {
+				> a {
+					border-radius: 2px 2px 0 0;
+					background-color: @gray!important;
+
+					&:hover,
+					&:focus,
+					&:active {
+					background-color: @brand-primary!important;
+					}
+				}
+			}
+
+			&.active > a {
+				background-color: @brand-primary!important;
+			}
+		}
+	}
+
+	// TOOL BAR
+	// ------------------------------------------------
+	.klist-markallcatsread {
+		.ksectionbody {
+			> .fltlft {
+				margin: 5px;
+			}
+
+			> .fltrt {
+				.inputbox {
+					height: 32px;
+				}
+
+				#catid {
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	.klist-times-all .inputboxusl {
+		height: 32px;
+	}
+
+	// KUNENA PATHWAY
+	// ------------------------------------------------
+	.kpathway {
+		border: 0;
+
+		.kforum-pathway {
+			background-color: @white;
+			border: 1px solid @t3-border-color;
+			font-size: @t3-font-size-smaller;
+			padding: (@t3-global-padding / 4) (@t3-global-padding / 2);
+
+			a {
+				&:hover,
+				&:focus,
+				&:active {
+					color: @brand-primary !important;
+				}
+			}
+		}
+	}
+
+	.kblock {
+		+ .klist-actions {
+			// Control screen mobile
+			@media screen and (max-width: @screen-xs-max) {
+				min-height: 110px;
+
+				.klist-pages-all {
+					padding-top: @t3-global-padding / 2;
+				}
+			}
+		}
+	}
+
+
+	// INDEX PAGE
+	// ---------------------------------------------------------
+	.kthead-title a,
+	.ktopic-title-cover a {
+		color: @gray!important;
+		line-height: 1;
+
+		// Control screen mobile
+		@media screen and (max-width: @screen-xs-max) {
+			font-size: @font-size-base;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: @brand-primary!important;
+		}
+	}
+
+	a.ktopic-title {
+		font-size: @font-size-base;
+	}
+
+	// Block
+	// -----------------------------
+	.kblock {
+		border-color: lighten(@gray-light, 25%);
+		margin: (@t3-global-margin / 2) 0 0;
+	}
+
+	// Body
+	// -----------------------------
+	.kbody {
+		border-color: lighten(@gray-light, 25%)!important;
+
+		.kmsg-header {
+			border-bottom: 0;
+		}
+
+		.krowmoderation {
+			select {
+				display: inline-block;
+				height: 32px;
+				vertical-align: top;
+				
+				&#kchecktarget,
+				&#kchecktask {
+					// Control screen mobile
+					@media screen and (min-width: @screen-sm) {
+						white-space: nowrap;
+					}
+				}
+			}
+
+			input {
+				line-height: 21px;
+			}
+		}
+	}
+
+	// Profile block
+	// -----------------------------
+	#kprofilebox {
+		.input span {
+			display: inline-block;
+			padding: (@t3-global-padding / 2) (@t3-global-padding / 2) (@t3-global-padding / 2) 0;
+
+			// Control screen mobile
+			@media screen and (max-width: @screen-xs-max) {
+				display: block;
+				padding-top: 3px;
+				padding-bottom: 3px;
+			}
+
+			.inputbox {
+				display: inline-block;
+
+				// Control screen mobile
+				@media screen and (max-width: @screen-xs-max) {
+					display: block;
+				}
+			}
+		}
+
+		input[value="Login"] {
+			display: block;
+			// Control screen desktop
+			@media screen and (min-width: @screen-xs-min) {
+				display: inline-block;
+				margin-left: @t3-global-margin / 2;
+			}
+		}
+
+		.klink-block a {
+			font-size: @t3-font-size-smaller;
+			margin-right: @t3-global-margin / 2;
+
+			// Control screen mobile
+			@media screen and (max-width: @screen-xs-max) {
+				display: block;
+			}
+		}
+
+		.kprofileboxcnt {
+			// Control screen mobile
+			@media screen and (max-width: @screen-xs-max) {
+				min-height: 110px;
+			}
+		}
+	}
+
+
+	// Action block
+	// -----------------------------
+	.klist-actions,
+	.klist-bottom {
+		.inputbox {
+			display: inline-block;
+			padding: 4px 3px;
+		}
+
+		.kbutton {
+			display: inline-block;
+		}
+	}
+
+	.klist-actions {
+		// Control screen mobile
+		@media screen and (max-width: @screen-xs-max) {
+			min-height: 70px;
+
+			.klist-pages-all {
+				text-align: right;
+				height: auto;
+
+				.kpagination {
+					padding-right: 0;
+					padding-top: 5px;
+				}
+			}
+		}
+		
+		// Control screen ipad
+		@media screen and (max-width: @screen-md) {
+			font-size: 12px;
+		}
+	}
+
+	.klist-bottom {
+		padding-bottom: 0 !important;
+		overflow: hidden;
+	}
+
+
+	// Block Table
+	// -----------------------------
+	div.kheader {
+		background-color: @gray !important;
+		border: 0;
+		color: @gray-lightest !important;
+		padding: (@t3-global-padding / 2);
+
+		// Control screen mobile
+		@media screen and (max-width: @screen-xs-max) {
+			padding-left: @t3-global-padding / 2;
+			padding-right: @t3-global-padding / 2;
+		}
+
+		a {
+			color: @white !important;
+		}
+
+		h3 {
+			margin: 0;
+			font-size: @t3-font-size-bigger;
+			font-weight: bold;
+		}
+
+		span.ktoggler {
+			right: 0;
+		}
+
+		.ktitle-desc {
+			color: @gray-lighter;
+		}
+	}
+
+	.kbody {
+		.kthead-title {
+			line-height: 1;
+			margin-bottom: @t3-global-margin / 4;
+		}
+
+		.kthead-title a {
+			float: none;
+			line-height: 1;
+			magin-bottom: 0;
+		}
+
+		// Sub categories
+		.kthead-child {
+			margin-top: @t3-global-margin / 2;
+		}
+
+		// Avatar
+		.klatest-avatar,
+		.ktopic-latest-post-avatar {
+			background-color: @white;
+			border: 1px solid @t3-border-color;
+			padding: 2px;
+			width: auto;
+
+			img {
+				margin: 0;
+			}
+		}
+	}
+
+	// Who is online block
+	// -----------------------------
+	#kwhoisonline {
+
+		.kwhoonline {
+			border-width: 0;
+			border-bottom-width: 1px;
+		}
+
+		.kwholegend {
+			border-width: 0;
+			border-top-width: 1px;
+		}
+	}
+
+	// Search user
+	// ------------------------------
+	#searchuser_tbody {
+		input {
+			display: inline-block;
+		}
+
+		select {
+			display: inline-block;
+			height: 32px;
+		}
+	}
+
+	#kuserlist-form {
+		.userlist {
+			a {
+				color: @white!important;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: @brand-primary!important;
+				}
+			}
+		}
+	}
+
+	// NEWTOPIC PAGE
+	// ---------------------------------------------------------
+	#kpostmessage {
+		.kpostbuttons {
+			input[type="button"] {
+				margin-top: @t3-global-margin / 4;
+			}
+
+			// Control screen mobile
+			@media screen and (max-width: @screen-xs-max) {
+				height: auto;
+				min-height: 90px;
+			}
+		}
+
+		#kvideoprovider {
+			color: @gray;
+			background-color: @white;
+		}
+
+		// attacchment
+		#kpost-attachments {
+			.kattachment {
+				margin-top: @t3-global-margin / 4;
+			}
+
+			.kfile-input-button {
+				// Control screen mobile
+				@media screen and (max-width: @screen-xs-max) {
+					margin-left: 18px;
+					margin-top: 3px;
+				}
+			}
+		}
+
+		#postcatid {
+			// Control screen mobile
+			@media screen and (max-width: @screen-xs-max) {
+				width: 100%;
+			}
+		}
+
+		#kpost-buttons {
+			// Control screen mobile
+			@media screen and (max-width: @screen-xs-max) {
+				input {
+					display: inline-block;
+					margin-top: 3px;
+				}
+			}
+		}
+
+		// Preview
+		#kbbcode-preview {
+			padding: @t3-global-padding / 4;
+		}
+
+		.kiconsel {
+			display: inline-block;
+		}
+
+		tr td {
+			// Control screen mobile
+			@media screen and (max-width: @screen-xs-max) {
+				width: 100%!important;
+			}
+		}
+
+		.kfile-input-textbox {
+			vertical-align: middle;
+		}
+	}
+
+	.kmsgattach {
+		ul.kfile-attach li {
+			// Control screen mobile
+			@media screen and (max-width: @screen-xs-max) {
+				background: 0;
+				padding-left: 0;
+			}
+
+			// Control screen desktop
+			@media screen and (min-width: @screen-xs-min) {
+				margin-right: @t3-global-margin;
+			}
+		}
+	}
+
+	// MODERATE PAGE
+	// ----------------------------------------------------------
+	#kmod-container {
+		.kmoderate-message {
+			padding: (@t3-global-padding / 2)!important;
+
+			.kmessage-timeby {
+				font-size: @t3-font-size-smaller;
+			}
+
+			.kmessage-msgtext {
+				font-size: @t3-font-size-small;
+			}
+		}
+
+		select {
+			height: 32px;
+		}
+
+		a.button {
+			border: 1px solid @brand-primary;
+			span {
+				color: @white!important;
+			}
+		}
+	}
+
+	// SEARCH PAGE
+	// ---------------------------------------------------------
+	.kadvsearch {
+		input {
+			margin-bottom: (@t3-global-margin / 2);
+		}
+
+		select {
+			background: @white !important;
+			margin-bottom: (@t3-global-margin / 2);	
+			padding: 4px 3px;
+
+			&.ks {
+				margin-left: 0;
+			}
+		}
+
+		legend {
+			border: 0;
+		}
+
+		#advsearch .kcenter input {
+			margin: (@t3-global-margin / 2) 0;
+		}
+
+		#keywords {
+			// Control screen mobile
+			@media screen and (max-width: @screen-xs-max) {
+				width: 100%;
+			}
+		}
+	}
+
+
+	// PROFILE PAGE
+	// ---------------------------------------------------------
+	#kprofile-edit {
+		.tabs {
+		  dt {
+		    margin-right: 2px;
+		    border-radius: 5px 5px 0 0;
+		    font-weight: normal;
+		  }
+
+		  .open {
+		    background: @blue;
+		    color: @white;
+				border-bottom: none;
+		  }
+
+		  .closed {
+		    background: @gray;
+		    color: @white;
+		  }
+		}
+
+		.editlinktip {
+			input {
+				display: inline-block;
+			}
+		}
+		
+		select, textarea, input {
+			@media screen and (max-width: @screen-xs) {
+				max-width: 100%;
+			}
+			
+			&#kavatar-upload {
+				@media screen and (max-width: @screen-xs) {
+					font-size: @t3-font-size-smaller;
+				}
+			}
+		}
+	}
+
+	#kprofile-tabs {
+		table + input[type="submit"] {
+			margin: @t3-global-margin / 2;
+		}
+
+		input.kcheck {
+			// Control screen mobile
+			@media screen and (max-width: @screen-xs-max) {
+				margin-left: 94%;
+			}
+		}
+
+		.tabs {
+		
+			dt.open {
+				border-bottom: 0;
+			}
+			
+			// Control screen mobile
+			@media screen and (max-width: @screen-xs-max) {
+				dt {
+					width: 100%;
+				}
+			}
+		}
+
+
+		#kchecktask {
+			// Control screen mobile
+			@media screen and (max-width: @screen-xs-max) {
+				width: 100%;
+				max-width: none;
+
+				+ input {
+					margin-top: 3px;
+				}
+			}
+		}
+
+		#kflattable {
+			// Control screen mobile
+			@media screen and (max-width: @screen-xs-max) {
+				.kcol-ktopicreplies,
+				.kcol-ktopicviews {
+					display: none;
+				}
+			}
+		}
+		
+		.kcontainer #adminForm table {
+			font-size: @t3-font-size-smaller;
+		}
+	}
+
+	// ANNOUCEMENT PAGE
+	// ---------------------------------------------------------
+	#kannouncement {
+		.kanndesc {
+			padding: @t3-global-padding / 2;
+
+			.anncreated {
+				font-weight: 600;
+				margin-bottom: @t3-global-margin / 4;
+			}
+		}
+
+		label {
+			display: block;
+			margin-bottom: @t3-global-margin / 2;
+
+			input,
+			textarea {
+				margin-top: 5px;
+			}
+
+			.input-append {
+				input {
+					margin-top: 0;
+					display: inline-block;
+				}
+
+				button {
+					height: 32px;
+					padding-top: 0;
+
+					&:hover,
+					&:focus,
+					&:active {
+						background-color: @gray;
+					}
+				}
+			}
+		}
+
+		// Announcement edit
+		div.kactions {
+			padding: @t3-global-padding / 2;
+		}
+		
+		.icon-calendar:before {
+			font-family: FontAwesome;
+			content: "\f073";
+			text-decoration: inherit;
+			display: inline-block;
+			speak: none;
+		}
+	}
+
+	.announcement-checkbox {
+		text-align: center;
+	}
+
+	// KLIST ACTION
+	// --------------------------------------------
+	.klist-markallcatsread {
+		border-top: 0;
+		padding: (@t3-global-padding / 4) (@t3-global-padding / 2);
+
+		div.fltlft {
+			margin: 0 !important;
+		}
+
+		form {
+			margin: 0;
+		}
+	}
+
+	// REPORT PAGE
+	// --------------------------------------------
+	#kreport-container {
+		.kbutton {
+			margin-top: @t3-global-margin / 2;
+		}
+	}
+
+	// Pagination
+	// ---------------------------------------------
+	.kpagination {
+		margin: (@t3-global-margin / 4) 0;
+		span,a {
+			display: inline-block;
+			padding: 5px;
+		}
+
+		span {
+			background-color: @brand-primary;
+		}
+
+		a {
+		  &:hover,
+		  &:focus,
+		  &:active {
+		  	background-color: @brand-primary!important;
+		  	color: @white!important;
+		  }
+		}
+	}
+	
+	td.kcol-first.kcol-ktopicreplies {
+		@media (max-width: @screen-xs) {
+			margin-bottom: 0;
+			padding-top: @t3-global-padding/2;
+		}
+	}
+}
+
+// MODULE
+.module-ct {
+	.kbutton {
+		border: 0;
+		background: @brand-primary;
+		color: @white;
+		padding: @t3-global-padding / 5 @t3-global-padding / 2;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background: darken(@brand-primary, 10%);
+		}
+	}
+
+	.kstats-module {
+		ul li {
+			font-size: 14px;
+
+			&:first-child {
+				padding-top: @t3-global-padding / 2;
+			}
+
+			&:last-child {
+				background-position: left 22px;
+			}
+		}
+	}
+}
+
+// Popup
+#mbCenter {
+	border-radius: 2px;
+	padding: 0;
+
+	#mbBottom {
+		padding: 2px (@t3-global-padding / 4);
+	}
+}
+
+
+// KUNENA MODULES
+// ---------------------------------------
+
+// Kunena latest
+// -------------
+div.klatest {
+	li.klatest-item {
+		border-top: 0;
+		border-bottom: 1px solid @t3-border-color;
+		margin: 0;
+		padding: (@t3-global-padding / 2) 0;
+
+		&:last-child {
+			border-bottom: 0;
+			padding-bottom: 0;
+		}
+	}
+
+	// Item details
+	.klatest-avatar {
+		margin: 0 (@t3-global-margin / 4) 0 0;
+		padding: 0;
+	}
+
+	.klatest-subject {
+		border: 0;
+		line-height: 1.3;
+		padding: 0;
+
+		a {
+			font-size: @font-size-small;
+		}
+
+		.knewchar {
+			top: 6px;
+		}
+	}
+
+	.klatest-preview-content {
+		border: 0;
+		font-size: @font-size-small - 2;
+		padding: 0;
+	}
+
+	.klatest-posttime,
+	.klatest-cat,
+	.klatest-author {
+		border: 0;
+		font-size: @font-size-small - 2;
+		padding: 0;
+	}
+}
+
+// Kunena stastic
+// --------------
+.kstats-module {
+	.kstats-items {
+		li {
+			background-image: none;
+			border-top: 0;
+			border-bottom: 1px solid @t3-border-color;
+			padding: (@t3-global-padding / 4) 0;
+		}
+	}
+}

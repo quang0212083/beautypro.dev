@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="mytest.css"?>
+<extension type="module" version="2.5" method="upgrade" client="site">
+    <name>MOD_VIDEOGALLERYLITE</name>
+    <version>1.0.8</version>
+    <author>Huge-IT</author>
+    <creationDate>January 2015</creationDate>
+    <copyright>Copyright (C) 2013 Huge-IT.com 2013. All rights reserved.</copyright> 
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <authorEmail>info@huge-it.com</authorEmail> 
+    <authorUrl>http://www.huge-it.com</authorUrl>
+    <files>
+        <filename>mod_videogallerylite.xml</filename>
+        <filename module="mod_videogallerylite">mod_videogallerylite.php</filename>
+        <filenmae>index.html</filenmae>
+        <filename>helper.php</filename>
+        <folder>models</folder>
+        <folder>language</folder>
+        
+    </files>
+   <config>
+      
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/modules/mod_videogallerylite/models/fields" label="General Options">
+                <field name="choose_videogallerylite" id=""  type="jscolor" label="Choose Video Gallery Lite"  type_="choose_videogallerylite">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </field>
+            </fieldset>
+        </fields>
+                <languages folder="language">
+                    <language tag="en-GB">en-GB/en-GB.mod_videogallerylite.ini></language>
+                    <language tag="en-GB">en-GB/en-GB.mod_videogallerylite.sys.ini></language>
+                </languages>
+		
+    </config>
+</extension>

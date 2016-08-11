@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <title>Footer Style 5</title>
+	<sampledata><![CDATA[
+        {":type":"uber:footer","footer":{"jatools-layout-footer":"style-5","footer[footer-background]":["highlight-color"],"footer[img]":[""],"footer[enable-backtotop]":["1"],"footer[footer-left-position]":["mainnav"],"footer[footer-right-position]":["footer-3"],"footer[full-width]":["0"],"footer[enable-sticky]":["0"]}}
+    ]]></sampledata>
+	
+    <fields name="footer">
+    	<fieldset name="basic" label="FOOTER_BASIC_LABEL" description="FOOTER_BASIC_DESC" multiple="0">
+				<field name="footer-background" type="list" default="light-color"
+						 global="1"
+						 label="FOOTER_BACKGROUND_LABEL"
+						 description="FOOTER_BACKGROUND_DESC">
+					<option value="dark-color">DARK_COLOR</option>
+					<option value="light-color">LIGHT_COLOR</option>
+					<option value="highlight-color">HIGHLIGHT_COLOR</option>
+				</field>
+				<field name="img" type="media" default="" label="FOOTER_BACKGROUND_IMG_LABEL" description="FOOTER_BACKGROUND_IMG_DESC" />
+
+      	<field name="enable-backtotop" type="radio" default="0" label="FOOTER_ENABLE_BACKTOTOP_LABEL" description="FOOTER_ENABLE_BACKTOTOP_DESC" >
+          <option value="0" class="off">JNO</option>
+					<option value="1" class="on">JYES</option>
+      	</field>
+      	<field name="footer-left-position" type="moduleposition"    
+					        description="FOOTER_LEFT_POSITION_DESC"
+					        label="FOOTER_LEFT_POSITION_LABEL"
+					        default=""/>
+				<field name="footer-right-position" type="moduleposition"    
+					        description="FOOTER_RIGHT_POSITION_DESC"
+					        label="FOOTER_RIGHT_POSITION_LABEL"
+					        default=""/>
+				<field name="full-width" type="radio" default="0" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC" >
+	      	<option value="0" class="off">JNO</option>
+					<option value="1" class="on">JYES</option>
+	      </field>
+	      <field name="enable-sticky" type="radio" default="0" label="ENABLE_STICKY_LABEL" description="ENABLE_STICKY_DESC" >
+	      	<option value="0" class="off">JNO</option>
+					<option value="1" class="on">JYES</option>
+	      </field>
+			</fieldset>
+
+    </fields>
+</form>

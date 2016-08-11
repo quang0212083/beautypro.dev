@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.5.0" client="site" method="upgrade">
+  <name>All Video Share Search</name>
+  <author>MrVinoth</author>
+  <creationDate>June 2014</creationDate>
+  <copyright>Copyright (c) 2012 - 2014 MrVinoth. All rights reserved.</copyright>
+  <authorEmail>admin@mrvinoth.com</authorEmail>
+  <authorUrl>mrvinoth.com</authorUrl>
+  <version>2.3.0</version>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <description>Add All Video Share Search to any of your Module Positions.</description>
+  <files>
+    <filename module="mod_allvideosharesearch">mod_allvideosharesearch.php</filename>
+    <filename>index.html</filename>
+  </files>
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.mod_allvideosharesearch.ini</language>
+  </languages>
+  <params>
+    <param name="cache" type="list" default="0" label="CACHE_LABEL" description="CACHE_DESCRIPTION">
+      <option value="0">Never</option>
+    </param>
+    <param name="moduleclass_sfx" type="text" default="" label="MODULE_CLASS_SUFFIX_LABEL" description="MODULE_CLASS_SUFFIX_DESCRIPTION" size="60" />
+  </params>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="cache" type="list" default="0" label="CACHE_LABEL" description="CACHE_DESCRIPTION">
+          <option value="0">Never</option>
+        </field>
+        <field name="moduleclass_sfx" type="text" default="" label="MODULE_CLASS_SUFFIX_LABEL" description="MODULE_CLASS_SUFFIX_DESCRIPTION" size="60" />
+      </fieldset>
+    </fields>
+  </config>
+</extension>

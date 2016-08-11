@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Cta Style 1</title>
+	<sampledata><![CDATA[
+        {":type":"uber:cta","cta":{"jatools-layout-cta":"style-1","cta[block-intro]":["Choose an option that suits your needs. 100% satisfaction guaranteed. "],"cta[block-extra-class]":[" text-center section-primary"],"cta[img]":[""],"cta[animation]":["fade"],"cta[animation_speed]":["0"],"cta[data]":{"cta[data][button]":["Sign Up Today"],"cta[data][link]":["index.php?option=com_users&view=registration&Itemid=551"],"cta[data][button_class]":[" btn-rounded btn-rounded-inverse btn-lg open-login-modal sign-up"],"rows":1,"cols":4,"type":"list"}}}
+    ]]></sampledata>
+	<fields name="cta">
+         <fieldset name="basic" label="CTA_BASIC_LABEL" description="CTA_BASIC_DESC" multiple="0">
+         		<field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+         		<field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+						
+            <field name="img" type="media" default="" label="CTA_IMG_LABEL" description="CTA_IMG_DESC" />
+            
+            <field name="animation" type="list" default="fade"
+									 global="1"
+									 label="CTA_ANIMATION_LABEL"
+									 description="CTA_ANIMATION_DESC" >
+							<option value="fade">CTA_ANIMATION_FADE</option>
+							<option value="moveFromBottom">CTA_ANIMATION_MOVEFROMBOTTOM</option>
+						</field>
+						
+						<field name="animation_speed" type="number" default="" label="CTA_ANIMATION_SPEED_LABEL" description="CTA_ANIMATION_SPEED_DESC" />
+            
+        </fieldset>
+    
+        <fieldset name="button" label="CTA_BUTTON_SETTING_LABEL" description="CTA_BUTTON_SETTING_DESC">
+        	<field name="data" type="jalist">
+            <item name="button" type="text" default="" label="CTA_BUTTON_LABEL" description="CTA_BUTTON_DESC" required="1" />
+            <item name="link" type="text" default="" label="CTA_LINK_LABEL" description="CTA_LINK_DESC" required="1" />
+            <item name="button_class" type="text" default="" label="CTA_BUTTON_CLASS_LABEL" description="CTA_BUTTON_CLASS_DESC" />
+          </field>
+        </fieldset>   
+         
+  </fields>
+</form>

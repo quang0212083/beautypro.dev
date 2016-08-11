@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.0"
+	client="site"
+	method="upgrade">
+	<name>Joombig Menu Tree</name>
+	<author>joombig</author>
+	<creationDate>DEC 2013</creationDate>
+	<copyright>Copyright joombig.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@joombig.com</authorEmail>
+	<authorUrl>http://www.joombig.com</authorUrl>
+	<version>1.0</version>
+	<description>MOD_JOOMBIG_MENU_TREE_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_joombig_menu_tree">mod_joombig_menu_tree.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_joombig_menu_tree.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_joombig_menu_tree.ini</language>
+		<language tag="en-GB">language/en-GB.mod_joombig_menu_tree.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_MENU" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="enable_jQuery" type="radio" default="1" label="Enable/Disable jQuery" description="select Enable/Disable">
+					<option value="1">Enable</option>
+					<option value="0">Disable</option>
+				</field>
+				<field name="width_module" type="text" default="100%" label="Width of module(%)" description="Width of module(%)" />
+				<field name="margin" type="text" default="0" label="Margin" description="Margin of module" />
+				<field
+					name="menutype"
+					type="menu"
+					label="MOD_JOOMBIG_MENU_TREE_FIELD_MENUTYPE_LABEL"
+					description="MOD_JOOMBIG_MENU_TREE_FIELD_MENUTYPE_DESC" />
+				<field
+					name="show_title_directory"
+					type="list"
+					default="0"
+					label="Show/Hide Title Directory"
+					description="select show/hide"
+				>
+					<option value="0">hide</option>
+					<option value="1">show</option>
+				</field>
+				<field
+					name="title_directory"
+					type="text"
+					default="Extensions Directory"
+					label="Title directory"
+					description="Title directory" />
+				<field
+					name="startLevel"
+					type="list"
+					default="1"
+					label="MOD_JOOMBIG_MENU_TREE_FIELD_STARTLEVEL_LABEL"
+					description="MOD_JOOMBIG_MENU_TREE_FIELD_STARTLEVEL_DESC"
+				>
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+
+				<field
+					name="endLevel"
+					type="list"
+					default="0"
+					label="MOD_JOOMBIG_MENU_TREE_FIELD_ENDLEVEL_LABEL"
+					description="MOD_JOOMBIG_MENU_TREE_FIELD_ENDLEVEL_DESC"
+					>
+					<option value="0">JALL</option>
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+
+				<field
+					name="showAllChildren"
+					type="radio"
+					default="0"
+					label="MOD_JOOMBIG_MENU_TREE_FIELD_ALLCHILDREN_LABEL"
+					description="MOD_JOOMBIG_MENU_TREE_FIELD_ALLCHILDREN_DESC">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+			</fieldset>
+
+			<fieldset
+				name="advanced">
+				<field
+					name="tag_id"
+					type="text"
+					label="MOD_JOOMBIG_MENU_TREE_FIELD_TAG_ID_LABEL"
+					description="MOD_JOOMBIG_MENU_TREE_FIELD_TAG_ID_DESC" />
+
+				<field
+					name="class_sfx"
+					type="text"
+					label="MOD_JOOMBIG_MENU_TREE_FIELD_CLASS_LABEL"
+					description="MOD_JOOMBIG_MENU_TREE_FIELD_CLASS_DESC" />
+
+				<field
+					name="window_open"
+					type="text"
+					label="MOD_JOOMBIG_MENU_TREE_FIELD_TARGET_LABEL"
+					description="MOD_JOOMBIG_MENU_TREE_FIELD_TARGET_DESC" />
+
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

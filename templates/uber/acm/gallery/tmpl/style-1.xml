@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Gallery Style 1</title>
+	<sampledata><![CDATA[  		
+		{":type":"uber:gallery","gallery":{"jatools-layout-gallery":"style-1","isotope[block-intro]":["Meet just a few of the many dedicated, enthusiastic, collaborative and mildy workaholic people who add real edge and variety to our offering.  We could not reach this far without such a hero team. "],"isotope[block-bg]":[""],"isotope[colmb]":["2"],"isotope[coltb]":["3"],"isotope[coldt]":["5"],"isotope[gutter]":["20"],"isotope[fullwidth]":[" container"],"isotope[animation]":[""],"isotope[hover-animation]":["scale"],"isotope[text-1]":[""],"isotope[gallery]":{"isotope[gallery][selectitem]":["1","2","1","1","1","2","1","1","1"],"undefined":["","","","","","","","",""],"isotope[gallery][img]":["images/joomlart/uber/items/item-1.jpg","images/joomlart/uber/items/item-x1.jpg","images/joomlart/uber/items/item-16.jpg","images/joomlart/uber/items/item-25.jpg","images/joomlart/uber/items/item-25.jpg","images/joomlart/uber/items/item-x3.jpg","images/joomlart/uber/items/item-12.jpg","images/joomlart/uber/items/item-7.jpg","images/joomlart/uber/items/item-9.jpg"],"rows":9,"cols":3,"type":"list"}}}
+    ]]></sampledata>
+    <fields name="isotope">
+		<fieldset name="basic-1" label="ISOTOPE_BASIC1_LABEL" description="ISOTOPE_BASIC1_DESC">
+			<field name="block-intro" type="textarea" default="" rows="5" cols="40"  label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+      <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+      <field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+			<field name="colmb" type="list" label="ISOTOPE_COL_MOBILE_LABEL" default="" description="ISOTOPE_COL_MOBILE_DESC">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</field>
+			
+			<field name="coltb" type="list" label="ISOTOPE_COL_TABLET_LABEL" default="" description="ISOTOPE_COL_TABLET_DESC">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</field>
+			
+			<field name="coldt" type="list" label="ISOTOPE_COL_DESKTOP_LABEL" default="" description="ISOTOPE_COL_DESKTOP_DESC">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</field>
+			
+			<field name="gutter" type="text" default="0" label="ISOTOPE_GUTTER_LABEL" description="ISOTOPE_GUTTER_DESC" filter="integer"></field>
+			<field name="fullwidth" type="radio" default="" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC">
+				<option value=" container">JNO</option>
+				<option value="">JYES</option>
+			</field>
+			
+			<field name="animation" type="list" default="None" label="ISOTOPE_ANIMATION_LABEL" description="ISOTOPE_ANIMATION_DESC">
+				<option value="">None</option>
+				<option value="effect">Scale</option>
+			</field>
+			
+			<field name="hover-animation" type="list" default="none" label="ISOTOPE_HOVER_ANIMATION_LABEL" description="ISOTOPE_HOVER_ANIMATION_DESC">
+				<option value="none">None</option>
+				<option value="scale">Scale</option>
+				<option value="lily">Lily</option>
+				<option value="sadie">Sadie</option>
+				<option value="flip">Flip</option>
+				<option value="zoe">Zoe</option>
+				<option value="swiper">Swiper</option>
+			</field>
+
+	  <field name="text-1" type="textarea" label="ISOTOPE_TEXT1_LABEL" description="ISOTOPE_TEXT1_DESC" cols="40" rows="5"></field>
+			
+		</fieldset>
+		
+    <fieldset name="basic-2" label="ISOTOPE_BASIC2_LABEL" description="ISOTOPE_BASIC2_DESC" multiple="0">
+			<field name="gallery" type="jalist">
+				<item name="selectitem" type="list" default="1" label="ISOTOPE_SIZE_ITEMS_LABEL"
+										 description="ISOTOPE_SIZE_ITEMS_DESC">
+										<option value="1">Item 1x1</option>
+										<option value="2">Item 2x2</option>
+				</item>
+				<item name="img" type="media" label="ISOTOPE_IMG_LABEL" description="ISOTOPE_IMG_DESC" required="1"/>
+
+			</field>
+    </fieldset>
+    </fields>
+</form>

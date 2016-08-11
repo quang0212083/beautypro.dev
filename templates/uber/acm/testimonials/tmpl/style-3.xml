@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>Testimonials Style 3</title>
+	<sampledata><![CDATA[ 
+		{":type":"uber:testimonials","testimonials":{"jatools-layout-testimonials":"style-3","testimonials[block-intro]":[""],"testimonials[block-extra-class]":[""],"testimonials[block-bg]":[""],"testimonials[text-color]":[""],"testimonials[author-info-color]":[""],"testimonials[full-width]":["0"],"testimonials[enable-controls]":["0"],"testimonials[data]":{"testimonials[data][testimonial-text]":["I can't believe the warm decor and calmness you'll get from beginning to end. I don't want to leave and face the real world outside after being in this spa. ","Wow, what a beautiful place!! Absolutely love them and your staff is very professional and experienced in permanent makeup. Try this place.....you will love it."],"testimonials[data][author-name]":["Daisy Ponte , Usa","Keth Dixon , UK"],"rows":2,"cols":3,"type":"list"},"testimonials[data-special]":{"testimonials[data-special][testimonial-text]":[""],"testimonials[data-special][author-name]":[""],"testimonials[data-special][author-title]":[""],"testimonials[data-special][author-img]":[""],"rows":1,"cols":5,"type":"list"},"testimonials[text-1]":[""],"testimonials[data-carousel]":{"testimonials[data-carousel][color]":[""],"testimonials[data-carousel][carousel]":[""],"rows":1,"cols":3,"type":"list"}}}
+    ]]></sampledata>
+	<fields name="testimonials">
+		<fieldset name="basic" label="TESTIMONIAL_BASIC_LABEL" description="TESTIMONIAL_BASIC_DESC">
+			<field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+			<field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+			<field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+
+			<field name="text-color" type="text" size="10" default="" label="TESTIMONIAL_TEXTCOLOR_LABEL" description="TESTIMONIAL_TEXTCOLOR_DESC"></field>
+			<field name="author-info-color" type="text" size="10" default="" label="TESTIMONIAL_AUTHORINFOCOLOR_LABEL" description="TESTIMONIAL_AUTHORINFOCOLOR_DESC"></field>
+			<field name="full-width" type="radio" default="1" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC">
+				<option value="0" class="off">JNO</option>
+				<option value="1" class="on">JYES</option>
+			</field>
+			<field name="enable-controls" type="radio" default="0" label="ACM_CONTROLS_LABEL" description="ACM_CONTROLS_DESC">
+				<option value="0" class="off">JNO</option>
+				<option value="1" class="on">JYES</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="testimonial-box" label="TESTIMONIALS_BOX_LABEL" description="TESTIMONIALS_BOX_DESC">
+			<field name="data" type="jalist">
+				<item name="testimonial-text" type="textarea" cols="40" rows="5" default="" label="TESTIMONIAL_TEXT_LABEL" description="TESTIMONIAL_TEXT_DESC" />
+				<item name="author-name" type="text" size="50" default="" label="TESTIMONIAL_NAME_LABEL" description="TESTIMONIAL_NAME_DESC" />
+			</field>
+		</fieldset>
+	</fields>
+</form>

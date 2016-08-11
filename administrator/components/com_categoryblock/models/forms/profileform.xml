@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+         addrulepath="administrator/components/com_categoryblock/models/rules"
+      >
+        <fieldset>
+                <field
+                        name="id"
+                        type="hidden"
+                />
+                
+                <field name="spacer0" type="spacer" default="" label="COM_CATEGORYBLOCK_SPACER_GENERAL" description="" />
+                
+                
+                <field
+                        name="profilename"
+                        type="text"
+                        label="COM_CATEGORYBLOCK_FIELD_PROFILENAME_LABEL"
+                        description="COM_CATEGORYBLOCK_FIELD_PROFILENAME_DESC"
+                        size="40"
+                        class="inputbox validate-greeting"
+                        validate="profilename"
+                        required="true"
+                        default=""
+                />
+                
+                
+                               
+				<field
+                                name="catid"
+                                type="category"
+                                label="Choose a category..."
+                                extension="com_content"
+                                description=""
+				/>
+			
+				<field type="radio" name="showfeaturedonly" default="0" label="Only Featured Articles" description="Show only featured articles of selected category." >
+				  <option value="1">Yes</option>
+				  <option value="0">No</option>
+				</field>
+				
+			<field type="list" name="recursive" default="0" label="Sub-Category Articles" description="Show articles of all child categories as well as of parent category." >
+				  <option value="0">Hide</option>
+				  <option value="1">Show Sub-Category Articles</option>
+				  <option value="2">Group articles by Category (Order By Category Title)</option>
+				  <option value="3">Group articles by Category (Order By Category Ordering)</option>
+                        </field>
+
+						<field type="radio" name="randomize" default="0" label="Randomize" description="Randomize the sequence of articles." >
+								<option value="1">Yes</option>
+                                <option value="0">No</option>
+                        </field>
+			                      
+               
+			<field type="radio" name="showtitle" default="1" label="Show Category Title" description="" >
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                        </field>
+	    
+			<field type="text" name="categorytitlecssstyle" default="" label="Category Title CSS Style/Class" description="style example: background-color:#ffffff; css class example: class:TheTitle " size="40" />
+		  
+			<field type="radio" name="showcatdesc" default="1" label="Show Category Description" description="" >
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                        </field>
+
+			<field type="text" name="categorydescriptioncssstyle" default="" label="Category Description CSS Style/Class" description="style example: background-color:#ffffff; css class example: class:TheTitle " size="40" />						
+						
+						
+                        <field type="text" name="columns" default="1" label="Number of columns" description="" />
+                        <field type="text" name="padding" default="5" label="Padding" description="" />
+			
+			
+                        <field type="list" name="orderby" default="" label="Order By" description="The field to order by" >
+                        	<option value="created">Creation Date</option>
+                        	<option value="modified">Modification Date</option>
+                        	<option value="title">Title</option>
+				<option value="hits">Hits</option>
+                            <option value="ordering">Custom Ordering</option>
+                        </field>
+			
+                        <field type="radio" name="orderdirection" default="" label="Order Direction" description="" >
+                        	<option value="">Ascending</option>
+                        	<option value="desc">Descending</option>
+                        </field>
+						
+						<field type="text" name="thelimit" default="5" label="Limit" description="Number of articles" />
+						<field type="text" name="skipnarticles" default="0" label="Skip N Articles" description="Number of first articles to skip." />
+						
+						<field type="list" name="targetwindow" default="" label="Target Window" description="" >
+                        	<option value="">Parent</option>
+                        	<option value="_blank">New Window With Navigation</option>
+							<option value="jblank">New Without Navigation</option>
+                        </field>
+        </fieldset>
+        
+        
+			
+                <fieldset name="EXTENDED">
+                        <field type="list" name="blocklayout" default="2" label="Layout" description="" >
+                            <option value="0">Horizontal</option>
+                            <option value="1">Vertical</option>
+                            <option value="2">Text Wrap</option>
+			    <option value="3">Custom Layout</option>
+			    <option value="4">Custom Layout Without Table</option>
+			    
+                        </field>
+						
+		  				<field type="list" name="contentsource" default="0" label="Content Source" description="">
+								<option value="0">Intro Text</option>
+								<option value="1">Full Text</option>
+						</field>
+						
+                        <field type="text" name="wordcount" default="50" label="Word count" description="" />
+						<field type="text" name="charcount" default="50" label="Character count" description="Overwrites Word Count" />
+			
+		
+                        <field type="text" name="imagewidth" default="100" label="Image Width" description="" />
+                        <field type="text" name="imageheight" default="100" label="Image Height (crop)" description="" />
+						
+			<field type="list" name="storethumbnails" default="0" label="Store Thumbnails" description="Store scaled images - thumbnails.">
+			      <option value="0">- No</option>
+			      <option value="4">Yes, article id as filename</option>
+			      <option value="4">*There are more options in Pro version</option>
+			      
+			</field>
+			
+			<field type="text" name="thumbnailspath" default="" label="Store thumbnails in (Folder)" description="Default: images/categoryblock/" />
+			
+                		<field type="text" name="modulecssstyle" default="" label="Module CSS Style/Class" description="style example: background-color:#ffffff; css class example: class:TheTitle " size="40" />
+                       
+			
+                       
+			
+                        <field type="list" name="pagination" default="1" label="Pagination" description="" >
+                                <option value="0">No</option>
+                                <option value="1">On Bottom</option>
+                                <option value="2">On Top</option>
+                                <option value="3">On Bottom and Top</option>
+                        </field>
+			
+                        <field type="text" name="customitemid" default="0" label="Open an Article with custom ItemId" description="if not set then it will be opened with parent Itemid" />
+						<field type="text" name="overwritearticleid" default="0" label="Overwrite Article ID" description="Why? See documentation" />
+				
+			
+                        <field type="radio" name="cleanbraces" default="0" label="Clean Braces" description="Clean everything inside braces {} " >
+                            	<option value="1">Yes</option>
+                        		<option value="0">No</option>
+                       	</field>
+						
+		  				<field type="radio" name="connectwithmenu" default="0" label="Connect with Menu" description="Use the menu item link if there is any with the same alias" >
+                            	<option value="1">Yes</option>
+                        		<option value="0">No</option>
+                       	</field>
+			
+                        <field type="text" name="default_image" default="" label="Default Image" description="Show this image if there is no image in the article available." />
+						
+						<field type="list" name="orientation" default="0" label="Orientation" description="The way to show the table" >
+								<option value="1">Horizontal</option>
+								<option value="0">Vertical</option>
+						</field>
+
+			
+        </fieldset>
+				
+		<fieldset name="WIZARDBLOCKLAYOUT">
+		  <field type="text" name="blockcssstyle" default="" label="Block CSS Style/Class" description="style example: background-color:#ffffff;  css class example: class:BlockClass " size="40" />
+		  <field type="radio" name="showarticletitle" default="1" label="Show Article Title" description="" >
+		    <option value="1">Yes</option>
+			<option value="0">No</option>
+		  </field>
+			
+          <field type="text" name="titlecssstyle" default="font-weight:bold;" label="Title CSS Style/Class" description="css style example: font-weight:bold;  css class example: class:TheTitle " size="40" />
+          <field type="text" name="imagecssstyle" default="padding:5px;" label="Image CSS Style/Class" description="example: padding:5px; css class example: class:cbimage" size="40" />
+          <field type="text" name="descriptioncssstyle" default="text-align:justify;" label="Description CSS Style/Class" description="example: padding:5px; css class example: class:classname" size="40" />
+                        
+						
+          <field type="radio" name="showcreationdate" default="1" label="Show Creation Date" description="" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+          </field>
+          <field type="text" name="dateformat" default="" label="Date Format" description="Use PHP date format, or leave it black to use Joomla default." />
+          <field type="text" name="datecssstyle" default="" label="Creation Date CSS Style/Class" description="" size="40" />	
+          <field type="radio" name="showreadmore" default="1" label="Read More..." description="Show Read More... link" >
+          	<option value="1">Yes</option>
+			<option value="0">No</option>
+          </field>
+		  <field type="text" name="readmorestyle" default="" label="Read More CSS Style/Class" description="example: padding:5px; css class example: class:classname" size="40" />
+						
+          <field type="radio" name="gotocomment" default="1" label="Show Link to Comments" description="If you have comment extension installed." >
+           	<option value="1">Yes</option>
+           	<option value="0">No</option>
+          </field>
+
+	  <field type="radio" name="allowcontentplugins" default="0" label="Allow Content Plugins" description="Important for comments etc." >
+           	<option value="1">Yes</option>
+           	<option value="0">No</option>
+          </field>
+		  
+		  <field type="list" name="titleimagepos" default="imagetitle" label="Title / Image positioning" description="What show first: Title or Image?" >
+			<option value="imagetitle">Image, Title</option>
+			<option value="titleimage">Title, Image</option>
+          </field>
+		  
+		</fieldset>
+		
+		<fieldset name="CUSTOMBLOCKLAYOUT">
+		  <field type="textarea" name="customblocklayouttop" filter="raw" default="" label="Custom Layout Top" description="Normal HTML code to put above rendered block." cols="40" rows="4" />
+		  <field type="textarea" name="customblocklayout" filter="raw" default="" label="Custom Layout" description="See documentation" cols="40" rows="15" />
+		  <field type="textarea" name="customblocklayoutbottom" filter="raw" default="" label="Custom Layout Bottom" description="Normal HTML code to put below rendered block." cols="40" rows="4" />
+		</fieldset>
+				
+
+		
+		<fieldset name="MODULESPECIFIC" label="Module" title="Module" description="gg">
+			<field type="text" name="modulewidth" default="0" label="Module Width (px)" description="example: 200" />
+			<field type="text" name="moduleheight" default="0" label="Module Height (px)" description="0 to have height unlimited, example: 300" />
+			
+			
+			<field type="list" name="overflow" default="scroll" label="Overflow" description="What to do when content is too big (wide or tall to fit the area)" >
+				<option value="scroll">Scroll Both</option>
+				<option value="scroll-x">Horizontal Scroll</option>
+				<option value="scroll-y">Vertical Scroll</option>
+				<option value="autoflow-slow">Auto Flow - Slow</option>
+				<option value="autoflow-normal">Auto Flow - Normal</option>
+				<option value="autoflow-fast">Auto Flow - Fast</option>
+				
+			</field>
+		</fieldset>
+        
+                
+        
+</form>

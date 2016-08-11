@@ -1,0 +1,25 @@
+div.guide {margin:12px 24px;}
+div.guide span {color:#ff0000; font:italic 14px Arial, Helvetica, sans-serif;}
+div.guide p {color:#000000; font:14px Arial, Helvetica, sans-serif;}
+div.guide pre {color:#990000;}
+div.guide p.title {color:#df501f; font:18px Arial, Helvetica, sans-serif;}
+.discription-text{font-size: 12px;}
+a.read-more{
+	background: transparent;
+	color: white;
+	text-decoration: none;
+	font-style: italic;
+}
+a.read-more:hover{
+	background: transparent;
+	color: green;
+	text-decoration: none;
+	font-style: italic;
+	font-weight: bold;
+}
+.html5gallery-tn-title-0{
+	text-align:left !important;
+	white-space: normal !important;
+	height: auto !important;
+	line-height: normal !important;
+}

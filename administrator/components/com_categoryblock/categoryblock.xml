@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+        <name>COM_CATEGORYBLOCK</name>
+        <author>DesignCompass corp</author>
+        <authorEmail>support@joomlaboat.com</authorEmail>
+        <authorUrl>http://joomlaboat.com</authorUrl>
+        <copyright>Copyright (C) 2009-2014 Design Compass corp. All rights reserved.</copyright>
+        <license>GNU General Public License</license>
+        <creationDate>June 2014</creationDate>
+        <version>1.8.0</version>
+        <description>COM_CATEGORYBLOCK_DESCRIPTION</description>
+        
+        
+
+        
+        <install> <!-- Runs on install -->
+                <sql>
+                        <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+                </sql>
+        </install>
+        
+        
+        <uninstall> <!-- Runs on uninstall -->
+                <sql>
+                        <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+                </sql>
+        </uninstall>
+        
+        <update>
+                <schemas>
+                        <schemapath type="mysql">sql/updates/mysql</schemapath>
+                </schemas>
+        </update>
+      
+        <scriptfile>install.php</scriptfile>
+        <installfile>install.php</installfile>
+        
+        <files folder="site">
+                <filename>index.html</filename>
+                <filename>categoryblock.php</filename>
+                <filename>controller.php</filename>
+                <filename>router.php</filename>
+                
+                <folder>includes</folder>
+                
+                <folder>images</folder>
+                <folder>language</folder>
+                <folder>models</folder>
+                <folder>views</folder>
+                
+                
+        </files>
+        <languages folder="site">
+                        <language tag="en-GB">language/en-GB/en-GB.com_categoryblock.ini</language>
+                        <language tag="es-ES">language/es-ES/es-ES.com_categoryblock.ini</language>
+                        <language tag="pl-PL">language/pl-PL/pl-PL.com_categoryblock.ini</language>
+                        <language tag="cs-CZ">language/cs-CZ/cs-CZ.com_categoryblock.ini</language>
+                        <language tag="el-GR">language/el-GR/el-GR.com_categoryblock.ini</language>
+                        <language tag="fr-FR">language/fr-FR/fr-FR.com_categoryblock.ini</language>
+                        <language tag="it-IT">language/it-IT/it-IT.com_categoryblock.ini</language>
+                        <language tag="ru-RU">language/ru-RU/ru-RU.com_categoryblock.ini</language>
+        </languages>
+ 
+
+        <administration>
+                <!-- Administration Menu Section -->
+                <menu>COM_CATEGORYBLOCK_MENU</menu>
+                <!-- Administration Main File Copy Section -->
+                <!-- Note the folder attribute: This attribute describes the folder
+                        to copy FROM in the package to install therefore files copied
+                        in this section are copied from /admin/ in the package -->
+                <files folder="admin">
+                        <!-- Admin Main File Copy Section -->
+                        <filename>index.html</filename>
+                        <filename>categoryblock.php</filename>
+                        <filename>controller.php</filename>
+                        
+                        <!-- SQL files section -->
+                        <folder>sql</folder>
+                        <!-- tables files section -->
+                        <folder>tables</folder>
+                        <!-- models files section -->
+                        <folder>models</folder>
+                        <!-- views files section -->
+                        <folder>views</folder>
+                        <!-- controllers files section -->
+                        <folder>controllers</folder>  
+                        
+                </files>
+                <languages folder="admin">
+                        <language tag="en-GB">language/en-GB/en-GB.com_categoryblock.ini</language>
+                        <language tag="en-GB">language/en-GB/en-GB.com_categoryblock.sys.ini</language>
+                        
+                        <language tag="pl-PL">language/pl-PL/pl-PL.com_categoryblock.ini</language>
+                        <language tag="pl-PL">language/pl-PL/pl-PL.com_categoryblock.sys.ini</language>
+                </languages>
+        </administration>               
+ 
+ 
+        <modules>
+                <module folder="modules" module="mod_categoryblock" name="Category Block" />
+        </modules>
+        
+        <plugins>
+                <plugin folder="plugins/content" plugin="categoryblock" name="Content - Category Block" group="content" />
+        </plugins>
+        
+</extension>

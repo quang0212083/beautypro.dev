@@ -1,0 +1,89 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+// SLIDESHOW THUBAILS
+// ------------------
+.section-inner {
+  background-size: cover;
+  background-position: center center;
+  .section-title  {
+    text-align: center;
+  }
+
+}
+
+.acm-accordion {
+  .panel {
+    border: 0;
+    .box-shadow(none);
+    .panel-body {
+      border: 1px solid @t3-border-color;
+      @media screen and (max-width: @screen-md-max) {
+        padding: @t3-global-padding;
+      }
+    }
+    .panel-heading {
+      padding: 0;
+      border: 0;
+      background: none;
+      a {
+        display: block;
+        padding: @t3-global-padding/3 @t3-global-padding/2;
+        font-weight: bold;
+        background: none;
+        color: @gray-darker;
+        border: 1px solid @t3-border-color;
+        font-size: @font-size-small;
+
+        .fa {
+          font-size: 8px;
+          border: 1px solid;
+          border-radius: 2px;
+          padding: 2px;
+        }
+
+        &:hover,
+        &:focus {
+          color: @link-color;
+        }
+
+        .heading-icon {
+          .fa-plus {
+            display: none;
+          }
+        }
+
+        &.active {
+          color: @white;
+          background: @link-color;
+          border-color: @link-color;
+          .fa-plus {
+            display: inline;
+          }
+          .fa-minus {
+            display: none;
+          }
+        }
+      }
+    }
+
+
+    .media-object {
+      margin-right: @t3-global-margin/2;
+    }
+
+    .media-body {
+      
+    }
+  }
+}
+
+
+// Import Style Less
+// --------------------------
+@import "style-1.less"; // Import file style-1.less

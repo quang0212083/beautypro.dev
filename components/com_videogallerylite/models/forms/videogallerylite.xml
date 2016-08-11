@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="editVideogallerylite" addfieldpath="/modules/com_videogallerylite/models/fields" >
+		<field 
+                    name="asset_id"
+                    type="hidden" 
+                    filter="unset" />
+		
+		<field 
+                    name="articletext"
+                    type_="media"
+                    type= "videogallerylite"
+                    class="inputbox"
+                    label=""
+                    description="COM_CONTENT_FIELD_ARTICLETEXT_DESC"/>
+        </fieldset>
+
+</form>

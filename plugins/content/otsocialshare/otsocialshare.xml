@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="content" method="upgrade">
+    <name>Content - OT Social Share</name>
+    <author>Omegatheme.com</author>
+    <creationDate>June 2014</creationDate>
+    <copyright>Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>services@omegatheme.com</authorEmail>
+    <authorUrl>www.omegatheme.com</authorUrl>
+    <version>3.1.0</version>
+    <description>PLG_OT_SOCIAL_SHARE_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="otsocialshare">otsocialshare.php</filename>
+        <filename>index.html</filename>
+        <filename>shareCount.php</filename>
+        <folder>css</folder>
+        <folder>js</folder>
+		<folder>images</folder>
+        <folder>language</folder>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_content_otsocialshare.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_content_otsocialshare.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                 <field name="ot_display" type="radio" class="btn-group"   label="PLG_OT_SI_FIELD_DISPLAY_LABLE" description="PLG_OT_SI_FIELD_DISPLAY_DESC" default="1" > 
+                    <option value="1">Top</option>
+                    <option value="0">Bottom</option>                                
+                </field>
+                <field name="ot_float" type="radio" class="btn-group"   label="PLG_OT_SI_FIELD_FLOAT_LABLE" description="PLG_OT_SI_FIELD_FLOAT_DESC" default="right" > 
+                    <option value="right">Right</option>
+                    <option value="left">Left</option>                                
+                </field>
+                <field name="ot_facebook" type="radio" class="btn-group"  label="PLG_OT_SI_FIELD_FACEBOOK_LABLE" description="PLG_OT_SI_FIELD_FACEBOOK_DESC"  default="0" > 
+                    <option value="1">Enable</option>
+                    <option value="0">Disable</option> 
+                                
+                </field>
+                <field name="ot_twitter" type="radio"  class="btn-group"  label="PLG_OT_SI_FIELD_TWITTER_LABLE" description="PLG_OT_SI_FIELD_TWITTER_DESC" default="1">               
+                    <option value="1">Enable</option>
+                    <option value="0">Disable</option> 
+                </field>
+                <field name="ot_pinterest" type="radio" class="btn-group"  label="PLG_OT_SI_FIELD_PRINTEREST_LABLE" description="PLG_OT_SI_FIELD_PRINTEREST_DESC" default="1"> 
+                    <option value="1">Enable</option>
+                    <option value="0">Disable</option> 
+                </field>
+                <field name="ot_google_plus" type="radio" class="btn-group"   label="PLG_OT_SI_FIELD_GOOGLE_PLUS_LABLE" description="PLG_OT_SI_FIELD_GOOGLE_PLUS_DESC" default="1"> 
+                    <option value="1">Enable</option>
+                    <option value="0">Disable</option> 
+                </field>
+                <field name="ot_linkedin" type="radio" class="btn-group" label="PLG_OT_SI_FIELD_LINKEDIN_LABLE" description="PLG_OT_SI_FIELD_LINKEDIN_DESC" default="1"> 
+                    <option value="1">Enable</option>
+                    <option value="0">Disable</option> 
+                </field>
+            </fieldset>
+        </fields>        
+    </config>
+</extension>

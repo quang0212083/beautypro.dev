@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension 
+	type="module" 
+	version="2.5.x"
+	client="site"
+	method="upgrade">
+	<name>JA News Ticker</name>
+	<author>Joomlart.com</author>
+	<creationDate>27 March 2015</creationDate>
+    <authorEmail>webmaster@joomlart.com</authorEmail>
+    <authorUrl>http://www.joomlart.com</authorUrl>
+	<copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>2.6.2</version>
+	<description>
+	 <![CDATA[
+	 <div align="left">
+	 	<span style="color: #008000;"><strong>JA Newsticker Module for Joomla! 2.5 and Joomla! 3.x</strong></span><br />
+	 	<p><img alt="JA Newsticker Module" src="http://static.joomlart.com/images/stories/extensions/joomla/jaec_janews.png" /></p>
+		<div style='font-weight:normal'>
+	 	Display latest articles with cool animation effects as News Ticker, select categories to include, length of titles, sorting or even control buttons. Decent way to scroll out your latest information in limited space...
+	 	<p style="clear:both"><span style="color: #ff6600;"><strong>Features:</strong></span></p>
+	 	<ul>
+			<li>The module supports a lot of animations display</li>
+		</ul>
+		
+		<p><strong><span style="color: #ff0000;">Upgrade Methods:</span><br /></strong></p>
+		<ul>
+			<li>You can install new version directly over this version. Uninstallation is not required. Backup any customized files before upgrading. OR</li>
+			<li>Use <strong><a href="http://extensions.joomla.org/extensions/core-enhancements/installers/12077" target="_blank">JA Extensions Manager</a></strong> Component for easy upgrades and rollbacks. <strong><a href="http://www.youtube.com/user/JoomlArt#p/c/BC9B0C0BFE98657E/2/mNAuJRmifG8" target="_blank">Watch Video..</a></strong></li>
+		</ul>
+		<p><span style="color: #008000;"><strong>Links:</strong></span></p>
+		<ul>
+		<li><a target='_blank' href='http://update.joomlart.com/'>Updates &amp; Versions</a></li><li><a target='_blank' href='http://www.joomlart.com/forums/showthread.php?51825'>General Userguide</a></li><li>For more details on Thumbnail modes read this <a href="http://www.joomlart.com/forums/showthread.php?50325" title="JA thumbanil modes" target="_blank"><strong>tutorial</strong></a></li>
+		</ul>
+		<p>Copyright 2004 - 2014 <a href="http://www.joomlart.com/" title="Visit Joomlart.com!">JoomlArt.com</a>.</p>
+		</div>
+	</div>
+	 ]]>
+	</description>
+	<files>
+		<filename module="mod_janewsticker">mod_janewsticker.php</filename>
+		<filename>index.html</filename>
+		<filename>jast_articles.php</filename>
+		<filename>helper.php</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_janewsticker.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_janewsticker/assets/elements">
+				
+				<field type="spacer" hr="false" label="Content Settings" />
+				<field name="using_mode" 
+					type="list" 
+					default=""
+					label="DISPLAY_ARTICLES_FROM" 
+					description="DISPLAY_ARTICLES_FROM_DESC">
+					<option value="categories_selected">Joomla Content</option>
+					<option value="com_k2">K2</option>
+					<option value="rss">Rss link</option>
+					<option value="external">External links</option>
+				</field>
+				<field name="external_link" 
+					type="textarea" 
+					cols="40" 
+					rows="10"
+					default="" label="EXTERNAL_LINK" 
+					description="EXTERNAL_LINK_DESC" />
+				<field name="k2catsid" 
+					type="k2category"
+					class="mselect"
+					default="" 
+					multiple="multiple"
+					level="3" 
+					label="SELECT_K2_CATEGORIES" 
+					description="SELECT_K2_DESC" />
+				<field name="rss_link" 
+					type="text" 
+					size="40" 
+					default=""
+					label="RSS_LINK" 
+					description="RSS_LINK_DESC" />
+				<field name="category" 
+					type="category"
+					extension="com_content" 
+					class="mselect"
+					multiple="true" 
+					size="5" 
+					default="" 
+					label="CATEGORIES_SELECTION"
+					description="THE_MODULE_JUST_DISPLAY_ARTICLES_FROM_ONE_OR_MANY_CATEGORIES">
+					<option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>
+				<field name="sort_order_field" 
+					type="list" 
+					default="created"
+					label="SORT_ORDER_BY" 
+					description="SORT_ORDER_BY_DESC">
+					<option value="created">DATE</option>
+					<option value="ordering">ORDER</option>
+					<option value="hits">HITS</option>
+				</field>
+				<field name="sort_order" 
+					type="radio" 
+					default="DESC" 
+					class="btn-group"
+					label="ASC_OR_DESC"
+					description="ASC_OR_DESC_DESC">
+					<option value="ASC">Asc</option>
+					<option value="DESC">Desc</option>
+				</field>
+				<field type="text" 
+					default="10" 
+					size="5" 
+					name="max_items" 
+					filter="integer"
+					label="MAX_ARTICLES_DISPLAY" 
+					description="MAX_ARTICLES_DISPLAY_DESC" />
+				<field name="title_max_chars" 
+					type="text" 
+					default="200" 
+					size="5" 
+					filter="integer"
+					label="TITLE_MAX_LENGTH" 
+					description="TITLE_MAX_LENGTH_DESC" />
+					
+				<field name="decription_max_chars"
+                    default="300"
+                    size="5"
+                    type="text"
+                    filter="integer"
+                    label="DESCRIPTION_MAX_LENGTH"
+                    description="DESCRIPTION_MAX_LENGTH_DESC" />	
+						
+				<field type="spacer" hr="false" label="Display Settings" />
+				<field name="animation_type" 
+					type="list" 
+					default="horizontal"
+					label="ANIMATION_TYPE" 
+					description="ANIMATION_TYPE_DESC">
+					<option value="opacity">Opacity</option>
+					<option value="vertical">Vertical slide down</option>
+					<option value="verticald">Vertical slide up</option>
+					<option value="horizontal">Horizontal slide left</option>
+					<option value="horizontal_right">Horizontal slide right</option>
+				</field>
+				<field name="animation_speed" 
+					type="text" 
+					default="500" 
+					size="5" 
+					filter="integer"
+					label="ANIMATION_DURATION" 
+					description="ANIMATION_DURATION_DESC" />
+				<field name="animation_interval" 
+					type="text" 
+					default="3000" 
+					size="5" 
+					filter="integer"
+					label="ANIMATION_INTERVAL" 
+					description="ANIMATION_INTERVAL_DESC" />
+				<field name="animation_transition" 
+					type="list"
+					default="Fx.Transitions.linear" 
+					label="ANIMATION_TRANSITION"
+					description="ANIMATION_TRANSITION_DESC">
+					<option value="Fx.Transitions.linear">linear</option>
+					<option value="Fx.Transitions.Quad.easeIn">Quad.easeIn</option>
+					<option value="Fx.Transitions.Quad.easeOut">Quad.easeOut</option>
+					<option value="Fx.Transitions.Quad.easeInOut">Quad.easeInOut</option>
+					<option value="Fx.Transitions.Cubic.easeIn">Cubic.easeIn</option>
+					<option value="Fx.Transitions.Cubic.easeOut">Cubic.easeOut</option>
+					<option value="Fx.Transitions.Cubic.easeInOut">Cubic.easeInOut</option>
+					<option value="Fx.Transitions.Quart.easeIn">Quart.easeIn</option>
+					<option value="Fx.Transitions.Quart.easeOut">Quart.easeOut</option>
+					<option value="Fx.Transitions.Quart.easeInOut">Quart.easeInOut</option>
+					<option value="Fx.Transitions.Quint.easeIn">Quint.easeIn</option>
+					<option value="Fx.Transitions.Quint.easeOut">Quint.easeOut</option>
+					<option value="Fx.Transitions.Quint.easeInOut">Quint.easeInOut</option>
+					<option value="Fx.Transitions.Pow.easeIn">Pow.easeIn</option>
+					<option value="Fx.Transitions.Pow.easeOut">Pow.easeOut</option>
+					<option value="Fx.Transitions.Pow.easeInOut">Pow.easeInOut</option>
+					<option value="Fx.Transitions.Expo.easeIn">Expo.easeIn</option>
+					<option value="Fx.Transitions.Expo.easeOut">Expo.easeOut</option>
+					<option value="Fx.Transitions.Expo.easeInOut">Expo.easeInOut</option>
+					<option value="Fx.Transitions.Circ.easeIn">Circ.easeIn</option>
+					<option value="Fx.Transitions.Circ.easeOut">Circ.easeOut</option>
+					<option value="Fx.Transitions.Circ.easeInOut">Circ.easeInOut</option>
+					<option value="Fx.Transitions.Sine.easeIn">Sine.easeIn</option>
+					<option value="Fx.Transitions.Sine.easeOut">Sine.easeOut</option>
+					<option value="Fx.Transitions.Sine.easeInOut">Sine.easeInOut</option>
+					<option value="Fx.Transitions.Back.easeIn">Back.easeIn</option>
+					<option value="Fx.Transitions.Back.easeOut">Back.easeOut</option>
+					<option value="Fx.Transitions.Back.easeInOut">Back.easeInOut</option>
+					<option value="Fx.Transitions.Bounce.easeIn">Bounce.easeIn</option>
+					<option value="Fx.Transitions.Bounce.easeOut">Bounce.easeOut</option>
+					<option value="Fx.Transitions.Bounce.easeInOut">Bounce.easeInOut</option>
+					<option value="Fx.Transitions.Elastic.easeIn">Elastic.easeIn</option>
+					<option value="Fx.Transitions.Elastic.easeOut">Elastic.easeOut</option>
+					<option value="Fx.Transitions.Elastic.easeInOut">Elastic.easeInOut</option>
+				</field>
+				<field name="show_headtext" 
+					type="radio" 
+					default="1"
+					class="btn-group"
+					label="SHOW_HEADTEXT" 
+					description="SHOW_HEADTEXT_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="headtext" type="text" default="Headlines:" label="HEADTEXT"
+					description="HEADTEXT_DESC" />
+				<field name="show_buttons_control" 
+					type="radio" 
+					default="0"
+					class="btn-group"
+					label="SHOW_BUTTTONS_CONTROL" 
+					description="SHOW_BUTTTONS_CONTROL_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+					
+				<field type="japanel" path="modules/mod_janewsticker/assets/elements/" />
+				<field name="group" type="japanel" function="depend" hidden="true">
+					<option for="using_mode" value="com_k2" hideRow="true">k2catsid,sort_order_field,sort_order,max_items</option>
+					<option for="using_mode" value="categories_selected" hideRow="true">category,sort_order_field,sort_order,max_items</option>
+					<option for="using_mode" value="rss" hideRow="true">rss_link</option>
+					<option for="using_mode" value="external" hideRow="true">external_link</option>
+					<option for="show_headtext" value="1" hideRow="true">headtext</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

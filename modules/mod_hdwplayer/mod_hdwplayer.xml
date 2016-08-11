@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0.0" client="site" method="upgrade">
+  <name>Hdwplayer</name>
+  <author>HDW Player</author>
+  <creationDate>November 2012</creationDate>
+  <copyright>Copyright (c) 2011 - 2013 HDW Player. All rights reserved.</copyright>
+  <authorEmail>admin@hdwplayer.com</authorEmail>
+  <authorUrl>www.hdwplayer.com</authorUrl>
+  <version>3.1</version>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <description>A Simple Video Player module for HDW Player. Video inputs are derived from the Component.</description>
+  <files>
+    <folder>tmpl</folder>
+    <filename module="mod_hdwplayer">mod_hdwplayer.php</filename>
+    <filename>index.html</filename>
+    <filename>helper.php</filename>
+  </files>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="width" type="text" default="640" label="Width" description="Width of the Player" />
+        <field name="height" type="text" default="360" label="Height" description="Height of the Player" />
+        <field name="categories" type="sql" multiple="true" label="Select Categories" description="Select category of videos for the player"  
+			query="select id, name from #__hdwplayer_category where published=1 order by name ASC" key_field="name" value_field="name"/>
+        <field name="showtitle" type="list" default="0" label="Show Video Title" description="Show Video Title above the Player" >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="showdescription" type="list" default="0" label="Show Video Description" description="Show Video Description below the Player" >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="autoplay" type="list" default="0" label="Autoplay" description="Start Playing the Video automatically on Page Load" >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="skinmode" type="list" default="static" label="Skin Mode" description="Show skin only on moving the cursor inside the player (or) make it static">
+          <option value="static">Static</option>
+          <option value="float">Float</option>
+        </field>
+        <field name="playlistautostart" type="list" default="0" label="PlayList AutoStart" description="Option to start the Next Video automatically at the end of the Current Playing Video from the Playlist." >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="playlistopen" type="list" default="0" label="PlayList Open" description="Option to keep the Playlist opened by default." >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="playlistrandom" type="list" default="0" label="PlayList Random" description="Play the videos in random from the playlist." >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="buffer" type="text" default="3" label="Buffer Value" description="This should be a numeric value from 0 - 10. This property is used to gather given seconds of video data in advance to play the video. Buffer seconds are used to improve the video performance in Progressive Downloaded Videos. The default value is 3." />
+        <field name="volumelevel" type="text" default="50" label="Intial Volume Level" description="This should be a numeric value from 0 - 100. This property is used to control the initial volume of the player. The default value is 50." />
+        <field name="stretch" type="list" default="fill" label="Stretch Type" description="Scaling of the Video">
+          <option value="none">None</option>
+          <option value="fill">Fill</option>
+          <option value="uniform">Uniform</option>
+          <option value="exactfit">Exact Fit</option>
+        </field>
+        <field name="controlbar" type="list" default="1" label="Enable ControlBar" description="Show (or) Hide the Control Bar from the Player." >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="playpausedock" type="list" default="1" label="Enable PlayPause Dock" description="Show (or) Hide the PlayPause Dock from the Player." >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="progressbar" type="list" default="1" label="Enable Progress Bar" description="Show (or) Hide the Progress Bar from the Player." >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="timerdock" type="list" default="1" label="Enable Timer Dock" description="Show (or) Hide the Timer Dock from the Player." >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="sharedock" type="list" default="1" label="Enable Share Dock" description="Show (or) Hide the Share Dock from the Player." >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="volumedock" type="list" default="1" label="Enable Volume Dock" description="Show (or) Hide the Volume Dock from the Player." >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="fullscreendock" type="list" default="1" label="Enable FullScreen Dock" description="Show (or) Hide the FullScreen Dock from the Player." >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="playdock" type="list" default="1" label="Enable Play Dock" description="Show (or) Hide the Play Dock from the Player." >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="playlist" type="list" default="1" label="Enable PlayList" description="Show (or) Hide the PlayList from the Player." >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+		<field name="autodetect" type="list" default="1" label="Autodetect Video"  description="Autodetect Video from Page URL." >
+      		<option value="0">No</option>
+      		<option value="1">Yes</option>
+    	</field>
+        <field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A Suffix to be applied to the CSS class of the Module.This allows for individual Module Styling." />
+      </fieldset>
+    </fields>
+  </config>
+</extension>

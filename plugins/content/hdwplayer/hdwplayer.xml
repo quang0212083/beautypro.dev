@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0.0" type="plugin" group="content" method="upgrade">
+  <name>HDW Player</name>
+  <author>HDW Player</author>
+  <creationDate>November 2012</creationDate>
+  <copyright>Copyright (c) 2011 - 2013 HDW Player. All rights reserved.</copyright>
+  <authorEmail>admin@hdwplayer.com</authorEmail>
+  <authorUrl>www.hdwplayer.com</authorUrl>
+  <version>3.1</version>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <description>Check the available Plugin parameters in http://www.hdwplayer.com/</description>
+  <files>
+    <filename plugin="hdwplayer">hdwplayer.php</filename>
+  </files>
+</extension>

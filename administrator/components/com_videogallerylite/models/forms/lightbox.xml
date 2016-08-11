@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="Internationalization" addfieldpath="/modules/com_videogallerylite/models/fields" >
+            <field labelclass = "labels" id="light_box_style" name="light_box_style" type="jscolor" type_= "light_box_style" label ="Lightbox style"></field>
+                <field labelclass = "labels" id="light_box_transition" name="light_box_transition" type="jscolor" type_= "TransitionList" label ="Transition type">
+                        <option value="elastic">Elastic</option>
+                        <option value="fade">Fade</option>
+                        <option value="none">None</option>
+                </field>
+                <field
+                    name="light_box_speed"
+                    type="jscolor"
+                    type_="number" 
+                    default = "800"
+                    value='800'
+                    label="Opening speed"
+                    id="light_box_speed" 
+                    class="text" 
+                    for="light_box_speed"/>
+                <field
+                    name="light_box_fadeout"
+                    type="jscolor" 
+                    type_="number" 
+                    label="Closing speed" 
+                    id="light_box_fadeout" 
+                    value="300"
+                    default="300"
+                    for="light_box_fadeout"/> 
+                <field
+                    name="light_box_title"
+                    type="jscolor" 
+                    type_="checkbox"
+                    default="false"
+                    label="Show the title"
+                    description="" 
+                    for="light_box_title" 
+                    value = ''/> 
+                <field 
+                    for="light_box_opacity" 
+                    name="light_box_opacity"
+                    id="light_box_opacity"
+                    type_="opacity"
+                    type="jscolor" 
+                    label="Overlay transparency" 
+                    value="70" 
+                    data-slider-highlight="true" 
+                    data-slider-values="0,10,20,30,40,50,60,70,80,90,100"
+                    data-slider="true"/> 
+                <field
+                    name="light_box_open" 
+                    type="jscolor" 
+                    type_="checkbox"
+                    default="" 
+                    label="Auto open" 
+                    description="" 
+                    for="light_box_open"
+                    value='1' 
+                    class = ".autoOpen"/> 
+                <field 
+                    name="light_box_overlayclose"
+                    type="jscolor"  
+                    type_="light_box_overlayclose"
+                    default="true"
+                    label="Overlay close"
+                    description=""
+                    for="light_box_overlayclose" /> 
+                <field
+                    name="light_box_esckey" 
+                    type="jscolor"
+                    type_="checkbox" 
+                    default="" 
+                    for="light_box_esckey"
+                    label="EscKey close"
+                    id="light_box_esckey"  
+                    checked = 'true'/> 
+                <field
+                    name="light_box_arrowkey"
+                    type="jscolor" 
+                    type_="checkbox"
+                    default=""
+                    for="light_box_arrowkey" 
+                    label="Keyboard navigation"   
+                    id="light_box_arrowkey" 
+                    checked = 'true'/> 
+                <field 
+                    name="light_box_loop" 
+                    type="jscolor"
+                    type_="light_box_loop" 
+                    
+                    for="light_box_loop" 
+                    label="Loop content"  
+                    id="light_box_loop"
+                    checked = 'true'
+                /> 
+                <field
+                    name="light_box_closebutton"
+                    type="jscolor" 
+                    type_="checkbox"
+                    default="1" 
+                    for="light_box_closebutton"
+                    label="Show close button" 
+                    id="light_box_closebutton" 
+                    checked = 'true'
+                    value='true'/> 
+</fieldset>
+<fieldset name="Positioning" >
+                <field
+                    name="light_box_fixed"
+                    type="jscolor" 
+                    type_="light_box_fixed"
+                    default="1" 
+                    for="light_box_fixed"
+                    label="Fixed position" 
+                    id="light_box_fixed" 
+                    checked = 'true'
+                    value='true'/> 
+                
+                <field name="lightbox_open_position" type="jscolor" type_="radio_lightbox" default="5" label="Popup position" description="">
+                    <option type="radio" value="1" id="slideshow_title_top-left" >1</option>
+                    <option type="radio" value="2" id="slideshow_title_top-center" >2</option>
+                    <option type="radio" value="3" id="slideshow_title_top-right" >3</option>
+                    <option type="radio" value="4" id="slideshow_title_middle-left" >4</option>
+                    <option type="radio" value="5" id="slideshow_title_middle-center" >5</option>
+                    <option type="radio" value="6" id="slideshow_title_middle-right">6</option>
+                    <option type="radio" value="7" id="slideshow_title_bottom-left" >7</option>
+                    <option type="radio" value="8" id="slideshow_title_bottom-center" >8</option>
+                    <option type="radio" value="9" id="slideshow_title_bottom-right" >9</option>
+                </field>
+</fieldset>
+<fieldset name="Dimensions">
+<field
+                    name="light_box_size_fix"
+                    type="jscolor" 
+                    type_="checkbox"
+                    script =''
+                    default="false" 
+                    for="light_box_size_fix"
+                    label="Popup size fix" 
+                    id="light_box_size_fix" 
+                    checked = 'true'
+                    value='true'/> 
+                <field
+                    name="light_box_initialwidth"
+                    type="jscolor" 
+                    type_="number"
+                    default="300" 
+                    for="light_box_initialwidth"
+                    label="Popup initial width" 
+                    id="light_box_initialwidth"
+                    value='light_box_initialwidth'
+                    class="text"/>
+                
+                <field
+                    name="light_box_width"
+                    type="jscolor" 
+                    type_="number"
+                    default="1000" 
+                    for="light_box_width"
+                    label="Popup width" 
+                    id="light_box_width"
+                    value='true'
+                    class="fixed-size"
+                    labelclass="fixed-size"/>
+                <field
+                    name="light_box_maxwidth"
+                    type="jscolor" 
+                    type_="light_box_maxwidth"
+                    default="768" 
+                    for="light_box_maxwidth"
+                    label="Popup maxWidth" 
+                    id="light_box_maxwidth"
+                    value='light_box_maxwidth'
+                    class="not-fixed-size"
+                    labelclass='not-fixed-size'/>                    
+                <field
+                    name="light_box_initialheight"
+                    type="jscolor" 
+                    type_="number"
+                    default="100" 
+                    for="light_box_initialheight"
+                    label="Popup initial height" 
+                    id="light_box_initialheight"
+                    value='light_box_initialheight'
+                    class="text"/>
+                <field
+                    name="light_box_height"
+                    type="jscolor" 
+                    type_="number"                
+                    default="1000" 
+                    for="light_box_height"
+                    label="Popup height" 
+                    id="light_box_height"
+                    value='true'
+                    class="fixed-size"
+                    labelclass="fixed-size"/> 
+                         
+                <field
+                    name="light_box_maxheight"
+                    type="jscolor" 
+                    type_="light_box_maxheight"
+                    default="500" 
+                    for="light_box_maxheight"
+                    label="Popup maxHeigh" 
+                    id="light_box_maxheight"
+                    value='light_box_maxheight'
+                    class="not-fixed-size"
+                    labelclass="not-fixed-size"/>           
+</fieldset>         
+<fieldset name="Slideshow">
+        <field 
+                name="light_box_slideshow"
+                type="jscolor" 
+                type_="checkbox"
+                default="" 
+                for="light_box_slideshow"
+                label="Slideshow" 
+                id="light_box_slideshow" 
+                checked = 'true'
+                value='true'/> 
+                <field
+                    name="light_box_slideshowspeed"
+                    type="jscolor" 
+                    type_="number"
+                    default="2500" 
+                    for="light_box_slideshowspeed"
+                    label="Slideshow interval" 
+                    id="light_box_slideshowspeed"
+                    value='2500'
+                    class="text"/>
+               
+                <field
+                    name="light_box_slideshowauto"
+                    type="jscolor" 
+                    type_="light_box_slideshowauto"
+                    default="" 
+                    for="light_box_slideshowauto"
+                    label="Slideshow auto start" 
+                    id="light_box_slideshowauto" 
+                    checked = 'true'
+                    value='true'/> 
+                <field
+                    name="light_box_slideshowstart"
+                    type="jscolor" 
+                    type_="text"
+                    default="" 
+                    for="light_box_slideshowstart"
+                    label="Slideshow start button text" 
+                    id="light_box_slideshowstart"
+                    value='light_box_slideshowstart]'
+                    class="text"/>
+                <field
+                    name="light_box_slideshowstop"
+                    type="jscolor" 
+                    type_="text"
+                    default="" 
+                    for="light_box_slideshowstop"
+                    label="Slideshow stop button text" 
+                    id="light_box_slideshowstop"
+                    value='light_box_slideshowstop'
+                    class="text"/>
+                <field
+                    name="light_box_scalephotos"
+                    type="hidden"
+                    default="" 
+                    label="light_box_scalephotos" 
+                    value='light_box_scalephotos'
+                    class="text"/>
+                <field
+                    name="light_box_scrolling"
+                    type="hidden" 
+                    default="" 
+                    label="light_box_returnfocus" 
+                    value='light_box_scrolling'
+                    class="text"/>
+                <field
+                    name="light_box_trapfocus"
+                    type="hidden" 
+                    default="" 
+                    label="light_box_scalephotos" 
+                    value='light_box_trapfocus'
+                    class="text"/>
+                <field
+                    name="light_box_fastiframe"
+                    type="hidden"
+                    default="" 
+                    label="light_box_scalephotos" 
+                    value='light_box_fastiframe'
+                    class="text"/>
+               
+            </fieldset>
+
+</form>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.6.0"
+	client="site"
+	method="upgrade">
+	<name>YJ Module Engine</name>
+	<author>YouJoomla.com</author>
+	<creationDate>04-06-2016</creationDate>
+	<license>GNU/GPL</license>
+	<authorEmail>youjoomla@gmail.com</authorEmail>
+	<authorUrl>www.youjoomla.com</authorUrl>
+	<version>1.0.18</version>
+	<compatibility>
+		<version>2.5</version>
+		<version>3</version>
+	</compatibility>
+	<description>
+		<![CDATA[<style type="text/css" media="all">body {background:#fff;}#wrap1 {padding:10px 0;margin:0 auto;display:block;overflow:hidden;width:100%;height:580px!important;background:#F6F6F6;border:1px solid #DEDEDE;}span.extitle {display:block;clear:both;font-weight:bold;font-family: Arial Narrow, sans-serif;font-size:18px;margin:10px 20px;color:#1e2325!important;text-align:center;padding:5px;background:#DEDEDE;border:5px solid #fff;text-shadow:1px 1px #fff;}.eximg {float:left;clear:right;border:5px solid #fff;margin:0 0 0 18px;}.exinfo{display:block;overflow:hidden;text-align:left;padding:5px 15px 0 0;float:right;font-size:12px;font-weight:bold;width:50%;}</style>
+		<div id="wrap1">
+			<span class="extitle">Youjoomla Module Engine for Joomla 1.6x and UP</span>
+			<a title="Visit the official website!" href="http://www.youjoomla.com" target="_blank">
+				<img class="eximg" src="../modules/mod_yjme/images/yj_extensions.jpg" border="0" alt="Logo" />
+			</a>
+			<div class="exinfo">Thank you for downloading Youjoomla.com extension.
+				<br />
+				To setup your module please hover over the module parameters
+				<br />
+				and follow the instructions.
+				<br />
+				If you need support please post new thread in our
+				<a href="http://www.youjoomla.com/joomla_support/index.php" target="_blank">Forum</a>
+				.
+				<br />
+				Have fun playing with your new extension :).
+				<br />
+				<a href="www.youjoomla.com">Youjoomla.com</a>
+			</div>
+		</div>]]>
+	</description>
+	<languages>
+		<language tag="en-GB">en-GB.mod_yjme.ini</language>
+		<language tag="en-GB">en-GB.mod_yjme.sys.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_yjme">mod_yjme.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>src</folder>
+		<folder>elements</folder>
+		<folder>yjme</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_yjme/elements/">
+			<fieldset name="basic">
+				<field type="yjhandler" name="yjhandler" />
+				<field type="yjspacer" default="&lt;strong&gt;MODULE LAYOUT SETTINGS&lt;/strong&gt;" />
+				<field name="module_template" type="yjfolderlist" default="Default" hide_none="blank" label="Select default module template" directory="modules/mod_yjme/tmpl" description="You can create custom layout templates for this module. Simply click the create new template button below and module engine will copy Default template and name it by the name you have selected in creation process.&lt;br /&gt;You could also copy modules/mod_yjme/tmpl/Default folder , rename it to your own template name and edit default.php within your template folder to your liking. &lt;br /&gt;Once you have created your module template , your template name will be visible here.&lt;br /&gt; For template overrides please copy your module template folder to your template/html/mod_yjme/ folder and create custom overides for each module instance. To get you started we have created blank module template name New. Edit Template option can be used to customize the module template files from here." />
+				<field name="module_css" type="yjcss" default="stylesheet.css" hide_none="blank" exclude="index.html|ifie.php" label="Select default module CSS" directory="modules/mod_yjme/css" description="Assign default module CSS file. You can use Edit, Upload or Create new options to customize the CSS files from here." />
+				<field type="yjspacer" default="&lt;strong&gt;PLEASE SELECT NEWS ITEM SOURCE&lt;/strong&gt;" name="select_source_title" />
+				<!--This is the toggle trigger-->
+				<field name="item_source" type="yjmelist" default="1" label="Select default news item source" directory="modules/mod_yjme/tmpl" description="Please select your default news item source. Note:News item source cannot be combined. Example: K2 only or Joomla Only. You can however make a copy of the module and publish K2 or Joomla news items instance on same page." >
+					<option value="1">Joomla News Items</option>
+					<option value="2">K2 Items</option>
+				</field>
+				<!--This is the first holder for toggle do not move it!-->
+				<field type="yjholder" name="joomla_items_holder"/>
+				<field type="yjspacer" name="j_news_source" default="&lt;strong&gt;JOOMLA NEWS SOURCE SETTINGS&lt;/strong&gt;" />
+				<field name="yjcatfilter" type="yjsgradio" default="0" label="Joomla Category filter" description="">
+					<option value="0">All</option>
+					<option value="1">Select</option>
+				</field>
+				<field name="get_items" type="yjcategoriesmultiple" multiple="multiple" extension="com_content" default="" label="Select one or more categories" description="In this categorie there must be min 1 news item published" />
+				<field name="item" type="yjgetitem" default="" label="Select specific items" description="Choose specific news items you would like to display. Note that category setting above will not take affect if this option is chosen." />
+				<field name="getspecific" type="yjlistitems" default="" label="Specific items list and order" description="First select few items from setting above. Drag and drop to re-order items. Click the remove icon to remove an item from the list. Note that the items reorder works only if you set News items ordering to Specific items order!" />
+				<field name="ordering" type="list" default="1" label="News Items Ordering" description="Choose news items order sequence. Note that Specific items order is the display order of your Specific items order setting above ">
+					<option value="1">Joomla news item ordering</option>
+					<option value="2">Most popular</option>
+					<option value="3">Random  news item</option>
+					<option value="4">Date created oldest article first</option>
+					<option value="5">Date created newest article first</option>
+					<option value="6">Specific items order</option>
+				</field>
+				<field name="show_frontpage" type="list" default="0" label="Show frontpage Items?" description="If set to yes module will show your Joomla frontpage news items. Leave this at No to avoid duplicated content">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<!--This is the second holder for toggle do not move it!-->
+				<field type="yjholder" name="k2_items_holder"/>
+				<field type="yjspacer"  name="k2_news_source" default="&lt;strong&gt;K2 NEWS SOURCE SETTINGS&lt;/strong&gt;" />
+				<field name="k2catfilter" type="yjsgradio" default="0" label="K2 Category filter" description="">
+					<option value="0">All</option>
+					<option value="1">Select</option>
+				</field>
+				<field name="category_id" type="k2categoriesmultiple" default="" label="Select one or more categories" description="Select one ore more categories for which you want to filter an items list. Select none to fetch items from all categories." />
+				<field name="k2item" type="k2item" default="" label="Select specific items" description="Choose specific news items you would like to display. Note that category setting above will not take affect if this option is chosen." />
+				<field name="k2items" type="k2items" default="" label="Drag and drop to re-order items" description="Drag and drop to re-order items. Click the remove icon to remove an item from the list." />
+				<field name="k2image_size" type="list" default="M" label="K2 Image to use" description="Choose what K2 image size to show ">
+					<option value="XS">Extra Small</option>
+					<option value="S">Small</option>
+					<option value="M">Medium</option>
+					<option value="L">Large</option>
+					<option value="XL">Extra Large</option>
+				</field>
+				<field name="k2ordering" type="list" default="1" label="K2 News Items Ordering" description="Choose news items order sequence. Note that Specific items order is the display order of your Specific items order setting above ">
+					<option value="1">K2 news item ordering</option>
+					<option value="2">Most popular</option>
+					<option value="3">Random  news item</option>
+					<option value="4">Date created oldest article first</option>
+					<option value="5">Date created newest article first</option>
+					<option value="6">Specific items order</option>
+				</field>
+				<!-- TOGGLE ENDS HERE. PUT YOUR PARAMS BELOW THIS !-->
+				<field type="yjspacer" default="&lt;strong&gt;NEWS ITEM SETTINGS&lt;/strong&gt;" />
+				<field name="access_redirect" type="list" default="1" label="Show registered only Items?" description="If your news item Accsess level is set to Regsitered and this setting is set to Yes , your restricted items will be visible in module but their read more link will redirect to login page">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="nitems" type="text" default="4" label="Number of news items to display" description="Number of news items to display" />
+				<field name="chars" type="text" default="40" label="Number of characters to display" description="Number of characters to display" />
+				<field name="allow_tags" type="text"   filter="safehtml" default="" size="60" label="Alowable html tags" description="ALLOWTAGSTEXT" />
+				<field name="show_title" type="list" default="1" label="Show item title?" description="Show or hide news item title">
+					<option value="1">Yes</option>
+					<option value="2">No</option>
+				</field>
+				<field name="show_author" type="list" default="1" label="Show item author?" description="Show or hide news item author">
+					<option value="1">Yes</option>
+					<option value="2">No</option>
+				</field>
+				<field name="author_name" type="list" default="1" label="Author name display" description="Can be username or realname. If author alias is set in article manager it will take over.">
+					<option value="1">Username</option>
+					<option value="2">Real name</option>
+				</field>
+				<field name="show_img" type="list" default="1" label="Show intro image?" description="Show or hide intro image">
+					<option value="1">Yes</option>
+					<option value="2">No</option>
+				</field>
+				<field name="img_align" type="list" default="1" label="Inro image position" description="Number of characters to display" >
+					<option value="1">Left</option>
+					<option value="2">Right</option>
+					<option value="3">Top</option>
+				</field>
+				<field name="img_width" type="text" default="90px" label="Intro image width" description="Intro image width" />
+				<field name="img_height" type="text" default="50px" label="Intro image height" description="Intro image height" />
+				<field name="show_cat_title" type="list" default="1" label="Show category title" description="Show category title" >
+					<option value="1">Yes</option>
+					<option value="2">No</option>
+				</field>
+				<field name="show_date" type="list" default="1" label="Show create date" description="Show create date" >
+					<option value="1">Yes</option>
+					<option value="2">No</option>
+				</field>
+				<field name="show_intro" type="list" default="1" label="Show news item intro text" description="Show news item intro text" >
+					<option value="1">Yes</option>
+					<option value="2">No</option>
+				</field>
+				<field name="show_read" type="list" default="1" label="Show read more?" description="Show or hide read more text">
+					<option value="1">Yes</option>
+					<option value="2">No</option>
+				</field>
+				<field name="show_rating" type="list" default="2" label="Show rating stars?" description="Show or hide item rating stars">
+					<option value="1">Yes</option>
+					<option value="2">No</option>
+				</field>
+				<field type="yjspacer" default="&lt;strong&gt;MODULE SUFFIX&lt;/strong&gt;" />
+				<field name="moduleclass_sfx" type="text" default=" yjme" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling.Note: CSS style for this class is overriding default module padding and margin. See bottom of module stylesheet.css file" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0.0" client="site" method="upgrade">
+  <name>HDW Player Upload</name>
+  <author>HDW Player</author>
+  <creationDate>November 2012</creationDate>
+  <copyright>Copyright (c) 2011 - 2014 HDW Player. All rights reserved.</copyright>
+  <authorEmail>admin@hdwplayer.com</authorEmail>
+  <authorUrl>www.hdwplayer.com</authorUrl>
+  <version>3.1</version>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <description>This module enable front-end upload for your Users.</description>
+  <files>
+    <folder>tmpl</folder>
+    <filename module="mod_hdwplayerupload">mod_hdwplayerupload.php</filename>
+    <filename>index.html</filename>
+    <filename>helper.php</filename>
+  </files>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="ffmpeg" type="radio" default="0" label="Is FFMPEG Available" description="Is FFMPEG Available" >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="youtube" type="radio" default="1" label="Allow Youtube Videos" description="Allow Youtube Videos" >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="dailymotion" type="radio" default="1" label="Allow Dailymotion Videos" description="Allow Dailymotion Videos" >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="vimeo" type="radio" default="1" label="Allow Vimeo Videos" description="Allow Vimeo Videos" >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="rtmp" type="radio" default="0" label="Allow RTMP Streams" description="Allow RTMP Streams" >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="smil" type="radio" default="0" label="Allow SMIL files" description="Allow SMIL files" >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="lighttpd" type="radio" default="0" label="Allow Lighttpd Videos" description="Allow Lighttpd Videos" >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="bitgravity" type="radio" default="0" label="Allow Bitgravity Videos" description="Allow Bitgravity Videos" >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A Suffix to be applied to the CSS class of the Module.This allows for individual Module Styling." />
+      </fieldset>
+    </fields>
+  </config>
+</extension>

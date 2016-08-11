@@ -1,0 +1,80 @@
+@import "../vars.less";
+
+// ---------------------------------------------------------
+// EASYSOCIAL COMPATIBLITY
+// ---------------------------------------------------------
+
+.com_easysocial {
+
+  .es-toolbar .es-navbar-search .search-query::-moz-placeholder {
+    color: @white;
+  }
+
+  .stream-meta {
+    margin-left: 0;
+    margin-right: 0;
+
+    .stream-title {
+      .row-fluid {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    .stream-content {
+      .row-fluid {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+  }
+
+
+  .es-stream-meta {
+    .es-stream-title {
+      .row-fluid {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .view-profile {
+    .profile-wrapper {
+      .form-actions {
+        .pull-right {
+          // Control screen mobile
+          @media screen and (max-width: @screen-xs-max) {
+            margin-top: @t3-global-margin / 2;
+          }
+        }
+      }
+    }
+  }
+
+  // Label
+  .es-stream-content-title {
+    a {
+      display: block;
+    }
+    
+    .label-success {
+      display: inline-block!important;
+      margin-top: @t3-global-margin / 4;
+      
+      // Mobile view
+      @media screen and (max-width: @screen-xs-max) {
+        display: inline-block!important;
+      }
+    }
+  }
+
+  // Popup
+  div#fd.fd-popover.es-field-error.left {
+    // Control screen tablet
+    @media screen and (max-width: @screen-sm-max) {
+      display: none!important;
+    }
+  }
+}

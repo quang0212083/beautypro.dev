@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Statistics Style 1</title>
+	<sampledata><![CDATA[  
+		{":type":"uber:statistics","statistics":{"jatools-layout-statistics":"style-1","statistics[block-intro]":[""],"statistics[block-extra-class]":[""],"statistics[block-bg]":[""],"statistics[stats-title]":["Statistics Style 1"],"statistics[stats-description]":["At this phase, we round up a collection of 12+ block types that feature typical content in Uber. Each block comes with multiple styles, giving you endless customisation possibility. "],"statistics[acm-style]":["style-light"],"statistics[full-width]":["0"],"statistics[acm-col-offset]":["col-lg-offset-0"],"statistics[data]":{"statistics[data][stats-count]":["6+","7+","3+","5+","7+","3+"],"statistics[data][stats-name]":["hero blocks","testimonials","CTA","galleries","slideshows ","pricing"],"statistics[data][stats-color]":["","","","","",""],"rows":6,"cols":4,"type":"list"},"statistics[data-style-2]":{"statistics[data-style-2][font-icon]":[""],"statistics[data-style-2][stats-count]":[""],"statistics[data-style-2][stats-name]":[""],"statistics[data-style-2][stats-color]":[""],"rows":1,"cols":5,"type":"list"},"statistics[data-style-7]":{"statistics[data-style-7][stats-count]":[""],"statistics[data-style-7][stats-name]":[""],"statistics[data-style-7][stats-color]":[""],"statistics[data-style-7][stats-shadow]":[""],"statistics[data-style-7][stats-bg]":[""],"rows":1,"cols":6,"type":"list"}}}
+    ]]></sampledata>
+    <fields name="statistics">
+    	<fieldset name="statistics-header" label="STATISTICS_HEADER_SETTING_LABEL" description="STATISTICS_HEADER_SETTING_DESC">
+			<field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+			<field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+			<field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+  
+			<field name="stats-title" type="text" default="" size="40" label="STATISTICS_TITLE_LABEL" description="STATISTICS_TITLE_DESC" ></field>
+			<field name="stats-description" type="textarea" default="" rows="5" cols="40" label="STATISTICS_DESCRIPTION_LABEL" description="STATISTICS_DESCRIPTION_DESC" />
+			<field name="acm-style" type="list" default="style-light"
+			  global="1"
+			  label="ACM_STYLE_LABEL"
+			  description="ACM_STYLE_DESC">
+				<option value="style-light">LAYOUT_STYLE_LIGHT</option>
+				<option value="style-dark">LAYOUT_STYLE_DARK</option>
+			</field>
+			<field name="full-width" type="radio" default="1" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC" >
+				<option value="0" class="off">JNO</option>
+				<option value="1" class="on">JYES</option>
+			</field>
+      
+		</fieldset>
+
+    <fieldset name="statistics-box" label="STATISTICS_BOX_LABEL" description="STATISTICS_BOX_DESC">
+			<field name="data" type="jalist">
+				<item name="stats-count" type="text" default="" label="STATISTICS_COUNT_LABEL" description="STATISTICS_COUNT_DESC" required="1" />
+				<item name="stats-name" type="text" default="" label="STATISTICS_NAME_LABEL" description="STATISTICS_NAME_DESC" />
+				<item name="stats-color" type="text" default="" label="STATISTICS_COLOR_LABEL" description="STATISTICS_COLOR_DESC" />
+			</field>
+    </fieldset>
+
+    </fields>
+</form>

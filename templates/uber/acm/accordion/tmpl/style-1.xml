@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>Slideshow Style 1</title>
+  <sampledata><![CDATA[ 
+	{":type":"uber:accordion","slideshow":""}
+   ]]></sampledata>
+  <fields name="slideshow">
+  
+    <fieldset name="basic" label="ACCORDION_BASIC_LABEL" description="ACCORDION_BASIC_DESC" multiple="0"> 
+      <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+      
+    </fieldset>
+		
+		<fieldset name="basic2" label="ACCORDION_BASIC_2_LABEL" description="ACCORDION_BASIC_2_DESC">
+			<field name="data" type="jalist">
+				<item name="title" type="text" description="ACCORDION_TITLE_DES" label="ACCORDION_TITLE" default=""/>
+				<item name="description" type="textarea" description="ACCORDION_DESCRIPTIONS_DES" label="ACCORDION_DESCRIPTIONS_TITLE" default="" cols="40" rows="5"/>
+				<item name="image" type="media" description="ACCORDION_IMAGE_DES" label="ACCORDION_IMAGE_LABEL" default=""/>
+				<item name="action-url" type="text" description="ACCORDION_URL_DES" label="ACCORDION_URL_LABEL" default=""/>
+			</field>
+			
+			
+		</fieldset>
+  </fields>
+</form>

@@ -1,0 +1,80 @@
+// ------------------------------------
+// FEATURES INTRO STYLE 10
+// ------------------------------------
+.acm-features {
+  position: relative;
+  z-index: 20;
+	&.style-11 {
+
+    // features description
+    .features-description {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+
+    .features-content {
+      margin: 0 auto;
+    }
+
+    .features-image {
+      margin-bottom: @t3-global-margin*2;
+      > img {
+        max-width: 100%;
+      }
+    }
+
+    .features-item {
+      padding-top: @t3-global-padding;
+      padding-bottom: @t3-global-padding;
+      position: relative;
+
+      @media screen and (max-width: @screen-xs-max) {
+        text-align: center;
+      }
+
+      .font-icon {
+        font-size: @font-size-h3;
+        margin: 0;
+        position: absolute;
+        text-align: center;
+        left: 0;
+        right: 0;
+        bottom: 100%;
+        margin-bottom: -40px;
+
+        .fa {
+          display: inline-block;
+          width: 80px;
+          height: 80px;
+          line-height: 80px;
+          text-align: center;
+          border-radius: 3px;
+        }
+      }
+
+      h3 {
+        text-transform: uppercase;
+        margin-bottom: @t3-global-margin;
+      }
+
+      .box-background-dark {
+        .table {
+          margin-bottom: 0;
+          td {
+            border-color: rgba(255,255,255,.1);
+          }
+        }
+      }
+    }
+
+    .features-item > p {
+      //margin-bottom: @t3-global-margin*2;
+  
+    
+    }
+  }
+}
+
+

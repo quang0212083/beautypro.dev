@@ -1,0 +1,386 @@
+@import "../vars.less";
+
+// ---------------------------------------------------------
+// EASYBLOG COMPATIBILITY
+// ---------------------------------------------------------
+
+.com_easyblog {
+	#eblog-wrapper .dtpicker-wrap input, #eblog-wrapper .dtpicker-wrap select {
+		display: inline-block;
+	}
+
+	#blogForm {
+		.ui-helper-hidden-accessible {
+			display: inline-block;
+			margin-top: 5px;
+		}
+	}
+
+	#eblog-wrapper #bloggers-sorting select {
+		@media screen and (max-width: @screen-xs-max) {
+			margin-bottom: @t3-global-margin/2;
+			display: block;
+		}
+	}
+
+	#eblog-wrapper #bloggers-sorting input, 
+	#eblog-wrapper #bloggers-sorting select {
+		@media screen and (max-width: @screen-xs) {
+			width: 100%;
+			display: block;
+		}
+	}
+
+	#eblog-wrapper #bloggers-sorting #btnSubmit {
+		@media screen and (max-width: @screen-md) {
+			margin-top: @t3-global-margin/2;
+		}
+	}
+
+	#eblog-search .search-input input {
+		height: 28px !important;
+	}
+
+	// EASYBLOCK HEAD
+	// --------------
+	#ezblog-head {
+		#ezblog-menu {
+			border-radius: 0;
+		}
+
+		.blog-navi {
+			box-shadow: none;
+
+			li.toolbar-item > form input.input {
+				border-radius: 0;
+				height: 25px;
+				margin-top: 4px;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	// EASYBLOG BODY
+	// -------------
+	#ezblog-body {
+
+		// Easyblog featured
+		// -----------------
+		.featured-slider {
+			padding: (@t3-global-padding / 2);
+			margin: (@t3-global-margin / 2) 0 @t3-global-margin;
+		}
+
+		ul.featured-entries {
+			.featured-title {
+				line-height: 1;
+			}
+
+			.featured-content {
+				line-height: 1.6;
+			}
+
+			.showcase-author {
+				font-size: @font-size-small;
+			}
+
+			.featured-author img.avatar {
+				margin-top: 5px;
+				margin-right: 0;
+			}
+		}
+
+		.tag-featured {
+			vertical-align: top;
+			top: 8px;
+		}
+
+		// Blog entry
+		// ------------------
+		#ezblog-posts {
+			// Blog header
+			.blog-header {
+				.blog-title {
+					margin-bottom: @t3-global-margin / 2;
+				}
+
+				.blog-meta {
+					font-size: @font-size-small;
+				}
+
+				.blog-meta span {
+					margin-right: 5px;
+				}
+			}
+
+			.blog-content {
+				.blog-image {
+					border-color: @t3-border-color;
+					margin-top: (@t3-global-margin / 4);
+				}
+			}
+		}
+
+		.featured-navi {
+			margin: (@t3-global-margin / 2) -(@t3-global-margin / 2) -(@t3-global-margin / 2);
+		}
+
+		.tab_button li a {
+			height: 40px;
+
+			span {
+				margin-top: 0;
+			}
+		}
+
+		.blog-avatar + .blog-cap {
+			margin-left: 75px !important;
+			clear: inherit !important;
+		}
+
+		.blog-avatar {
+			float: left !important;
+		}
+
+		.blog-meta * {
+			font-weight: @font-weight-normal;
+		}
+
+		.blog-meta-bottom {
+			.in > div {
+			  @media screen and (max-width: @screen-xs-max) {
+					width: 100%;
+					margin-bottom: 10px;
+			  }
+			}
+		}
+
+	}
+
+	#comment-form input.inputbox[type="checkbox"] {
+		height: auto;
+		width: auto;
+		display: inline;
+
+		& + label {
+			display: inline;
+		}
+	}
+
+	.window-mainbody {
+		#blog-title h1 {
+			font-size: @font-size-h3;
+			font-weight: @font-weight-bold;
+		}
+	}
+
+	#ezblog-menu .btn-eb-navbar {
+		width: 40px;
+		height: 30px;
+	}
+
+	#eblog-wrapper img.avatar,
+	#eblog-wrapper .comment-avatar {
+		float: left !important;
+		margin-right: 10px;
+	}
+
+	#eb-fblikes {
+		float: none;
+		overflow: hidden;
+		max-width: 280px;
+	}
+
+	.comment-body .mtm label.label {
+		white-space: normal;
+		color: @gray-light;
+	}
+
+	// Filter blogger
+	.blogger-filter {
+		input.inputbox {
+			// Mobile view
+			@media screen and (max-width: @screen-xs-max) {
+				margin-bottom: @t3-global-margin / 2 !important;
+			}
+		}
+
+		input,
+		select {
+			display: inline;
+			height: 37px;
+			width: auto;
+		}
+
+		.button {
+
+		}
+	}
+
+	// EASYBLOCK MODULE
+	// ----------------
+	// Cateogries
+	.mod_easyblogcategories {
+		.mod-item + .mod-item {
+			border-top: 1px solid @t3-border-color;
+			margin-top: 0 !important;
+		}
+	}
+
+	// Latest post
+	.ezblog-latestpost {
+		.mod-item + .mod-item {
+			padding-top: @t3-global-padding !important;
+		}
+
+		.mod-post-image {
+			background: @white;
+			border: 1px solid @t3-border-color;
+			margin-bottom: 10px;
+			padding: 5px;
+		}
+
+		.mod-post-image a {
+			display: block;
+			margin: 0;
+			max-height: @t3-global-padding * 3;
+			overflow: hidden;
+
+			img {
+				border: 0;
+				margin: 0;
+				padding: 0;
+			}
+		}
+
+		.mod-post-title {
+			font-size: @font-size-small;
+			margin-bottom: 15px;
+		}
+
+		.mod-post-type {
+			font-size: @font-size-small;
+		}
+
+		.mod-post-more {
+			font-size: @font-size-small;
+			margin-top: 10px;
+		}
+
+		.mod-post-meta {
+			margin-top: 0;
+		}
+
+		.mod-post-author {
+			font-size: 14px;
+			line-height: 1.6;
+
+			.mod-avatar {
+				margin-top: 5px;
+			}
+		}
+	}
+
+	// Search blog
+	.searchblogs {
+		#search-blogs {
+			display: inline-block;
+			width: 60%;
+		}
+
+		.ui-button {
+			background: @gray-dark;
+			border: 0;
+			color: @gray-light;
+			padding: 6px 10px;
+
+			&:hover {
+				color: @white;
+			}
+		}
+	}
+
+	// DETAIL PAGE
+	// -----------
+	// Thumb image
+	#eblog-wrapper a.easyblog-thumb-preview img {
+		border: 0;
+		margin: 0 0 @t3-global-margin;
+		padding: 0;
+	}
+
+	#eblog-wrapper {
+		.tab_button {
+
+			li {
+				// Mobile view
+				@media screen and (max-width: @screen-xs-max) {
+					width: 50%;
+				}
+
+				a span {
+					height: auto;
+				}
+			}
+		}
+
+		// Section author
+		#section-author {
+			margin-top: @t3-global-margin / 2;
+			margin-bottom: @t3-global-margin / 2;
+			padding: @t3-global-padding / 2;
+			
+			.author-meta {
+				font-size: @font-size-small;
+			}
+
+			.entry-related-post {
+				font-size: @font-size-small;
+				li {
+					padding: (@t3-global-padding / 4) 0;
+				}
+			}
+
+		}
+
+		// Comments
+		.comment-body {
+			.subscription-box {
+				margin-bottom: @t3-global-margin;
+				.mtm,
+				.mbm {
+					line-height: 1;
+				}
+			}
+
+			.button {
+				background: @gray-dark;
+				border: 0;
+				color: @gray-lighter;
+				line-height: 1;
+				padding: @t3-global-padding / 2;
+
+				&:hover {
+					background-color: @brand-primary;
+					color: @white;
+				}
+			}
+		}
+	}
+	a.at300b .at4-icon, a.at300m .at4-icon {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 5px;
+	}
+
+	// Popup Subcribe
+	#eblog-dialog {
+		// Control screen mobile
+		@media screen and (max-width: @screen-xs-max) {
+			.dialog-middle,
+			.dialog-middle-content {
+				height: auto!important;
+			}
+		}
+	}
+}

@@ -1,0 +1,90 @@
+.com_easydiscuss div#discuss-wrapper .social-button.google-share {
+  width: 220px !important;
+}
+.com_easydiscuss div#discuss-wrapper .discuss-searchbar .input-searchbar {
+  padding-right: 110px;
+}
+.com_easydiscuss #discuss-wrapper .nav-collapse.collapse {
+  display: block;
+}
+.com_easydiscuss #discuss-wrapper .nav-collapse.collapse .modal-body .row-fluid {
+  margin-left: 0;
+  margin-right: 0;
+}
+.com_easydiscuss #discuss-wrapper .dropdown-menu .divider {
+  border-bottom-color: #ecf0f1;
+}
+.com_easydiscuss #discuss-wrapper .btn {
+  background-image: none;
+  text-shadow: none;
+}
+.com_easydiscuss #discuss-wrapper .btn.btn-primary {
+  border-color: #039be5;
+  background-color: #039be5;
+}
+.com_easydiscuss #discuss-wrapper .btn.btn-primary:hover,
+.com_easydiscuss #discuss-wrapper .btn.btn-primary:focus,
+.com_easydiscuss #discuss-wrapper .btn.btn-primary:active {
+  border-color: #0279b3;
+}
+.com_easydiscuss #discuss-wrapper .commentFormContainer .discuss-comment-form .mt-5 {
+  margin-left: 26px;
+}
+.com_easydiscuss #discuss-wrapper .commentFormContainer .discuss-comment-form .mt-5 input {
+  margin-top: 0;
+}
+.com_easydiscuss #discuss-wrapper .discuss-component-title {
+  line-height: 35px;
+}
+.com_easydiscuss #discuss-wrapper .discuss-user-menu .modal-body .row-fluid:last-child {
+  margin-left: 0;
+}
+.com_easydiscuss #discuss-wrapper .discuss-searchbar .btn-ask {
+  line-height: 22px;
+}
+.com_easydiscuss #discuss-wrapper .discuss-badges-list .badges-desp {
+  padding-top: 13px;
+}
+.com_easydiscuss #discuss-wrapper .discuss-categories .media .media-body {
+  font-size: 14px;
+}
+.com_easydiscuss #discuss-wrapper .discuss-categories .media .media-body .discuss-subscribe {
+  margin-top: 6.5px;
+}
+.com_easydiscuss #discuss-wrapper .discuss-composer-creating .modal-footer > .row-fluid {
+  margin: 0;
+}
+@media screen and (max-width: 767px) {
+  .com_easydiscuss #discuss-wrapper.w320 .discuss-tag-list > li {
+    width: 100%;
+  }
+}
+.com_easydiscuss #discuss-wrapper .discuss-users-list .discuss-story,
+.com_easydiscuss #discuss-wrapper .discuss-post-share,
+.com_easydiscuss #discuss-wrapper .discuss-story-bd {
+  overflow: hidden;
+}
+#discuss-dialog {
+  bottom: auto;
+}
+#discuss-dialog #subscribeForm input[type="text"] {
+  height: 30px;
+}
+#discuss-dialog #subscribeForm input[type="radio"] {
+  margin-left: -20px;
+  margin-top: 2px;
+}
+@media screen and (max-width: 480px) {
+  #discuss-dialog .form-horizontal .control-label {
+    width: 100%;
+    text-align: left;
+  }
+  #discuss-dialog .form-horizontal .controls {
+    margin-left: 0;
+  }
+  #discuss-dialog .form-inline .radio {
+    display: block;
+    padding-left: 20px;
+    min-height: 26px;
+  }
+}

@@ -1,0 +1,124 @@
+// ------------------------------------------------
+// TIMELINE STYLE 2
+// ------------------------------------------------
+
+
+.acm-timeline {
+	&.style-2 {
+		.timeline-list {
+			@media screen and (max-width: @screen-xs-max) {
+				width: auto !important;
+			}
+		}
+		.item-row  {
+			@media screen and (max-width: @screen-xs-max) {
+				padding-left: 0;
+			}
+			.timeline-item {
+				margin-left: 40px;
+				@media screen and (max-width: @screen-xs-max) {
+					margin-left: 80px;
+					margin-right: @t3-global-margin;
+
+				}
+				.item-date {
+					font-size: @font-size-base;
+					color: @gray;
+					padding-top: 5px;
+					padding-right: 25px;
+					@media screen and (max-width: @screen-xs-max) {
+						top: -@t3-global-margin;
+					}
+				}
+				.item-title {
+					color: @gray-darker;
+
+					&:hover,
+					&:focus {
+						color: @link-color;
+					}
+				}
+				.item-content {
+					padding: @t3-global-padding/2 @t3-global-padding; 
+					@media screen and (max-width: @screen-xs-max) {
+						margin-top: -@t3-global-margin;
+					}
+
+					&:before {
+						border-top: 0;
+						top: 0;
+					}
+				}
+
+				.item-icon {
+				  position: absolute;
+				  left: 50%;
+				  width: 28px;
+				  height: 28px;
+				  line-height: 1;
+				  margin-left: -12px;
+				  border-radius: 0;
+				  text-align: center;
+				  padding: 5px;
+				  background: #ccc;
+				  line-height: 1;
+				  color: #fff;
+				  font-size: 12px;
+				  border: 3px solid #fff;
+				  margin-top: -1px;
+				  border-radius: 50%;
+				  @media screen and (max-width: @screen-xs-max) {
+				  	left: 44px;
+				  }
+				}
+			}
+
+			&:first-child {
+				.item-icon,
+				.item-content {
+					background: @gray;
+					color: @white;
+
+					.item-title {
+						color: @white;
+					}
+
+					&:before {
+						border-right-color: @gray !important;
+					}
+				}
+			}
+
+			&:nth-child(2) {
+				.item-icon,
+				.item-content {
+					background: lighten(@gray, 15%);
+					color: @white;
+
+					.item-title {
+						color: @white;
+					}
+
+					&:before {
+						border-right-color: lighten(@gray, 15%) !important;
+					}
+				}
+			}
+			&:nth-child(3) {
+				.item-icon,
+				.item-content {
+					background: lighten(@gray, 30%);
+					color: @white;
+
+					.item-title {
+						color: @white;
+					}
+
+					&:before {
+						border-right-color: lighten(@gray, 30%) !important;
+					}
+				}
+			}
+		}
+	}
+}

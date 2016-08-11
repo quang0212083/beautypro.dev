@@ -1,0 +1,163 @@
+/*
+ * @version		$Id: allvideoshare.j3.css 2.3.0 2014-06-21 $
+ * @package		Joomla
+ * @copyright   Copyright (C) 2012-2014 MrVinoth
+ * @license     GNU/GPL http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/***General[start]********************************************************/
+.icon-allvideoshare {
+	margin-right:5px;
+}
+body .page-title {
+	background:url(../assets/logo.png) no-repeat 0 50%;
+	background-size:36px;
+	padding-left:15px;
+}
+.icon {
+	background-color:#fff;
+	text-align:center;
+	margin-right:9px;
+	float:left;
+	margin-bottom:5px;
+}
+.icon a {
+	display:block;
+	float:left;
+	border:1px solid #e7e7e7;
+	height:80px;
+	width:90px;
+	color:#666;
+	vertical-align:middle;
+	text-decoration:none;
+}
+.icon a:hover {
+	text-decoration:none;
+	border-left:1px solid #eee;
+	border-top:1px solid #eee;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	background:#f9f9f9;
+	color:#0B55C4;
+}
+.icon img {
+	padding:10px 0;
+	margin:0 auto;
+}
+.icon span {
+	display:block;
+	text-align:center;
+	font-weight:normal;
+}
+#avs table.avsfilter {
+	display:block;
+	padding-bottom:10px;
+}
+.table thead th {
+	color:#08C !important;
+}
+.table thead th, .table tbody td {
+	vertical-align:middle !important;
+	text-align:center;
+}
+.table tbody td.order input {
+	float:right !important;
+	padding:3px !important;
+	font-size:10px !important;
+}
+.table tfoot tr td {
+	padding:15px 0px 0px 0px !important;
+}
+#avs input, #avs select, #avs button {
+	float:none;
+	width:auto;
+	height:auto;
+	margin:2px;
+	padding:5px;
+	font-size:12px;
+}
+#avs input[type="file"] {
+	line-height:15px;
+	padding:0px;
+}
+#avs textarea {
+	width:350px;
+}
+#avs table.admintable td.mceFirst, #avs table.admintable td.mceLast {
+	padding:0px !important;
+}
+#avs .toggle-editor {
+	display:none !important;
+}
+#avs label {
+	display:inline-block;
+}
+#avs .spacer {
+	height:10px;
+}
+/***General[end]**********************************************************/
+
+/***Tabs[start]***********************************************************/
+#avs h3 {
+	font-size:12px;
+	line-height:0px;
+}
+#avs h3 a {
+	color:#666;
+}
+#avs h3 strong {
+	font-weight:normal;
+}
+#avs a:hover {
+	text-decoration:none;
+}
+#avs dl.tabs dt {
+	float:left;
+	padding:5px 10px;
+	margin-left:7px;
+	background-color:#F9F9F9;
+	border-left:1px solid #DDD;
+	border-top:1px solid #DDD;
+	border-right:1px solid #DDD;
+}
+#avs dl.tabs dt.open {
+	color:#222;
+	background-color:#FFF;
+	z-index:100;
+}
+#avs dd {
+	margin:0px;
+}
+#avs div.current {
+	clear:both;
+	padding:5px 0px;
+	border-top:1px solid #DDD;
+}
+/***Tabs[end]*************************************************************/
+
+/***Adminlist[start]******************************************************/
+#avs table.adminlist tr td {
+	padding:10px !important;
+}
+#avs table.adminlist th.ctr, #avs table.adminlist td.ctr {
+	text-align:center !important;
+}
+#avs table.adminlist th.padlft, #avs table.adminlist td.padlft {
+	padding-left:10px;
+	text-align:left;
+}
+/***Adminlist[end]********************************************************/
+
+/***Admintable[start]*****************************************************/
+#avs table.admintable td.avskey {
+	padding:5px;
+	font-style:italic;
+}
+
+#avs table.admintable {
+	margin:5px 10px;
+}
+#avs table.admintable tr td {
+	padding:3px;
+}
+/***Admintable[end]*******************************************************/

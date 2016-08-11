@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style>
+  <name>Extension</name>
+  <author>joombig</author>
+  <description>joombig video slider vertical module.</description>
+  <version>1.1</version>
+  <files>
+    <public>
+    </public>
+    <admin></admin>
+  </files>
+  <config>
+    <fieldset name="Basic">
+    </fieldset>
+  </config>
+</style>

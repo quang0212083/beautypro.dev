@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Cta Style 4</title>
+	<sampledata><![CDATA[
+        {":type":"uber:cta","cta":{"jatools-layout-cta":"style-4","cta[block-intro]":[""],"cta[block-extra-class]":[" no-padding"],"cta[cta-bg]":["brand-info"],"cta[cta-icon]":["fa fa-chevron-right"],"cta[link]":["#"]}}
+    ]]></sampledata>
+	<fields name="cta">
+     <fieldset name="basic" label="CTA_BASIC_LABEL" description="CTA_BASIC_DESC" multiple="0">
+     		<field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+     		<field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+        
+				<field name="cta-bg" type="list" default="brand-primary"
+							 global="1"
+							 label="CTA_BACKGROUND_LABEL"
+							 description="CTA_BACKGROUND_DESC">
+					<option value="brand-primary">Brand Primary</option>
+					<option value="brand-secondary">Brand Secondary</option>
+					<option value="brand-success">Brand Success</option>
+          <option value="brand-warning">Brand Warning</option>
+          <option value="brand-danger">Brand Danger</option>
+          <option value="brand-info">Brand Info</option>
+          <option value="gray-light">Gray Light</option>
+          <option value="gray-dark">Gray Dark</option>
+				</field>
+
+        <field name="cta-icon" type="text" size="10" default="" label="CTA_ICON_LABEL" description="CTA_ICON_DESC" />
+
+        <field name="link" type="text" default="" label="CTA_LINK_LABEL" description="CTA_LINK_DESC" required="1" />
+    </fieldset> 
+         
+  </fields>
+</form>

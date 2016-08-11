@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>Hero Style 2</title>
+	<sampledata><![CDATA[  {":type":"uber:hero","hero":{"jatools-layout-hero":"style-2","hero-style[block-intro]":[""],"hero-style[block-extra-class]":[" no-padding"],"hero-style[hero-style]":["style-dark"],"hero-style[hero-content-position]":["position-left"],"hero-style[hero-text-align]":["text-left"],"hero-style[hero-screen]":[""],"hero-style[hero-effect]":[""],"hero-style[hero-heading]":["Retless creative"],"hero-style[hero-heading-size]":[""],"hero-style[hero-intro]":["Dedicated, collaborative ((br)) workaholic people"],"hero-style[hero-quote]":["Our Team"],"hero-style[hero-img]":[""],"hero-style[hero-btn1-text]":[""],"hero-style[hero-btn1-class]":[""],"hero-style[hero-btn1-link]":[""],"hero-style[hero-btn2-text]":[""],"hero-style[hero-btn2-link]":[""],"hero-style[hero-bg]":["images/joomlart/corporate/slideshow/slide-1.jpg"],"hero-style[hero-video]":["vimeo="]}}
+    ]]></sampledata>
+  <fields name="hero-style">
+    <fieldset name="basic" label="HERO_BASIC_LABEL" description="HERO_BASIC_DESC" multiple="0"> 
+      <field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+      <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+    
+      <field name="hero-style" type="list" default="style-dark"
+          global="1"
+          label="HERO_STYLE_LABEL"
+          description="HERO_STYLE_DESC">
+        <option value="style-dark">LAYOUT_HERO_DARK</option>
+        <option value="style-light">LAYOUT_HERO_LIGHT</option>
+      </field>
+      
+      <field name="hero-content-position" type="list" default="position-left"
+          global="1"
+          label="HERO_CONTENT_POSITION_LABEL"
+          description="HERO_CONTENT_POSITION_DESC">
+        <option value="position-left">JGLOBAL_LEFT</option>
+        <option value="position-center">JGLOBAL_CENTER</option>
+        <option value="position-right">JGLOBAL_RIGHT</option>
+      </field>
+      
+      <field name="hero-text-align" type="list" default="text-left"
+          global="1"
+          label="HERO_TEXT_ALIGN_LABEL"
+          description="HERO_TEXT_ALIGN_DESC">
+        <option value="text-left">JGLOBAL_LEFT</option>
+        <option value="text-center">JGLOBAL_CENTER</option>
+        <option value="text-right">JGLOBAL_RIGHT</option>
+      </field>
+	  
+
+			
+
+      
+    </fieldset>
+
+    <fieldset name="hero-content" label="HERO_CONTENT_LABEL" description="HERO_CONTENT_DESC" multiple="0">
+      <field name="hero-heading" type="textarea" cols="40" rows="5" default="" label="HERO_HEADING_LABEL" description="HERO_HEADING_DESC"></field>
+      <field name="hero-heading-size" type="list" default="" label="HERO_HEADINGSIZE_LABEL" description="HERO_HEADINGSIZE_DESC" layouts="style-5">
+				<option value="">Default</option>
+        <option value="lg">Large</option>
+			</field>
+      <field name="hero-intro" type="textarea" cols="40" rows="5" default="" label="HERO_INTRODUCTION_LABEL" description="HERO_INTRODUCTION_DESC"></field>
+	  	<field name="hero-quote" type="textarea" cols="40" rows="5" default="" label="HERO_QUOTE_LABEL" description="HERO_QUOTE_DESC"></field>     
+      <field name="hero-bg" type="media" default="" label="HERO_BACKGROUND_LABEL" description="HERO_BACKGROUND_DESC"></field>
+    </fieldset>
+  </fields>
+</form>

@@ -1,0 +1,208 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+// ----------------------------------------
+// SLIDESHOW STYLE
+// ----------------------------------------
+body.home-landing {
+  overflow: hidden;
+
+	// Control screen mobile/tablet
+	@media screen and (max-width: @screen-sm-max) {
+		overflow: scroll !important;
+	}
+}
+
+.block-landing {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+	
+	// Control screen mobile/tablet
+	@media screen and (max-width: @screen-md) {
+		position: static;
+	}
+
+  .section-title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: @t3-global-margin * 2;
+
+    // Control screen mobile/tablet
+    @media screen and (max-width: @screen-sm-max) {
+      padding-top: @t3-global-padding;
+    }
+  }
+
+  .section-inner {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+		
+		// Control screen mobile/tablet
+    @media screen and (max-width: @screen-sm-max) {
+      display: block;
+    }
+
+    .uber-stats,
+    .acm-features {
+      // Control screen desktop
+      @media screen and (min-width: @screen-md-max) {
+        top: 50%;
+        left: 0;
+        right: 0;
+        position: absolute;
+        .translateY(-50%);
+      }
+    }
+
+    .acm-hero {
+      .hero-content {
+        // Control screen mobile
+        @media screen and (max-width: @screen-sm-max) {
+          padding-top: 40px!important;
+        }
+      }
+      .hero-heading {
+        font-size: @font-size-h3;
+        margin-bottom: @t3-global-margin;
+        font-weight: @font-weight-bold;
+
+        // Control screen mobile
+        @media screen and (min-width: @screen-sm-min) {
+          font-size: @font-size-h2;
+        }
+      }
+			
+			&.fullscreen {
+				background-size: cover !important;
+			}
+    }
+  }
+
+  .block-landing-item {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 100%;
+		
+		// Control screen mobile/tablet
+    @media screen and (max-width: @screen-sm-max) {
+      display: block;
+			height: auto !important;
+			border-top: 1px solid @black;
+    }
+  }
+
+  .arrow-bottom {
+    display: block;
+    height: 30px;
+    left: 50%;
+    margin-left: -15px;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    color: @gray-darker;
+    font-size: @font-size-h4;
+    -webkit-animation: arrow-animation 1s infinite;
+    animation: arrow-animation 1s infinite;
+
+    &:hover, &:focus, &:active {
+      bottom: 30px;
+     -webkit-animation: none;
+      animation: none;
+    }
+  }
+
+  #sec-last {
+    height: 0 !important;
+  }
+
+  .mod-nav {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    z-index: 10000;
+    .translate(0, -50%);
+
+    .block-landing-nav {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+      // Control screen mobile/ tablet
+      @media screen and (max-width: @screen-sm-max) {
+        display: none;
+      }
+    }
+  }
+
+  .mod-nav-item {
+    margin: 20px 0;
+
+    &.sec-last a {
+      background: @brand-danger;
+    }
+  }
+
+  .mod-nav-item a {
+    background: @gray-lighter;
+    border-radius: 10px;
+    display: block;
+    height: 20px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    width: 20px;
+    .transition(all 400ms);
+  }
+
+  .mod-nav-item a:hover,
+  .mod-nav-item a:focus,
+  .mod-nav-item.block-landing-active a {
+    background: @brand-primary;
+  }
+
+  .uber-stats.style-4 {
+    padding: @t3-global-padding * 2 0;
+  }
+
+  .acm-hero .hero-heading {
+    padding-top: @t3-global-padding * 2;
+  }
+}
+
+.sections-wrap.slide-hide .block-landing {
+  height: 0 !important;
+  position: relative !important;
+  overflow: hidden;
+}
+
+.sections-wrap.slide-hide .mod-nav {
+  display: none;
+}
+
+@-webkit-keyframes arrow-animation {
+    0% {bottom: 40px; opacity: 1;}
+    50% {bottom: 30px; opacity: 0.5;}
+    100% {bottom: 40px; opacity: 1;}
+}
+
+/* Standard syntax */
+@keyframes arrow-animation {
+    0% {bottom: 40px; opacity: 1;}
+    50% {bottom: 30px; opacity: 0.5;}
+    100% {bottom: 40px; opacity: 1;}
+}

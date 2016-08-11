@@ -1,0 +1,145 @@
+/**
+* YJ Module Engine CSS
+* @package YJ Module Engine
+* @author Youjoomla.com
+* @website Youjoomla.com * @copyright  Copyright (c) 2007 - 2011 Youjoomla.com.
+* @license   PHP files are GNU/GPL V2 Copyleft CSS / JS / IMAGES are Copyrighted Commercial
+*/
+/*NEWS ITEM HOLDER*/
+.yjme_item {
+  clear:both;
+  overflow:hidden;
+  display:block;
+  margin:0;
+  padding:0;
+  height:auto;
+  width:100%;
+  position:relative;
+}
+/* ITEMS WRAP. PADDINGS AND MARGIN SHOULD BE APPLIED TO THIS DIV*/
+.yjme_item_in {
+  padding:0 10px;
+  margin:5px;
+  display:block;
+  overflow:hidden;
+  position:relative;
+  height:auto;
+  border-bottom:1px solid #efefef;
+}
+/* last item in the row*/
+.yjme_item_in.last {
+  border-bottom:none!important;
+}
+/*THERE IS A SPECIFIC ITEM CSS ID YOU CAN USE FOR EACH NEWS ITEM 
+IT WILL BE DISPLAYED AS div class=".yjme_item_in yjmeitemITEM_ID_NUMBER". 
+.yjmeitem8 AS EXAMPLE. YOU CAN USE THIS DIV CLASS TO STYLE EACH NEWS ITEM SPECIFICALLY*/
+/*.yjmeitem9{background:#ff0000;}
+.yjmeitem8{background:#ff6600;}*/
+
+/* NEWS ITEM TITLE */
+.yjme_item a.item_title {
+  display:block;
+  overflow:hidden;
+  clear:both;
+  margin:0 0 5px 0;
+  font-weight:bold;
+}
+/* NEWS ITEM IMAGE HOLDER */
+.yjme_item div.imageholder {
+  overflow:hidden;
+  float:left;
+  margin:5px 5px 5px 0;
+  padding:5px;
+  border:1px solid #e0dede;
+  background:#fff;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box; 
+  box-sizing: content-box; 
+}
+/* NEWS ITEM IMAGE LINK */
+.yjme_item a.item_image {
+  display:block;
+  margin:0px;
+  overflow:hidden;
+}
+/*  NEWS ITEM INTRO TEXT*/
+.yjme_item p.item_intro {
+  padding:0;
+  margin:0;
+  display:block;
+  overflow:visible;
+}
+/*  NEWS ITEM READ MORE*/
+.yjme_item a.item_readmore {
+  display:block;
+  width:100px;
+  text-align:center;
+  float:right;
+  border:1px solid #efefef;
+  height:20px;
+  line-height:20px;
+  padding:0 0 0 10px;
+  margin:5px 0 5px 0;
+}
+.yjme_item a.item_readmore span {
+  display: block;
+  height:20px;
+  line-height:20px;
+  padding:0 10px 0 0px;
+  text-align:center;
+}
+/*  NEWS ITEM DETAILS.CATGEGORY TITLE, DATE , AUTHOR*/
+.yjme_item div.item_details {
+  display:block;
+  position:relative;
+  overflow:hidden;
+  float:left;
+  height:20px;
+  line-height:20px;
+  margin:5px 0 5px 0;
+}
+.item_details .item_category, .item_details .item_cdate, .item_details .item_author {
+  float:left;
+  font-weight:bold;
+  font-size:10px;
+  display:block;
+}
+/* CLEARING*/
+.clearnf {
+  clear:both;
+  display:block;
+}
+/* RESET MODULE HOLDER PADDINGS*/
+.yjsquare.yjme, .yjsquare.yjme .yjsquare_in, .yjround.yjme, .yjround.yjme .yjround_in, .module.yjme, .moduletable.yjme {
+  padding:0;
+  margin:0;
+}
+
+/* Rating Stars */
+.yjme_rating{
+	display:block;
+	overflow:hidden;
+	clear:both;
+	height:16px;
+	width:89px;
+	padding:0;
+	margin:5px 0;
+	background-image:url(../images/0.png);
+	background-repeat:no-repeat;
+	background-position:left top;
+}
+.yjmestars1{
+	background-image:url(../images/1.png);
+}
+.yjmestars2{
+	background-image:url(../images/2.png);
+}
+.yjmestars3{
+	background-image:url(../images/3.png);
+}
+.yjmestars4{
+	background-image:url(../images/4.png);
+}
+.yjmestars5{
+	background-image:url(../images/5.png);
+}

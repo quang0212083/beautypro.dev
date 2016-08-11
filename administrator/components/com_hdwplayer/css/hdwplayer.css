@@ -1,0 +1,142 @@
+/*
+ * @version		$Id: webplayer.css 3.1 2012-11-28 $
+ * @package		Joomla
+ * @subpackage	hdwebplayer
+ * @copyright   Copyright (C) 2011-2012 HD Webplayer
+ * @license     GNU/GPL http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* Header */
+.icon-48-hdwplayer {
+	background:url(../assets/logo.png) no-repeat 0 50%!important;
+}
+.header {
+	color:#333333!important;
+	padding-left:42px!important;
+}
+.pagetitle {
+	color:#333333!important;
+	padding-left:42px!important;
+}
+
+/* Dashboard */
+div.dashboard_right {
+	background-color:#FFF;
+	padding:10px;
+	border:1px solid #CCC;
+}
+
+.icon {
+	background-color:#fff;
+	text-align: center;
+	margin-right: 9px;
+	float: left;
+	margin-bottom: 5px;
+}
+.icon a {
+	display: block;
+	float: left;
+	border: 1px solid #e7e7e7;
+	height: 90px;
+	width: 110px;
+	color: #333;
+	vertical-align: middle;
+	text-decoration: none;
+}
+.icon a:hover {
+	text-decoration: none;
+	border-left: 1px solid #eee;
+	border-top: 1px solid #eee;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background: #f9f9f9;
+	color: #0B55C4;
+}
+.icon img {
+	padding: 10px 0px 5px 0px;
+	margin: 0 auto;
+}
+.icon span {
+	display: block;
+	text-align: center;
+	font-weight:bold;
+}
+
+/* General */
+h1 {
+	margin:0px !important;
+}
+
+#hdwplayer {
+	background-color:#fff;
+	color:#444;
+	overflow:hidden;
+	padding:5px;
+}
+#hdwplayer legend {
+	font-size:14px;
+}
+
+span.note {
+	background:#FFF !important;
+	line-height:17px !important;
+}
+
+fieldset {
+	background:#FFF !important;
+}
+
+.table th a.saveorder {
+	display:inline-block;
+	float:none;
+}
+
+.table tbody td.order {
+	text-align:left;;
+}
+
+
+/* Add (or) Edit Forms */
+#hdwplayer fieldset.adminform {
+	border:1px solid #E7E7E7 !important;
+}
+#hdwplayer table.admintable td, #hdwplayer table.admintable th {
+	font-size:11px;
+	color:#555;
+}
+#hdwplayer table.admintable td.key {
+	background-color: #f6f6f6;
+	height:25px;
+	padding:3px 10px!important;
+	border-right:1px solid #E7E7E7;
+	border-bottom:1px solid #E7E7E7;
+	font-weight:bold;
+	text-align:right;
+}
+#hdwplayer textarea {
+	font-size:11px;
+	color:#444;
+}
+#hdwplayer input, #hdwplayer select {
+	margin:2px;
+	padding:3px;
+	float:none;
+	color:#444;
+}
+
+/* Admin List */
+#hdwplayer table.adminlist tr td {
+	height: 25px;
+}
+#hdwplayer th a:link {
+	color:#666;
+}
+#hdwplayer a:hover {
+	text-decoration:none;
+}
+#hdwplayer button {
+	padding:2px 5px;
+	font-size:11px;
+	font-weight:bold;
+	color:#444;
+}

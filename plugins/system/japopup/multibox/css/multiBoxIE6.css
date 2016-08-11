@@ -1,0 +1,34 @@
+/*
+Pop-up styles (remember image paths are from root of your website!) - - - - */
+.MultiBoxClose{
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='/plugins/system/japopup/multibox/images/close.png', sizingMethod='image');
+}
+
+.MultiBoxPrevious{
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='/plugins/system/japopup/multibox/images/left.png', sizingMethod='image');
+}
+
+.MultiBoxNext{
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='/plugins/system/japopup/multibox/images/right.png', sizingMethod='image');
+}
+
+.MultiBoxNextDisabled{
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='/plugins/system/japopup/multibox/images/rightDisabled.png', sizingMethod='image');
+}
+
+.MultiBoxPreviousDisabled{
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='/plugins/system/japopup/multibox/images/leftDisabled.png', sizingMethod='image');
+}
+
+
+/*
+Overlay icon - - - - */
+.OverlayIcon{
+	background:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader (src='/plugins/system/japopup/multibox/images/MagIcon.png', sizingMethod='image');
+}

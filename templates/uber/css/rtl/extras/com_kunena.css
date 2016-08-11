@@ -1,0 +1,661 @@
+.com_kunena #t3-mainbody #Kunena a {
+  color: #039be5 !important;
+}
+.com_kunena #t3-mainbody #Kunena a:hover,
+.com_kunena #t3-mainbody #Kunena a:active,
+.com_kunena #t3-mainbody #Kunena a:focus {
+  color: #0279b3 !important;
+}
+.com_kunena #t3-mainbody #Kunena input[type="text"],
+.com_kunena #t3-mainbody #Kunena input[type="password"] {
+  height: 32px;
+}
+.com_kunena #t3-mainbody #Kunena input[type="text"]:focus,
+.com_kunena #t3-mainbody #Kunena input[type="password"]:focus {
+  border-color: #039be5;
+  box-shadow: none;
+}
+.com_kunena #t3-mainbody #Kunena tr.krow1 td {
+  background-color: #ecf0f1;
+}
+.com_kunena #t3-mainbody #Kunena tr.krow1 td,
+.com_kunena #t3-mainbody #Kunena tr.krow2 td {
+  border-color: #dadedf;
+  padding: 13px;
+}
+@media screen and (max-width: 767px) {
+  .com_kunena #t3-mainbody #Kunena tr.krow1 td,
+  .com_kunena #t3-mainbody #Kunena tr.krow2 td {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+}
+.com_kunena #t3-mainbody #Kunena tr.krow1:last-child td,
+.com_kunena #t3-mainbody #Kunena tr.krow2:last-child td {
+  border-bottom: 0;
+}
+.com_kunena #t3-mainbody #Kunena .knewchar {
+  vertical-align: text-top;
+  font-size: 10px;
+}
+.com_kunena #t3-mainbody #Kunena .ktitle-desc,
+.com_kunena #t3-mainbody #Kunena .kthead-desc,
+.com_kunena #t3-mainbody #Kunena .kcat-replies,
+.com_kunena #t3-mainbody #Kunena .kcat-topics,
+.com_kunena #t3-mainbody #Kunena .ktopic-details,
+.com_kunena #t3-mainbody #Kunena .ktopic-details-kcategory {
+  font-size: 14px;
+}
+@media screen and (max-width: 480px) {
+  .com_kunena #t3-mainbody #Kunena #kflattable .krowmoderation .inputbox {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 5px;
+  }
+}
+.com_kunena #t3-mainbody #Kunena .kcol-ktopicreplies,
+.com_kunena #t3-mainbody #Kunena .kcol-ktopicviews {
+  line-height: 1;
+  font-size: 14px;
+}
+.com_kunena #t3-mainbody #Kunena .kcol-ktopicreplies strong,
+.com_kunena #t3-mainbody #Kunena .kcol-ktopicviews strong {
+  color: #3d4045;
+  font-size: 1.455em;
+}
+.com_kunena #t3-mainbody #Kunena .kcat-topics-number,
+.com_kunena #t3-mainbody #Kunena .kcat-replies-number,
+.com_kunena #t3-mainbody #Kunena .ktopic-views-number {
+  color: #3d4045;
+  line-height: 1;
+}
+@media screen and (max-width: 767px) {
+  .com_kunena #t3-mainbody #Kunena .kblocktable {
+    padding-left: 0;
+  }
+  .com_kunena #t3-mainbody #Kunena .kblocktable .klatest-post-info {
+    clear: both;
+  }
+  .com_kunena #t3-mainbody #Kunena .kblocktable .ktopicmoderation {
+    text-align: left;
+  }
+}
+.com_kunena #t3-mainbody #Kunena fieldset {
+  border: 1px solid #bfc6c7;
+}
+.com_kunena #t3-mainbody #Kunena fieldset legend {
+  margin: 0;
+  padding: 0 6.5px;
+  width: inherit;
+}
+.com_kunena #t3-mainbody #Kunena .kbutton,
+.com_kunena #t3-mainbody #Kunena .button,
+.com_kunena #t3-mainbody #Kunena .kbutton-container .kbutton {
+  background-color: #039be5 !important;
+  border: 0;
+  color: #ffffff !important;
+  font-size: 16px;
+  margin: 0;
+  padding: 5.2px 13px;
+}
+.com_kunena #t3-mainbody #Kunena .kbutton:hover,
+.com_kunena #t3-mainbody #Kunena .button:hover,
+.com_kunena #t3-mainbody #Kunena .kbutton-container .kbutton:hover,
+.com_kunena #t3-mainbody #Kunena .kbutton:focus,
+.com_kunena #t3-mainbody #Kunena .button:focus,
+.com_kunena #t3-mainbody #Kunena .kbutton-container .kbutton:focus,
+.com_kunena #t3-mainbody #Kunena .kbutton:active,
+.com_kunena #t3-mainbody #Kunena .button:active,
+.com_kunena #t3-mainbody #Kunena .kbutton-container .kbutton:active {
+  background-color: #0279b3 !important;
+}
+.com_kunena #t3-mainbody #Kunena .kmessage-informmarkup {
+  border: 1px solid #96a1a3;
+  background-color: #96a1a3;
+}
+.com_kunena #t3-mainbody #Kunena .kmessage-informmarkup a {
+  color: #ffffff !important;
+}
+.com_kunena #t3-mainbody #Kunena .kmessage-informmarkup:hover,
+.com_kunena #t3-mainbody #Kunena .kmessage-informmarkup:focus,
+.com_kunena #t3-mainbody #Kunena .kmessage-informmarkup:active {
+  background-color: #7b898b;
+}
+.com_kunena #t3-mainbody #Kunena #ktop {
+  border-color: #039be5 !important;
+}
+.com_kunena #t3-mainbody #Kunena #ktop span.ktoggler {
+  background-color: #039be5 !important;
+}
+@media screen and (min-width: 768px) {
+  .com_kunena #t3-mainbody #Kunena #ktop .menu > li > a {
+    border-radius: 2px 2px 0 0;
+    background-color: #505656 !important;
+  }
+  .com_kunena #t3-mainbody #Kunena #ktop .menu > li > a:hover,
+  .com_kunena #t3-mainbody #Kunena #ktop .menu > li > a:focus,
+  .com_kunena #t3-mainbody #Kunena #ktop .menu > li > a:active {
+    background-color: #039be5 !important;
+  }
+}
+.com_kunena #t3-mainbody #Kunena #ktop .menu > li.active > a {
+  background-color: #039be5 !important;
+}
+.com_kunena #t3-mainbody #Kunena .klist-markallcatsread .ksectionbody > .fltlft {
+  margin: 5px;
+}
+.com_kunena #t3-mainbody #Kunena .klist-markallcatsread .ksectionbody > .fltrt .inputbox {
+  height: 32px;
+}
+.com_kunena #t3-mainbody #Kunena .klist-markallcatsread .ksectionbody > .fltrt #catid {
+  display: inline-block;
+}
+.com_kunena #t3-mainbody #Kunena .klist-times-all .inputboxusl {
+  height: 32px;
+}
+.com_kunena #t3-mainbody #Kunena .kpathway {
+  border: 0;
+}
+.com_kunena #t3-mainbody #Kunena .kpathway .kforum-pathway {
+  background-color: #ffffff;
+  border: 1px solid #dadedf;
+  font-size: 14px;
+  padding: 6.5px 13px;
+}
+.com_kunena #t3-mainbody #Kunena .kpathway .kforum-pathway a:hover,
+.com_kunena #t3-mainbody #Kunena .kpathway .kforum-pathway a:focus,
+.com_kunena #t3-mainbody #Kunena .kpathway .kforum-pathway a:active {
+  color: #039be5 !important;
+}
+@media screen and (max-width: 767px) {
+  .com_kunena #t3-mainbody #Kunena .kblock + .klist-actions {
+    min-height: 110px;
+  }
+  .com_kunena #t3-mainbody #Kunena .kblock + .klist-actions .klist-pages-all {
+    padding-top: 13px;
+  }
+}
+.com_kunena #t3-mainbody #Kunena .kthead-title a,
+.com_kunena #t3-mainbody #Kunena .ktopic-title-cover a {
+  color: #505656 !important;
+  line-height: 1;
+}
+@media screen and (max-width: 767px) {
+  .com_kunena #t3-mainbody #Kunena .kthead-title a,
+  .com_kunena #t3-mainbody #Kunena .ktopic-title-cover a {
+    font-size: 16px;
+  }
+}
+.com_kunena #t3-mainbody #Kunena .kthead-title a:hover,
+.com_kunena #t3-mainbody #Kunena .ktopic-title-cover a:hover,
+.com_kunena #t3-mainbody #Kunena .kthead-title a:focus,
+.com_kunena #t3-mainbody #Kunena .ktopic-title-cover a:focus,
+.com_kunena #t3-mainbody #Kunena .kthead-title a:active,
+.com_kunena #t3-mainbody #Kunena .ktopic-title-cover a:active {
+  color: #039be5 !important;
+}
+.com_kunena #t3-mainbody #Kunena a.ktopic-title {
+  font-size: 16px;
+}
+.com_kunena #t3-mainbody #Kunena .kblock {
+  border-color: #dadedf;
+  margin: 13px 0 0;
+}
+.com_kunena #t3-mainbody #Kunena .kbody {
+  border-color: #dadedf !important;
+}
+.com_kunena #t3-mainbody #Kunena .kbody .kmsg-header {
+  border-bottom: 0;
+}
+.com_kunena #t3-mainbody #Kunena .kbody .krowmoderation select {
+  display: inline-block;
+  height: 32px;
+  vertical-align: top;
+}
+.com_kunena #t3-mainbody #Kunena .kbody .krowmoderation input {
+  line-height: 21px;
+}
+.com_kunena #t3-mainbody #Kunena #kprofilebox .input span {
+  display: inline-block;
+  padding: 13px 0 13px 13px;
+}
+@media screen and (max-width: 767px) {
+  .com_kunena #t3-mainbody #Kunena #kprofilebox .input span {
+    display: block;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+}
+.com_kunena #t3-mainbody #Kunena #kprofilebox .input span .inputbox {
+  display: inline-block;
+}
+@media screen and (max-width: 767px) {
+  .com_kunena #t3-mainbody #Kunena #kprofilebox .input span .inputbox {
+    display: block;
+  }
+}
+.com_kunena #t3-mainbody #Kunena #kprofilebox input[value="Login"] {
+  display: block;
+}
+@media screen and (min-width: 480px) {
+  .com_kunena #t3-mainbody #Kunena #kprofilebox input[value="Login"] {
+    display: inline-block;
+    margin-right: 13px;
+  }
+}
+.com_kunena #t3-mainbody #Kunena #kprofilebox .klink-block a {
+  font-size: 14px;
+  margin-left: 13px;
+}
+@media screen and (max-width: 767px) {
+  .com_kunena #t3-mainbody #Kunena #kprofilebox .klink-block a {
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .com_kunena #t3-mainbody #Kunena #kprofilebox .kprofileboxcnt {
+    min-height: 110px;
+  }
+}
+.com_kunena #t3-mainbody #Kunena .klist-actions .inputbox,
+.com_kunena #t3-mainbody #Kunena .klist-bottom .inputbox {
+  display: inline-block;
+  padding: 4px 3px;
+}
+.com_kunena #t3-mainbody #Kunena .klist-actions .kbutton,
+.com_kunena #t3-mainbody #Kunena .klist-bottom .kbutton {
+  display: inline-block;
+}
+@media screen and (max-width: 767px) {
+  .com_kunena #t3-mainbody #Kunena .klist-actions {
+    min-height: 70px;
+  }
+  .com_kunena #t3-mainbody #Kunena .klist-actions .klist-pages-all {
+    text-align: left;
+    height: auto;
+  }
+  .com_kunena #t3-mainbody #Kunena .klist-actions .klist-pages-all .kpagination {
+    padding-left: 0;
+    padding-top: 5px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .com_kunena #t3-mainbody #Kunena .klist-actions {
+    font-size: 12px;
+  }
+}
+.com_kunena #t3-mainbody #Kunena .klist-bottom {
+  padding-bottom: 0 !important;
+  overflow: hidden;
+}
+.com_kunena #t3-mainbody #Kunena div.kheader {
+  background-color: #505656 !important;
+  border: 0;
+  color: #f4f6f7 !important;
+  padding: 13px;
+}
+@media screen and (max-width: 767px) {
+  .com_kunena #t3-mainbody #Kunena div.kheader {
+    padding-right: 13px;
+    padding-left: 13px;
+  }
+}
+.com_kunena #t3-mainbody #Kunena div.kheader a {
+  color: #ffffff !important;
+}
+.com_kunena #t3-mainbody #Kunena div.kheader h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+.com_kunena #t3-mainbody #Kunena div.kheader span.ktoggler {
+  left: 0;
+}
+.com_kunena #t3-mainbody #Kunena div.kheader .ktitle-desc {
+  color: #ecf0f1;
+}
+.com_kunena #t3-mainbody #Kunena .kbody .kthead-title {
+  line-height: 1;
+  margin-bottom: 6.5px;
+}
+.com_kunena #t3-mainbody #Kunena .kbody .kthead-title a {
+  float: none;
+  line-height: 1;
+  magin-bottom: 0;
+}
+.com_kunena #t3-mainbody #Kunena .kbody .kthead-child {
+  margin-top: 13px;
+}
+.com_kunena #t3-mainbody #Kunena .kbody .klatest-avatar,
+.com_kunena #t3-mainbody #Kunena .kbody .ktopic-latest-post-avatar {
+  background-color: #ffffff;
+  border: 1px solid #dadedf;
+  padding: 2px;
+  width: auto;
+}
+.com_kunena #t3-mainbody #Kunena .kbody .klatest-avatar img,
+.com_kunena #t3-mainbody #Kunena .kbody .ktopic-latest-post-avatar img {
+  margin: 0;
+}
+.com_kunena #t3-mainbody #Kunena #kwhoisonline .kwhoonline {
+  border-width: 0;
+  border-bottom-width: 1px;
+}
+.com_kunena #t3-mainbody #Kunena #kwhoisonline .kwholegend {
+  border-width: 0;
+  border-top-width: 1px;
+}
+.com_kunena #t3-mainbody #Kunena #searchuser_tbody input {
+  display: inline-block;
+}
+.com_kunena #t3-mainbody #Kunena #searchuser_tbody select {
+  display: inline-block;
+  height: 32px;
+}
+.com_kunena #t3-mainbody #Kunena #kuserlist-form .userlist a {
+  color: #ffffff !important;
+}
+.com_kunena #t3-mainbody #Kunena #kuserlist-form .userlist a:hover,
+.com_kunena #t3-mainbody #Kunena #kuserlist-form .userlist a:focus,
+.com_kunena #t3-mainbody #Kunena #kuserlist-form .userlist a:active {
+  color: #039be5 !important;
+}
+.com_kunena #t3-mainbody #Kunena #kpostmessage .kpostbuttons input[type="button"] {
+  margin-top: 6.5px;
+}
+@media screen and (max-width: 767px) {
+  .com_kunena #t3-mainbody #Kunena #kpostmessage .kpostbuttons {
+    height: auto;
+    min-height: 90px;
+  }
+}
+.com_kunena #t3-mainbody #Kunena #kpostmessage #kvideoprovider {
+  color: #505656;
+  background-color: #ffffff;
+}
+.com_kunena #t3-mainbody #Kunena #kpostmessage #kpost-attachments .kattachment {
+  margin-top: 6.5px;
+}
+@media screen and (max-width: 767px) {
+  .com_kunena #t3-mainbody #Kunena #kpostmessage #kpost-attachments .kfile-input-button {
+    margin-right: 18px;
+    margin-top: 3px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .com_kunena #t3-mainbody #Kunena #kpostmessage #postcatid {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .com_kunena #t3-mainbody #Kunena #kpostmessage #kpost-buttons input {
+    display: inline-block;
+    margin-top: 3px;
+  }
+}
+.com_kunena #t3-mainbody #Kunena #kpostmessage #kbbcode-preview {
+  padding: 6.5px;
+}
+.com_kunena #t3-mainbody #Kunena #kpostmessage .kiconsel {
+  display: inline-block;
+}
+@media screen and (max-width: 767px) {
+  .com_kunena #t3-mainbody #Kunena #kpostmessage tr td {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .com_kunena #t3-mainbody #Kunena .kmsgattach ul.kfile-attach li {
+    background: 0;
+    padding-right: 0;
+  }
+}
+@media screen and (min-width: 480px) {
+  .com_kunena #t3-mainbody #Kunena .kmsgattach ul.kfile-attach li {
+    margin-left: 26px;
+  }
+}
+.com_kunena #t3-mainbody #Kunena #kmod-container .kmoderate-message {
+  padding: 13px !important;
+}
+.com_kunena #t3-mainbody #Kunena #kmod-container .kmoderate-message .kmessage-timeby {
+  font-size: 14px;
+}
+.com_kunena #t3-mainbody #Kunena #kmod-container .kmoderate-message .kmessage-msgtext {
+  font-size: 15px;
+}
+.com_kunena #t3-mainbody #Kunena #kmod-container select {
+  height: 32px;
+}
+.com_kunena #t3-mainbody #Kunena #kmod-container a.button {
+  border: 1px solid #039be5;
+}
+.com_kunena #t3-mainbody #Kunena #kmod-container a.button span {
+  color: #ffffff !important;
+}
+.com_kunena #t3-mainbody #Kunena .kadvsearch input {
+  margin-bottom: 13px;
+}
+.com_kunena #t3-mainbody #Kunena .kadvsearch select {
+  background: #ffffff !important;
+  margin-bottom: 13px;
+  padding: 4px 3px;
+}
+.com_kunena #t3-mainbody #Kunena .kadvsearch select.ks {
+  margin-right: 0;
+}
+.com_kunena #t3-mainbody #Kunena .kadvsearch legend {
+  border: 0;
+}
+.com_kunena #t3-mainbody #Kunena .kadvsearch #advsearch .kcenter input {
+  margin: 13px 0;
+}
+@media screen and (max-width: 767px) {
+  .com_kunena #t3-mainbody #Kunena .kadvsearch #keywords {
+    width: 100%;
+  }
+}
+.com_kunena #t3-mainbody #Kunena #kprofile-edit .tabs dt {
+  margin-left: 2px;
+  border-radius: 5px 5px 0 0;
+  font-weight: normal;
+}
+.com_kunena #t3-mainbody #Kunena #kprofile-edit .tabs .open {
+  background: #039be5;
+  color: #ffffff;
+}
+.com_kunena #t3-mainbody #Kunena #kprofile-edit .tabs .closed {
+  background: #505656;
+  color: #ffffff;
+}
+.com_kunena #t3-mainbody #Kunena #kprofile-edit .editlinktip input {
+  display: inline-block;
+}
+@media screen and (max-width: 480px) {
+  .com_kunena #t3-mainbody #Kunena #kprofile-edit select,
+  .com_kunena #t3-mainbody #Kunena #kprofile-edit textarea,
+  .com_kunena #t3-mainbody #Kunena #kprofile-edit input {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .com_kunena #t3-mainbody #Kunena #kprofile-edit select#kavatar-upload,
+  .com_kunena #t3-mainbody #Kunena #kprofile-edit textarea#kavatar-upload,
+  .com_kunena #t3-mainbody #Kunena #kprofile-edit input#kavatar-upload {
+    font-size: 14px;
+  }
+}
+.com_kunena #t3-mainbody #Kunena #kprofile-tabs table + input[type="submit"] {
+  margin: 13px;
+}
+@media screen and (max-width: 767px) {
+  .com_kunena #t3-mainbody #Kunena #kprofile-tabs input.kcheck {
+    margin-right: 94%;
+  }
+}
+.com_kunena #t3-mainbody #Kunena #kprofile-tabs .tabs dt.open {
+  border-bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  .com_kunena #t3-mainbody #Kunena #kprofile-tabs .tabs dt {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .com_kunena #t3-mainbody #Kunena #kprofile-tabs #kchecktask {
+    width: 100%;
+    max-width: none;
+  }
+  .com_kunena #t3-mainbody #Kunena #kprofile-tabs #kchecktask + input {
+    margin-top: 3px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .com_kunena #t3-mainbody #Kunena #kprofile-tabs #kflattable .kcol-ktopicreplies,
+  .com_kunena #t3-mainbody #Kunena #kprofile-tabs #kflattable .kcol-ktopicviews {
+    display: none;
+  }
+}
+.com_kunena #t3-mainbody #Kunena #kprofile-tabs .kcontainer #adminForm table {
+  font-size: 14px;
+}
+.com_kunena #t3-mainbody #Kunena #kannouncement .kanndesc {
+  padding: 13px;
+}
+.com_kunena #t3-mainbody #Kunena #kannouncement .kanndesc .anncreated {
+  font-weight: 600;
+  margin-bottom: 6.5px;
+}
+.com_kunena #t3-mainbody #Kunena #kannouncement label {
+  display: block;
+  margin-bottom: 13px;
+}
+.com_kunena #t3-mainbody #Kunena #kannouncement label input,
+.com_kunena #t3-mainbody #Kunena #kannouncement label textarea {
+  margin-top: 5px;
+}
+.com_kunena #t3-mainbody #Kunena #kannouncement label .input-append input {
+  margin-top: 0;
+  display: inline-block;
+}
+.com_kunena #t3-mainbody #Kunena #kannouncement label .input-append button {
+  height: 32px;
+  padding-top: 0;
+}
+.com_kunena #t3-mainbody #Kunena #kannouncement label .input-append button:hover,
+.com_kunena #t3-mainbody #Kunena #kannouncement label .input-append button:focus,
+.com_kunena #t3-mainbody #Kunena #kannouncement label .input-append button:active {
+  background-color: #505656;
+}
+.com_kunena #t3-mainbody #Kunena #kannouncement div.kactions {
+  padding: 13px;
+}
+.com_kunena #t3-mainbody #Kunena .announcement-checkbox {
+  text-align: center;
+}
+.com_kunena #t3-mainbody #Kunena .klist-markallcatsread {
+  border-top: 0;
+  padding: 6.5px 13px;
+}
+.com_kunena #t3-mainbody #Kunena .klist-markallcatsread div.fltlft {
+  margin: 0 !important;
+}
+.com_kunena #t3-mainbody #Kunena .klist-markallcatsread form {
+  margin: 0;
+}
+.com_kunena #t3-mainbody #Kunena #kreport-container .kbutton {
+  margin-top: 13px;
+}
+.com_kunena #t3-mainbody #Kunena .kpagination {
+  margin: 6.5px 0;
+}
+.com_kunena #t3-mainbody #Kunena .kpagination span,
+.com_kunena #t3-mainbody #Kunena .kpagination a {
+  display: inline-block;
+  padding: 5px;
+}
+.com_kunena #t3-mainbody #Kunena .kpagination span {
+  background-color: #039be5;
+}
+.com_kunena #t3-mainbody #Kunena .kpagination a:hover,
+.com_kunena #t3-mainbody #Kunena .kpagination a:focus,
+.com_kunena #t3-mainbody #Kunena .kpagination a:active {
+  background-color: #039be5 !important;
+  color: #ffffff !important;
+}
+@media (max-width: 480px) {
+  .com_kunena #t3-mainbody #Kunena td.kcol-first.kcol-ktopicreplies {
+    margin-bottom: 0;
+    padding-top: 13px;
+  }
+}
+.module-ct .kbutton {
+  border: 0;
+  background: #039be5;
+  color: #ffffff;
+  padding: 5.2px 13px;
+}
+.module-ct .kbutton:hover,
+.module-ct .kbutton:focus,
+.module-ct .kbutton:active {
+  background: #0279b3;
+}
+.module-ct .kstats-module ul li {
+  font-size: 14px;
+}
+.module-ct .kstats-module ul li:first-child {
+  padding-top: 13px;
+}
+.module-ct .kstats-module ul li:last-child {
+  background-position: right 22px;
+}
+#mbCenter {
+  border-radius: 2px;
+  padding: 0;
+}
+#mbCenter #mbBottom {
+  padding: 2px 6.5px;
+}
+div.klatest li.klatest-item {
+  border-top: 0;
+  border-bottom: 1px solid #dadedf;
+  margin: 0;
+  padding: 13px 0;
+}
+div.klatest li.klatest-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+div.klatest .klatest-avatar {
+  margin: 0 0 0 6.5px;
+  padding: 0;
+}
+div.klatest .klatest-subject {
+  border: 0;
+  line-height: 1.3;
+  padding: 0;
+}
+div.klatest .klatest-subject a {
+  font-size: 14px;
+}
+div.klatest .klatest-subject .knewchar {
+  top: 6px;
+}
+div.klatest .klatest-preview-content {
+  border: 0;
+  font-size: 12px;
+  padding: 0;
+}
+div.klatest .klatest-posttime,
+div.klatest .klatest-cat,
+div.klatest .klatest-author {
+  border: 0;
+  font-size: 12px;
+  padding: 0;
+}
+.kstats-module .kstats-items li {
+  background-image: none;
+  border-top: 0;
+  border-bottom: 1px solid #dadedf;
+  padding: 6.5px 0;
+}

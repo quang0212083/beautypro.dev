@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>Slideshow Style 2</title>
+  <sampledata><![CDATA[ 
+	{":type":"uber:slideshow","slideshow":{"jatools-layout-slideshow":"style-2","slideshow[block-intro]":["We pay careful attention to design a comfortable office environment, not just to create aesthetic but also give a boost to employee happiness."],"slideshow[block-extra-class]":[""],"slideshow[block-bg]":["images/joomlart/uber/background/aboutus-bg.png"],"slideshow[img-bg]":[""],"slideshow[enable-controls]":["0"],"slideshow[data]":{"slideshow[data][title]":[""],"slideshow[data][description]":[""],"rows":1,"cols":3,"type":"list"},"slideshow[data-s2]":{"slideshow[data-s2][img]":["images/joomlart/uber/demo/demo-11.jpg","images/joomlart/uber/demo/demo-12.jpg","images/joomlart/uber/demo/demo-13.jpg","images/joomlart/uber/demo/demo-14.jpg"],"rows":4,"cols":2,"type":"list"}}}
+   ]]></sampledata>
+  <fields name="slideshow">
+  
+    <fieldset name="basic" label="SLIDESHOW2_BASIC_LABEL" description="SLIDESHOW2_BASIC_DESC" multiple="0"> 
+      <field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+      <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+      <field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />  
+				
+
+			
+			<field name="enable-controls" type="radio" default="0" label="SLIDESHOW2_CONTROLS_LABEL" description="SLIDESHOW2_CONTROLS_DESC" >
+				<option value="0" class="off">JNO</option>
+				<option value="1" class="on">JYES</option>
+      </field>
+				
+    </fieldset>
+		
+		<fieldset name="basic2" label="SLIDESHOW2_BASIC_2_LABEL" description="SLIDESHOW2_BASIC_2_DESC">
+
+			<field name="data-s2" type="jalist">
+				<item name="img" type="media" 
+					description="SLIDESHOW2_ITEMS_IMAGES_DES"
+					label="SLIDESHOW2_ITEMS_IMAGES"
+					default=""
+					required="1" />
+			</field>
+		</fieldset>
+  </fields>
+</form>

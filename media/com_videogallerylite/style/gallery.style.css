@@ -1,0 +1,20 @@
+.page-title [class^="icon-"], .page-title [class*=" icon-"]{
+   background: url('../images/huge.png') !important;
+   width: 20px;
+   height: 20px;
+   margin:0px;
+   padding: 0px;
+}
+.icon-Sliders{
+   background: url('../images/huge.png');
+   width: 20px;
+   height: 20px;
+   margin:0px;
+   padding: 0px;  
+}
+.icon-generic:before {
+	content: url('../images/huge.png') !important;
+}
+ .full {
+    cursor: text !important;
+  }
